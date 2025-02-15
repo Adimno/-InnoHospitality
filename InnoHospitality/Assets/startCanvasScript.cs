@@ -2,15 +2,31 @@ using UnityEngine;
 
 public class startCanvasScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject MainMenu;
+    public GameObject StartCanvas; // Reference to button 
+  
+
+
     void Start()
     {
-        
+      
     }
 
-    // Update is called once per frame
-    void Update()
+      public void startCanvas()
     {
-        
+        if (StartCanvas != null)
+        {
+            MainMenu.SetActive(false);  // hiding the canvas 
+            StartCanvas.SetActive(true); // showing the canvas
+        }
+    }
+
+    public void HideCanvas()
+    {
+        if (StartCanvas != null)
+        {
+            MainMenu.SetActive(true);
+            StartCanvas.SetActive(false);
+        }
     }
 }
