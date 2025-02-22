@@ -1,14 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class S1CanvasManager : MonoBehaviour
 {
     public GameObject WelcomeCanvas;
     public GameObject TakeCardCanvas; 
+    public Button button;
     
     void Start()
     {
         WelcomeCanvas.SetActive(true);
         TakeCardCanvas.SetActive(false);
+
+        // Disable button at start and start countdown
+        button.interactable = false;
+        StartCoroutine(EnableButtonAfterDelay(16f));
     }
 
     public void WelcomeCanvasLogic()
@@ -21,5 +28,11 @@ public class S1CanvasManager : MonoBehaviour
     {
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(true);
+    }
+
+    private IEnumerator EnableButtonAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        button.interactable = true;
     }
 }
