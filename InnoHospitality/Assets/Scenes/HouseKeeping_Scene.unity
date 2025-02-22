@@ -5723,6 +5723,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6208489627028653197, guid: 66790430d223a634a9c82886d81c7773, type: 3}
+      propertyPath: m_Name
+      value: Object_7Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208489627028653197, guid: 66790430d223a634a9c82886d81c7773, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5785,13 +5789,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 705777354060073115, guid: 66790430d223a634a9c82886d81c7773, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782472933}
+    - targetCorrespondingSourceObject: {fileID: 705777354060073115, guid: 66790430d223a634a9c82886d81c7773, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782472932}
   m_SourcePrefab: {fileID: 100100000, guid: 66790430d223a634a9c82886d81c7773, type: 3}
 --- !u!4 &1782472929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7530871920592647143, guid: 66790430d223a634a9c82886d81c7773, type: 3}
   m_PrefabInstance: {fileID: 1782472928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1782472930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 705777354060073115, guid: 66790430d223a634a9c82886d81c7773, type: 3}
+  m_PrefabInstance: {fileID: 1782472928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1782472931 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1707541416942977382, guid: 66790430d223a634a9c82886d81c7773, type: 3}
+  m_PrefabInstance: {fileID: 1782472928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782472932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782472930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad354cf3eb299747bc51d4b37294c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardReader: {fileID: 1782472931}
+  Card: {fileID: 4002584091083754316}
+--- !u!65 &1782472933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782472930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.000001, z: 73.19059}
+  m_Center: {x: 0.000007653033, y: -0.000000010932409, z: -36.595295}
 --- !u!1 &1790201375
 GameObject:
   m_ObjectHideFlags: 0
