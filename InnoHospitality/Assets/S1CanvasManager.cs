@@ -7,9 +7,11 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject WelcomeCanvas;
     public GameObject TakeCardCanvas; 
     public Button button;
+    public GameObject CardReader;
     
     void Start()
     {
+        CardReader.SetActive(false);
         WelcomeCanvas.SetActive(true);
         TakeCardCanvas.SetActive(false);
 
@@ -22,12 +24,15 @@ public class S1CanvasManager : MonoBehaviour
     {
         WelcomeCanvas.SetActive(true);
         TakeCardCanvas.SetActive(false);
+        CardReader.SetActive(false);
     }
 
     public void TakeCardCanvasLogic()
     {
+    
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(true);
+        CardReader.SetActive(true);
     }
 
     private IEnumerator EnableButtonAfterDelay(float delay)
