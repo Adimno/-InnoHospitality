@@ -6948,6 +6948,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4343717413446395463, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
       insertIndex: -1
       addedObject: {fileID: 777134245}
+    - targetCorrespondingSourceObject: {fileID: -8269195505564239483, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1632533516}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
 --- !u!64 &804477471
@@ -11728,6 +11731,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 255.69734, y: 251.81284, z: 371.3571}
   m_Center: {x: -0.000031964104, y: 0.000054908323, z: -185.67908}
+--- !u!4 &1304736394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8269195505564239483, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
+  m_PrefabInstance: {fileID: 797703998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1312122825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15191,6 +15199,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.62014663, y: 0.77020144, z: 0.6296039}
   m_Center: {x: 0.0012083203, y: 0.38510072, z: 0.000004693868}
+--- !u!4 &1632533516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+  m_PrefabInstance: {fileID: 1745371852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1633156848
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16256,6 +16269,63 @@ Transform:
   - {fileID: 1021886338}
   m_Father: {fileID: 719011914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1745371852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1304736394}
+    m_Modifications:
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.792
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.43449974
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7822178
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.36143816
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.26212183
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -150.642
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -56.18799
+      objectReference: {fileID: 0}
+    - target: {fileID: 190014701388106137, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 65.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560038154466214764, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
+      propertyPath: m_Name
+      value: Violin__Stick_(rigged)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bfc0bcf11e4157b4db09aabd3f9e97c1, type: 3}
 --- !u!64 &1750435957
 MeshCollider:
   m_ObjectHideFlags: 0
