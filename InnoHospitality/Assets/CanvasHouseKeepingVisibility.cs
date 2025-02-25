@@ -5,36 +5,52 @@ using UnityEngine.XR;
 
 public class CanvasHouseKeepingVisibility : MonoBehaviour
 {
-    public Canvas canvas;
-    private bool isActive = false;
+    public Canvas Maincanvas;
+    public GameObject QuitCanvas;  // GameObject instead of Canvas
+
     private bool isScriptActive = true;
-
-  //  private InputDevice leftHandDevice;
+    private InputDevice leftHandDevice;
     private InputDevice rightHandDevice;
-    public static InputFeatureUsage<bool> primaryTouch = CommonUsages.primaryButton; // Changed to primaryButton
+    public static InputFeatureUsage<bool> primaryTouch = CommonUsages.primaryButton;
 
-    private bool previousTouchState = false; // Prevents rapid toggling
+    private bool previousTouchStateLeft = false;
+    private bool previousTouchStateRight = false;
 
     private void Start()
     {
+        QuitCanvas.SetActive(false); // Ensure it's hidden initially
         InitializeXRInput();
-        canvas.enabled = true; // Start with canvas open
+        Maincanvas.enabled = true;
     }
 
     private void InitializeXRInput()
     {
         List<InputDevice> devices = new List<InputDevice>();
-      //  InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Left, devices);
-      //  if (devices.Count > 0)
-      //  {
-       //     leftHandDevice = devices[0];
-     //   }
+
+        // Get Left Hand Device
+        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Left, devices);
+        if (devices.Count > 0)
+        {
+            leftHandDevice = devices[0];
+            Debug.Log($"Left Device Found: {leftHandDevice.isValid}");
+        }
+        else
+        {
+            Debug.LogWarning("No Left Hand Controller Found!");
+        }
 
         devices.Clear();
+
+        // Get Right Hand Device
         InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Right, devices);
         if (devices.Count > 0)
         {
             rightHandDevice = devices[0];
+            Debug.Log($"Right Device Found: {rightHandDevice.isValid}");
+        }
+        else
+        {
+            Debug.LogWarning("No Right Hand Controller Found!");
         }
     }
 
@@ -43,31 +59,38 @@ public class CanvasHouseKeepingVisibility : MonoBehaviour
         if (!isScriptActive)
             return;
 
-      //  bool leftPrimaryTouch = false;
+        bool leftPrimaryTouch = false;
         bool rightPrimaryTouch = false;
 
-        //if (leftHandDevice.isValid)
-      //      leftHandDevice.TryGetFeatureValue(primaryTouch, out leftPrimaryTouch);
+        if (leftHandDevice.isValid)
+            leftHandDevice.TryGetFeatureValue(primaryTouch, out leftPrimaryTouch);
 
         if (rightHandDevice.isValid)
             rightHandDevice.TryGetFeatureValue(primaryTouch, out rightPrimaryTouch);
 
-        bool isTouching = rightPrimaryTouch;     // leftPrimaryTouch || rightPrimaryTouch;
-
-        // Toggle only when state changes from false -> true
-        if (isTouching && !previousTouchState)
+        // Toggle QuitCanvas using Left Controller's primary button
+        if (leftPrimaryTouch && !previousTouchStateLeft)
         {
-            isActive = !isActive;
-            canvas.enabled = isActive;
+            QuitCanvas.SetActive(!QuitCanvas.activeSelf); // Toggle visibility
         }
 
-        previousTouchState = isTouching; // Store previous state
+        // Toggle Maincanvas using Right Controller's primary button
+        if (rightPrimaryTouch && !previousTouchStateRight)
+        {
+            Maincanvas.enabled = !Maincanvas.enabled; // Toggle visibility
+         
+        }
+
+        // Store previous states to prevent rapid toggling
+        previousTouchStateLeft = leftPrimaryTouch;
+        previousTouchStateRight = rightPrimaryTouch;
     }
 
     // Function to deactivate the script
     public void DeactivateScript()
     {
-        canvas.enabled = false;
+        QuitCanvas.SetActive(false);
+        Maincanvas.enabled = false;
         isScriptActive = false;
     }
 }
