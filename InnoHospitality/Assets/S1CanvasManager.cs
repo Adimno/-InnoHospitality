@@ -7,9 +7,10 @@ public class S1CanvasManager : MonoBehaviour
     // Canvas
     public GameObject WelcomeCanvas;
     public GameObject TakeCardCanvas; 
+    public GameObject OpenDoor;
     public GameObject KitchAreaCanvas;
     public GameObject GoKitchAreaCanvas;
-    public GameObject OpenDoor;
+    public GameObject KitchenPlayerCollider;
     
  // Assets
     public Button button;
@@ -29,6 +30,7 @@ public class S1CanvasManager : MonoBehaviour
         KitchAreaCanvas.SetActive(false);
         GoKitchAreaCanvas.SetActive(false);
            MarkKitchenCollider.SetActive(false);
+           KitchenPlayerCollider.SetActive(false); 
         // Disable button at start and start countdown
         button.interactable = false;
         StartCoroutine(EnableButtonAfterDelay(16f));
@@ -71,7 +73,7 @@ public class S1CanvasManager : MonoBehaviour
         TakeCardCanvas.SetActive(false);
         OpenDoor.SetActive(false);
         KitchAreaCanvas.SetActive(true);
-        StartCoroutine(GoKitchenArea(12f));
+        StartCoroutine(GoKitchenArea(11f));
     }
 
        public void GoKitchAreaCanvasLogic()
@@ -85,6 +87,22 @@ public class S1CanvasManager : MonoBehaviour
         GoKitchAreaCanvas.SetActive(true);
         MarkKitchenCollider.SetActive(true);
     }
+
+    public void KitchenPlayerCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+         KitchenPlayerCollider.SetActive(true); 
+    }
+
+
+
 
     private IEnumerator EnableButtonAfterDelay(float delay)
     {
