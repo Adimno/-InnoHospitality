@@ -13,6 +13,9 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject KitchenPlayerCollider;
     public GameObject LookLivingRoom;
     public GameObject GoLivingRoom; 
+    public GameObject LivingRoomCanvas;
+    public GameObject LookLeftLivingRoomCanvas;
+
     
  // Assets
     public Button button;
@@ -26,18 +29,22 @@ public class S1CanvasManager : MonoBehaviour
     
     void Start()
     {
+        // Canvas
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(true);
         TakeCardCanvas.SetActive(false);
         CardReaderParent.SetActive(false);
         KitchAreaCanvas.SetActive(false);
         GoKitchAreaCanvas.SetActive(false);
-           MarkKitchenCollider.SetActive(false);
-           MarkLivingRoomCollider.SetActive(false);
-           KitchenPlayerCollider.SetActive(false); 
+        LivingRoomCanvas.SetActive(false);
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        // Assets
+        MarkKitchenCollider.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
 
-           LookLivingRoom.SetActive(false);
-            GoLivingRoom.SetActive(false);
         // Disable button at start and start countdown
         button.interactable = false;
         StartCoroutine(EnableButtonAfterDelay(16f));
@@ -140,6 +147,45 @@ public class S1CanvasManager : MonoBehaviour
         MarkLivingRoomCollider.SetActive(true);
     }
 
+    
+     public void LivingRoomCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(true);
+         StartCoroutine(LookLeftLivingRoomArea(4.5f));
+    }
+
+       public void LookLeftLivingRoomCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(true);
+    }
+
+
+
 
 
 
@@ -166,5 +212,11 @@ public class S1CanvasManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         GoLivingRoomCanvasLogic();
+    }
+
+        private IEnumerator LookLeftLivingRoomArea(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        LookLeftLivingRoomCanvasLogic();
     }
 }
