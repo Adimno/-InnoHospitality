@@ -61,7 +61,7 @@ public class S1CanvasManager : MonoBehaviour
         MarkTrashCollider.SetActive(false);
         foreach (GameObject trashbin in TrashbinChecklist) 
          {
-        trashbin.SetActive(true);
+        trashbin.SetActive(false);
          }
 
 
