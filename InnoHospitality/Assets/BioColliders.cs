@@ -1,25 +1,24 @@
 using UnityEngine;
-using TMPro; // Import TextMeshPro namespace
 
 public class BioColliders : MonoBehaviour
 {
     public GameObject[] ChecklistTrash; // List of trash objects
     public GameObject[] CheckIcon; // Corresponding check icons
-    public TextMeshProUGUI countText; // Reference to the TextMeshPro UI for count display
 
-    private int trashCount = 0; // Counter for collected trash
-
-   void Start() {
-
-      foreach (GameObject icon in CheckIcon)
+    void Start()
+    {
+        // Disable all check icons at the start
+        foreach (GameObject icon in CheckIcon)
         {
             if (icon != null)
             {
                 icon.SetActive(false);
             }
         }
-    
-   }
+
+        // Register this bin's trash count with TrashManager
+        TrashManager.instance.RegisterTrash(ChecklistTrash.Length);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,18 +29,9 @@ public class BioColliders : MonoBehaviour
                 if (CheckIcon[i] != null && !CheckIcon[i].activeSelf) // Ensure it hasn't been counted yet
                 {
                     CheckIcon[i].SetActive(true); // Enable check icon
-                    trashCount++; // Increase the counter
-                    UpdateCountText(); // Update the UI
+                    TrashManager.instance.CollectTrash(); // Update global count
                 }
             }
-        }
-    }
-
-    private void UpdateCountText()
-    {
-        if (countText != null)
-        {
-            countText.text =  + trashCount + "/" + ChecklistTrash.Length;
         }
     }
 }

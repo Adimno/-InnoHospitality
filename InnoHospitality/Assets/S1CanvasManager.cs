@@ -20,6 +20,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject BioMeansCanvas;
     public GameObject EnvironmentCanvas;
     public GameObject ChecklistTrashBinCanvas;
+    public GameObject CongratsTrashBinCanvas;
   
 
     
@@ -53,6 +54,7 @@ public class S1CanvasManager : MonoBehaviour
         BioMeansCanvas.SetActive(false);
         EnvironmentCanvas.SetActive(false);
         ChecklistTrashBinCanvas.SetActive(false);
+           CongratsTrashBinCanvas.SetActive(false);
         
         // Assets
         MarkKitchenCollider.SetActive(false);
@@ -327,6 +329,39 @@ public class S1CanvasManager : MonoBehaviour
          {
         trashbin.SetActive(true);
          }
+
+     
+    }
+
+    
+     public void CongratsTrashCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(true);
 
      
     }
