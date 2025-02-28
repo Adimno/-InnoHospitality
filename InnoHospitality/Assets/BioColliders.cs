@@ -9,6 +9,18 @@ public class BioColliders : MonoBehaviour
 
     private int trashCount = 0; // Counter for collected trash
 
+   void Start() {
+
+      foreach (GameObject icon in CheckIcon)
+        {
+            if (icon != null)
+            {
+                icon.SetActive(false);
+            }
+        }
+    
+   }
+
     private void OnTriggerEnter(Collider other)
     {
         for (int i = 0; i < ChecklistTrash.Length; i++)
