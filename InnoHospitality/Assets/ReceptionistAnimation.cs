@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ReceptionistAnimation : MonoBehaviour
 {
-    public Animator animator; // Drag and drop the Animator in the Inspector
+    public Animator animator; 
 
     void Start()
     {
         if (animator == null)
         {
-            animator = GetComponent<Animator>(); // Fallback if not assigned
+            animator = GetComponent<Animator>(); 
         }
     }
 
