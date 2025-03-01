@@ -1,12 +1,29 @@
 using UnityEngine;
-using System.Collections;
 
 public class CustomerWalkToTable : MonoBehaviour
 {
-    public Animator animator; // Drag and drop the Animator in the Inspector
-    public Transform target; // Assign the table GameObject here
-    public float speed = 2f;
+    public Animator animator; // Assign in the Inspector
+    public Transform target;  // Assign the table GameObject here
+    public float speed = 1f;
+
     public bool isWalking = false;
+
+    void Start()
+    {
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogError("Animator component is missing!");
+            }
+        }
+
+        if (target == null)
+        {
+            Debug.LogError("Target is not assigned!");
+        }
+    }
 
     void Update()
     {
@@ -18,19 +35,35 @@ public class CustomerWalkToTable : MonoBehaviour
 
     public void WalkToTable()
     {
-        if (target != null)
-        {
-            isWalking = true;
-            ResetTriggers();
-            animator.SetTrigger("walk");
-            Debug.Log("Walking animation triggered");
-        }
+        if (target == null || animator == null) return;
+
+        isWalking = true;
+        ResetTriggers();
+        animator.SetTrigger("walk"); // Start walking animation
+        Debug.Log("Walking animation triggered");
     }
 
     private void MoveTowardsTarget()
     {
+        if (target == null) return;
+
+        // Face the target
+        Vector3 direction = (target.position - transform.position).normalized;
+        if (direction.magnitude > 0)
+        {
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
+
+        // Move towards the target
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        WalkToTable();
+
+        // Continue walking animation while moving
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walk"))
+        {
+            animator.SetTrigger("walk");
+        }
+
+        // Stop walking if close enough to the target
         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             StopWalking();
@@ -41,7 +74,7 @@ public class CustomerWalkToTable : MonoBehaviour
     {
         isWalking = false;
         ResetTriggers();
-        animator.SetTrigger("idle");
+        animator.SetTrigger("idle"); // Switch to idle animation
         Debug.Log("Idle animation triggered");
     }
 
