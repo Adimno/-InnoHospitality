@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+
+
 public class S1CanvasManager : MonoBehaviour
 {
     // Canvas
@@ -32,6 +34,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkLivingRoomCollider; // Kitchen mark 
     public GameObject MarkTrashCollider; // Kitchen mark 
     public GameObject[] TrashbinChecklist;
+     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;
 
 
     
@@ -65,7 +68,15 @@ public class S1CanvasManager : MonoBehaviour
          {
         trashbin.SetActive(false);
          }
-
+         
+        foreach (UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab in XRGrabInteractableGrabs)
+    {
+        if (grab != null)
+        {
+            grab.enabled = false; // Completely disables grabbing
+            // Alternative: grab.allowSelect = false; // Only prevents grabbing without disabling the whole component
+        }
+    }
 
         // Disable button at start and start countdown
         button.interactable = false;
@@ -330,6 +341,14 @@ public class S1CanvasManager : MonoBehaviour
         trashbin.SetActive(true);
          }
 
+           foreach (UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab in XRGrabInteractableGrabs)
+    {
+        if (grab != null)
+        {
+            grab.enabled = true;
+            // Alternative: grab.allowSelect = true;
+        }
+    }
      
     }
 
