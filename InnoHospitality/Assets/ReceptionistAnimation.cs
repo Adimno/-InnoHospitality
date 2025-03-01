@@ -10,7 +10,6 @@ public class ReceptionistAnimation : MonoBehaviour
         {
             animator = GetComponent<Animator>(); // Fallback if not assigned
         }
-        Idle();
     }
 
     public void Walk()
