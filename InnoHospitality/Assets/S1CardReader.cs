@@ -10,6 +10,10 @@ public class S1CardReader : MonoBehaviour
     public BoxCollider doorKnobEntrance;
     private bool hasTriggered = false; // Flag to track if it has already executed
 
+    public AudioClip cardReaderSound; 
+    private bool soundPlayed = false; 
+    private AudioSource audioSource; 
+
     private void Start()
     {
         originalColor = CardReader.material.color; // Save the original color at the start
@@ -31,6 +35,12 @@ public class S1CardReader : MonoBehaviour
         CardReader.material.color = Color.green; // Change to green
         yield return new WaitForSeconds(3f); // Wait another 3 seconds
         CardReader.material.color = originalColor; // Revert back to the original color
+              // Play the door opening sound if available and not already played
+            if (cardReaderSound != null && audioSource != null && !soundPlayed)
+            {
+                audioSource.PlayOneShot(cardReaderSound);
+                soundPlayed = true; // Set flag to indicate sound has been played
+            }
          s1CanvasManager.OpenDoorCanvasLogic();
          doorKnobEntrance.enabled = true;
         
