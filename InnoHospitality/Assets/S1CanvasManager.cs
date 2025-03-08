@@ -27,6 +27,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject OpenBedDoorCanvas;
     public GameObject BedroomCanvas;
     public GameObject GoBedroomMarkedAreaCanvas;
+     public GameObject StartSetUpBedAreaCanvas;
   
 
     
@@ -39,6 +40,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkTrashCollider; // Kitchen mark 
     public GameObject MarkBedDoorCollider; // Kitchen mark 
     public GameObject MarkBedRoomCollider; // Kitchen mark 
+    public GameObject PillowGuide;
 
     public GameObject[] TrashbinChecklist;
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;
@@ -69,6 +71,8 @@ public class S1CanvasManager : MonoBehaviour
          OpenBedDoorCanvas.SetActive(false);
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+        
          
         
         // Assets
@@ -78,6 +82,8 @@ public class S1CanvasManager : MonoBehaviour
         MarkTrashCollider.SetActive(false);
         MarkBedDoorCollider.SetActive(false);
         MarkBedRoomCollider.SetActive(false);
+     
+        
         foreach (GameObject trashbin in TrashbinChecklist) 
          {
         trashbin.SetActive(false);
@@ -537,6 +543,44 @@ public class S1CanvasManager : MonoBehaviour
          OpenBedDoorCanvas.SetActive(false);
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(true);
+         StartCoroutine(StartSetUpBedGuide(6f));
+     
+    }
+
+      public void StartSetUpBedAreaCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(true);
+           PillowGuide.SetActive(false);
      
     }
 
@@ -606,5 +650,11 @@ public class S1CanvasManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         MarkBedRoomCollider.SetActive(true);
+    }
+
+         private IEnumerator StartSetUpBedGuide(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+         StartSetUpBedAreaCanvasLogic();
     }
 }
