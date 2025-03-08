@@ -17,7 +17,7 @@ public class BedroomDoorPlayer : MonoBehaviour
         if (other.gameObject == Player && !hasTriggered) // Ensure it only runs once
         {
             BedRoomGuide.SetActive(true);
-              s1CanvasManager.BedroomCanvas();
+              s1CanvasManager.BedroomCanvasLogic();
             hasTriggered = true; // Set flag so it doesn't run again
         }
     }
