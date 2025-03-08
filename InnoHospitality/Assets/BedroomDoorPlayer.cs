@@ -4,12 +4,15 @@ public class BedroomDoorPlayer : MonoBehaviour
 {
       public GameObject Player;
     public  GameObject BedRoomGuide;
+     public  GameObject PillowsSheetGuide;
         public S1CanvasManager s1CanvasManager;
 
     private bool hasTriggered = false; // Flag to track if it has already executed
 
     void Start(){
+
         BedRoomGuide.SetActive(false);
+        PillowsSheetGuide.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
