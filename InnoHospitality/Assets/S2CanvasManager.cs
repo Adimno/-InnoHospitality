@@ -4,6 +4,8 @@ public class S2CanvasManager : MonoBehaviour
 {
     public GameObject D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13;
     public ReceptionistAnimation receptionist;
+    public GameObject utensils, gosign;
+
 
     void Start()
     {
@@ -20,6 +22,8 @@ public class S2CanvasManager : MonoBehaviour
         D11.SetActive(false);
         D12.SetActive(false);
         D13.SetActive(false);
+        utensils.SetActive(false);
+        gosign.SetActive(false);
     }
 
     public void D1Show()
@@ -32,6 +36,14 @@ public class S2CanvasManager : MonoBehaviour
     {
         ShowDialogue(D2);
         receptionist.Talk();
+    }
+
+    public void D2Close()
+    {
+        D2.SetActive(false);
+        receptionist.Idle();
+        utensils.SetActive(true);
+        gosign.SetActive(true);
     }
 
     public void D3Show()
@@ -100,11 +112,7 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
-    public void D1Close()
-    {
-        D1.SetActive(false);
-        receptionist.Idle();
-    }
+    
 
     private void ShowDialogue(GameObject dialogue)
     {
