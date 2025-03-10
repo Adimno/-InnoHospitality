@@ -27,7 +27,8 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject OpenBedDoorCanvas;
     public GameObject BedroomCanvas;
     public GameObject GoBedroomMarkedAreaCanvas;
-     public GameObject StartSetUpBedAreaCanvas;
+    public GameObject StartSetUpBedAreaCanvas;
+    public GameObject AppliancesLookCanvas;
   
 
     
@@ -72,6 +73,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
+        AppliancesLookCanvas.SetActive(false);
         
          
         
@@ -581,8 +583,49 @@ public class S1CanvasManager : MonoBehaviour
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(true);
            PillowGuide.SetActive(false);
+        
      
     }
+
+         public void AppliancesLookCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+           PillowGuide.SetActive(false);
+           AppliancesLookCanvas.SetActive(true);
+        
+     
+    }
+
 
 
     private IEnumerator EnableButtonAfterDelay(float delay)

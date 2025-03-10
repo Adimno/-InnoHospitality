@@ -4,8 +4,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class S1MeshRendererBedTracker : MonoBehaviour
 {
     public MeshRenderer[] bedMesh; // Array of MeshRenderers
-    public GameObject nextGameObject; // The next GameObject to activate
+    public GameObject[] GameObjectFalse; // The next GameObject to activate
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;// Array of XRGrabInteractable objects
+         public S1CanvasManager s1CanvasManager;
 
     void Start()
     {
@@ -28,7 +29,11 @@ public class S1MeshRendererBedTracker : MonoBehaviour
 
         if (AllMeshesEnabled())
         {
-            nextGameObject.SetActive(true); // Activate the next GameObject when all meshes are enabled
+            s1CanvasManager.AppliancesLookCanvasLogic();
+            foreach (GameObject GameObjectDisabled in GameObjectFalse) 
+            {
+             GameObjectDisabled.SetActive(false);
+             }
         }
     }
 
