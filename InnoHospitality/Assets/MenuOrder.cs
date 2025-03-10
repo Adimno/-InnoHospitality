@@ -4,8 +4,10 @@ using System.Collections;
 public class MenuOrder : MonoBehaviour
 {
     public GameObject check, wrong;
-    private bool isCheckActive = false; // Track the current state
-    private bool canClick = true; // Prevent multiple rapid triggers
+    public CheckOrder order; // Reference to CheckOrder script
+    public int indexValue;   // Determines which order to update
+    private bool isCheckActive = false;
+    private bool canClick = true;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -17,15 +19,20 @@ public class MenuOrder : MonoBehaviour
 
     private IEnumerator ToggleState()
     {
-        canClick = false; // Disable clicking
-        isCheckActive = !isCheckActive; // Toggle state
+        canClick = false;
+        isCheckActive = !isCheckActive;
 
         check.SetActive(isCheckActive);
         wrong.SetActive(!isCheckActive);
 
-        Debug.Log("Player collided. Check is " + isCheckActive);
+        // Update the corresponding index in CheckOrder
+        if (order != null && indexValue >= 0 && indexValue < order.orders.Length)
+        {
+            order.orders[indexValue] = isCheckActive;
+            Debug.Log($"Order {indexValue} set to {isCheckActive}");
+        }
 
-        yield return new WaitForSeconds(1f); // Wait 1 second
-        canClick = true; // Re-enable clicking
+        yield return new WaitForSeconds(1f);
+        canClick = true;
     }
 }
