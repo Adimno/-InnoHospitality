@@ -5400,7 +5400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &211391210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23500,7 +23500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835586503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28481,7 +28481,7 @@ GameObject:
   - component: {fileID: 1001029811}
   - component: {fileID: 1001029810}
   - component: {fileID: 1001029814}
-  - component: {fileID: 1001029815}
+  - component: {fileID: 1001029816}
   m_Layer: 0
   m_Name: Customer1Mark
   m_TagString: Untagged
@@ -28608,7 +28608,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1001029815
+--- !u!114 &1001029816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28617,7 +28617,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001029808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1a5f673c647ef4e8f067cdd47c0275, type: 3}
+  m_Script: {fileID: 11500000, guid: 619824073c273044ba882e7bb679ad79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 264369621}
@@ -30755,7 +30755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f344f92b0c5960547b671a86fd4e0510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1039904474}
   target: {fileID: 1245042083}
   speed: 1
   isWalking: 0
@@ -30785,6 +30785,11 @@ CapsuleCollider:
 --- !u!4 &1039904473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 489e209d7bb42fe45b54dc1f3eeda129, type: 3}
+  m_PrefabInstance: {fileID: 1039904468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1039904474 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 489e209d7bb42fe45b54dc1f3eeda129, type: 3}
   m_PrefabInstance: {fileID: 1039904468}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1042921520
@@ -45772,6 +45777,7 @@ MonoBehaviour:
   Player: {fileID: 264369621}
   D5: {fileID: 211391209}
   CustomerMark: {fileID: 1583564387}
+  customer1: {fileID: 1039904471}
 --- !u!54 &1583564389
 Rigidbody:
   m_ObjectHideFlags: 0

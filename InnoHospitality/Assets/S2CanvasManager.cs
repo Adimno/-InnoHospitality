@@ -106,6 +106,14 @@ public class S2CanvasManager : MonoBehaviour
 
     public void P3Show()
     {
+
+        
+        StartCoroutine(ActivateP3WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP3WithDelay()
+    {
+        yield return new WaitForSeconds(4); // Wait for 2 seconds
         ShowDialogue(P3);
     }
 

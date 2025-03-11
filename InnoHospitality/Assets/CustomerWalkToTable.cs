@@ -43,6 +43,15 @@ public class CustomerWalkToTable : MonoBehaviour
         Debug.Log("Walking animation triggered");
     }
 
+    public void StartWalking()
+    {
+        // Public method to set isWalking to true
+        isWalking = true;
+        ResetTriggers();
+        animator.SetTrigger("walk");
+        Debug.Log("Start walking triggered from another script");
+    }
+
     private void MoveTowardsTarget()
     {
         if (target == null) return;
