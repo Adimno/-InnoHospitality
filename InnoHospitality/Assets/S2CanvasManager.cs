@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class S2CanvasManager : MonoBehaviour
 {
-    public GameObject D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13;
+    public GameObject D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, C1;
     public ReceptionistAnimation receptionist;
-    public GameObject utensils, gosign;
+    public GameObject utensils, gosign, customer1Mark;
 
 
     void Start()
@@ -24,6 +24,8 @@ public class S2CanvasManager : MonoBehaviour
         D13.SetActive(false);
         utensils.SetActive(false);
         gosign.SetActive(false);
+        customer1Mark.SetActive(false);
+        C1.SetActive(false);
     }
 
     public void D1Show()
@@ -63,12 +65,25 @@ public class S2CanvasManager : MonoBehaviour
     {
         D4.SetActive(false);
         receptionist.Idle();
+        customer1Mark.SetActive(true);
     }
 
     public void D5Show()
     {
         ShowDialogue(D5);
         receptionist.Talk();
+    }
+
+    public void C1Show()
+    {
+        ShowDialogue(C1);
+        ActivateP2WithDelay();
+    }
+
+    private IEnumerator ActivateP2WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+
     }
 
     public void D6Show()
@@ -136,6 +151,7 @@ public class S2CanvasManager : MonoBehaviour
         D11.SetActive(false);
         D12.SetActive(false);
         D13.SetActive(false);
+        C1.SetActive(false);
 
         dialogue.SetActive(true);
     }
