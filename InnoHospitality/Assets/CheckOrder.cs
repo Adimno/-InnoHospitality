@@ -38,7 +38,6 @@ public class CheckOrder : MonoBehaviour
         {
             Debug.Log("Not Chicken");
             wrongOrder.SetActive(true);
-            tablet.SetActive(false);
         }
     }
 }

@@ -2242,7 +2242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utensil: {fileID: 7122510204038993917}
-  boxTag: Plank
   count: {fileID: 515048530}
 --- !u!64 &85707176
 MeshCollider:
@@ -3329,6 +3328,7 @@ MonoBehaviour:
   tablet: {fileID: 749488799}
   WrongOrder: {fileID: 2012490552}
   AskAgain: {fileID: 508173101}
+  Order1: {fileID: 1299243849}
 --- !u!223 &140949658
 Canvas:
   m_ObjectHideFlags: 0
@@ -14860,8 +14860,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Now, it\u2019s time to take their order. Approach the table and use your
-    notepad to record their choice."
+  m_text: "Excellent! You\u2019ve completed your first service. Keep going to earn
+    a higher score!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -27924,7 +27924,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 140949657}
         m_TargetAssemblyTypeName: S2CanvasManager, Assembly-CSharp
-        m_MethodName: WelcomeCanvasClose
+        m_MethodName: D7Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28608,6 +28608,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 733448739807464261, guid: a7ad55ce57cb54e44aba937b46e1d502, type: 3}
       insertIndex: -1
       addedObject: {fileID: 939547316}
+    - targetCorrespondingSourceObject: {fileID: 733448739807464261, guid: a7ad55ce57cb54e44aba937b46e1d502, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 939547317}
   m_SourcePrefab: {fileID: 100100000, guid: a7ad55ce57cb54e44aba937b46e1d502, type: 3}
 --- !u!4 &939547313 stripped
 Transform:
@@ -28710,6 +28713,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.879618, y: 1, z: 9.907651}
   m_Center: {x: 0.11083947, y: 0, z: -0.15158397}
+--- !u!114 &939547317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939547314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9549c6cfa35b19f448a03a87db7a2cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: {fileID: 52276264}
+  count: {fileID: 1299243851}
 --- !u!1 &940092156
 GameObject:
   m_ObjectHideFlags: 0
@@ -28982,6 +28999,7 @@ GameObject:
   - component: {fileID: 942233936}
   - component: {fileID: 942233935}
   - component: {fileID: 942233934}
+  - component: {fileID: 942233942}
   m_Layer: 5
   m_Name: D8
   m_TagString: Untagged
@@ -29173,6 +29191,103 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &942233942
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942233932}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0a47b5c3ec11b64283ceffe3e400e7b, type: 3}
+  m_Resource: {fileID: 8300000, guid: d0a47b5c3ec11b64283ceffe3e400e7b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!64 &942757281
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32501,7 +32616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utensil: {fileID: 6736943272959342303}
-  boxTag: Plank
   count: {fileID: 515048530}
 --- !u!1 &1019618860
 GameObject:
@@ -32696,7 +32810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utensil: {fileID: 455696428021087317}
-  boxTag: Plank
   count: {fileID: 515048530}
 --- !u!1 &1021536307
 GameObject:
@@ -36684,6 +36797,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5531211558684630955, guid: a04bfd4790897604583fd52ce5307f60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1165506196}
+    - targetCorrespondingSourceObject: {fileID: 5531211558684630955, guid: a04bfd4790897604583fd52ce5307f60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1165506197}
   m_SourcePrefab: {fileID: 100100000, guid: a04bfd4790897604583fd52ce5307f60, type: 3}
 --- !u!4 &1165506193 stripped
 Transform:
@@ -36762,6 +36878,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 4.1514654, z: 1}
   m_Center: {x: 0, y: 1.5757328, z: 0}
+--- !u!114 &1165506197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165506194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9549c6cfa35b19f448a03a87db7a2cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: {fileID: 646915720}
+  count: {fileID: 1299243851}
 --- !u!1 &1167541698
 GameObject:
   m_ObjectHideFlags: 0
@@ -39978,7 +40108,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 140949657}
         m_TargetAssemblyTypeName: S2CanvasManager, Assembly-CSharp
-        m_MethodName: WelcomeCanvasClose
+        m_MethodName: D8Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40537,6 +40667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299243850}
+  - component: {fileID: 1299243851}
   m_Layer: 0
   m_Name: Order1
   m_TagString: Untagged
@@ -40567,6 +40698,20 @@ Transform:
   - {fileID: 646915719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1299243851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299243849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a218c9a55f8b61e448e75d3ef38cb8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
+  D8: {fileID: 942233932}
 --- !u!4 &1304736394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8269195505564239483, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
@@ -51169,7 +51314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utensil: {fileID: 4383242943982825428}
-  boxTag: Plank
   count: {fileID: 515048530}
 --- !u!1 &1623893052 stripped
 GameObject:
@@ -70471,6 +70615,7 @@ GameObject:
   - component: {fileID: 7418280324734971}
   - component: {fileID: 4106941474296405706}
   - component: {fileID: 4106941474296405707}
+  - component: {fileID: 4106941474296405708}
   m_Layer: 0
   m_Name: Chicken SNAP
   m_TagString: Untagged
@@ -70545,6 +70690,20 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &4106941474296405708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106941474296405705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9549c6cfa35b19f448a03a87db7a2cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: {fileID: 1544902601}
+  count: {fileID: 1299243851}
 --- !u!1 &4141000538241512313
 GameObject:
   m_ObjectHideFlags: 0
@@ -71781,6 +71940,7 @@ GameObject:
   - component: {fileID: 4022428163196174670}
   - component: {fileID: 2144785166}
   - component: {fileID: 7416626741909378294}
+  - component: {fileID: 7416626741909378295}
   m_Layer: 0
   m_Name: Coffee SNAP
   m_TagString: Untagged
@@ -71834,6 +71994,20 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &7416626741909378295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416626741909378293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9549c6cfa35b19f448a03a87db7a2cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: {fileID: 7416626742249921774}
+  count: {fileID: 1299243851}
 --- !u!1 &7416626742249921774
 GameObject:
   m_ObjectHideFlags: 0

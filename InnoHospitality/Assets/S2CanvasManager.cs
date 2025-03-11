@@ -7,7 +7,7 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject P2, P3, P4, P5, P6, C2, C3, C4, C5;
     public ReceptionistAnimation receptionist;
     public GameObject utensils, gosign, customer1Mark, tableMark, tablet;
-    public GameObject WrongOrder, AskAgain;
+    public GameObject WrongOrder, AskAgain, Order1;
 
 
     void Start()
@@ -41,6 +41,7 @@ public class S2CanvasManager : MonoBehaviour
         tableMark.SetActive(false);
         WrongOrder.SetActive(false);
         AskAgain.SetActive(false);
+        Order1.SetActive(false);
     }
 
     public void D1Show()
@@ -190,40 +191,17 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
-    public void D8Show()
+    public void D7Close ()
     {
-        ShowDialogue(D8);
-        receptionist.Talk();
+        D7.SetActive(false);
+        Order1.SetActive(true);
+
     }
 
-    public void D9Show()
+    public void D8Close() //lastorder
     {
-        ShowDialogue(D9);
-        receptionist.Talk();
-    }
+        D8.SetActive(false);
 
-    public void D10Show()
-    {
-        ShowDialogue(D10);
-        receptionist.Talk();
-    }
-
-    public void D11Show()
-    {
-        ShowDialogue(D11);
-        receptionist.Talk();
-    }
-
-    public void D12Show()
-    {
-        ShowDialogue(D12);
-        receptionist.Talk();
-    }
-
-    public void D13Show()
-    {
-        ShowDialogue(D13);
-        receptionist.Talk();
     }
 
     public void AskAgainShow()

@@ -3,7 +3,6 @@ using UnityEngine;
 public class UtensilsSnap : MonoBehaviour
 {
     public GameObject utensil;
-    public string boxTag = "Plank";
     public UtensilCounter count;
 
     void OnTriggerEnter(Collider other)
