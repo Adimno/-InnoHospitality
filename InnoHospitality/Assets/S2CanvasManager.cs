@@ -38,18 +38,19 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
-    public void D2Close()
-    {
-        D2.SetActive(false);
-        receptionist.Idle();
-        utensils.SetActive(true);
-        gosign.SetActive(true);
-    }
 
     public void D3Show()
     {
         ShowDialogue(D3);
         receptionist.Talk();
+    }
+
+    public void D3Close()
+    {
+        D3.SetActive(false);
+        receptionist.Idle();
+        utensils.SetActive(true);
+        gosign.SetActive(true);
     }
 
     public void D4Show()
