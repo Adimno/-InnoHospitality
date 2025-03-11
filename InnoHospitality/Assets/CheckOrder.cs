@@ -3,6 +3,7 @@ using UnityEngine;
 public class CheckOrder : MonoBehaviour
 {
     public bool[] orders = new bool[11]; // 11 boolean array, all false by default
+    public GameObject P6, tablet, wrongOrder;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -30,10 +31,14 @@ public class CheckOrder : MonoBehaviour
         if (correctIndexes && otherIndexesFalse)
         {
             Debug.Log("Chicken");
+            P6.SetActive(true);
+            tablet.SetActive(false);
         }
         else
         {
             Debug.Log("Not Chicken");
+            wrongOrder.SetActive(true);
+            tablet.SetActive(false);
         }
     }
 }
