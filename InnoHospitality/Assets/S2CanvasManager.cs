@@ -6,7 +6,7 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject D1, D2, D3, D4, P1, D6, D7, D8, D9, D10, D11, D12, D13, C1;
     public GameObject P2, P3, P4, P5, P6, C2, C3, C4, C5;
     public ReceptionistAnimation receptionist;
-    public GameObject utensils, gosign, customer1Mark, tableMark;
+    public GameObject utensils, gosign, customer1Mark, tableMark, tablet;
 
 
     void Start()
@@ -142,7 +142,7 @@ public class S2CanvasManager : MonoBehaviour
 
     private IEnumerator ActivateP5WithDelay()
     {
-        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        yield return new WaitForSeconds(3); // Wait for 2 seconds
         P5Show();
     }
 
@@ -154,6 +154,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C4Show()
     {
         ShowDialogue(C4);
+        tablet.SetActive(true); 
     }
 
     public void D6Show()

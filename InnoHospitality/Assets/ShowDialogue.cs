@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ShowDialogue : MonoBehaviour
 {
@@ -11,8 +12,15 @@ public class ShowDialogue : MonoBehaviour
         if (other.gameObject == Player)
         {
             customer1.StartWalking();
-            D5.SetActive(true); // Show dialogue or perform another action
-            CustomerMark.SetActive(false);
+            
+            StartCoroutine(ActivateD5WithDelay()); // Start the coroutine
         }
+    }
+
+    private IEnumerator ActivateD5WithDelay()
+    {
+        yield return new WaitForSeconds(3); // Wait for 2 seconds
+        D5.SetActive(true); // Show dialogue or perform another action
+        CustomerMark.SetActive(false);
     }
 }
