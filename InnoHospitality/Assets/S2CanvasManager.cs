@@ -163,6 +163,13 @@ public class S2CanvasManager : MonoBehaviour
     public void C5Show()
     {
         ShowDialogue(C5);
+        StartCoroutine(ActivateD7WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateD7WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        D7Show();
     }
 
     public void D6Show()
