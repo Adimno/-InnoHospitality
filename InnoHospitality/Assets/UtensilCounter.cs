@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UtensilCounter : MonoBehaviour
 {
+    private int previousCounter = -1; // Stores the last counter value
     public int counter = 0;
 
     public void Increment()
@@ -16,7 +17,16 @@ public class UtensilCounter : MonoBehaviour
         Debug.Log("Counter decrement: " + counter);
     }
 
-    public void CheckerCount()
+    void Update()
+    {
+        if (counter != previousCounter) // Only check if the counter changed
+        {
+            CheckerCount();
+            previousCounter = counter; // Update the last recorded value
+        }
+    }
+
+    private void CheckerCount()
     {
         if (counter < 4)
         {
