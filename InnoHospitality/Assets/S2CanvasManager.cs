@@ -59,6 +59,12 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
+    public void D4Close()
+    {
+        D4.SetActive(false);
+        receptionist.Idle();
+    }
+
     public void D5Show()
     {
         ShowDialogue(D5);

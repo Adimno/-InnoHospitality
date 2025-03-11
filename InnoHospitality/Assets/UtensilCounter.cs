@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class UtensilCounter : MonoBehaviour
 {
     private int previousCounter = -1; // Stores the last counter value
     public int counter = 0;
+    public GameObject D4, arrow;
+
 
     public void Increment()
     {
@@ -35,6 +38,14 @@ public class UtensilCounter : MonoBehaviour
         else if (counter == 4)
         {
             Debug.Log("COMPLETE " + counter);
+            StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
         }
+    }
+
+    private IEnumerator ActivateD4WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        D4.SetActive(true);
+        arrow.SetActive(false);
     }
 }
