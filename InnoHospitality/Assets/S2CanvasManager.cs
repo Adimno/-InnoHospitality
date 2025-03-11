@@ -109,6 +109,45 @@ public class S2CanvasManager : MonoBehaviour
         ShowDialogue(P3);
     }
 
+    public void C2Show()
+    {
+        ShowDialogue(C2);
+        StartCoroutine(ActivateP4WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP4WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P4Show();
+    }
+
+    public void P4Show()
+    {
+        ShowDialogue(P4);
+    }
+
+    public void C3Show()
+    {
+        ShowDialogue(C3);
+        StartCoroutine(ActivateP5WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP5WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P5Show();
+    }
+
+    public void P5Show()
+    {
+        ShowDialogue(P5);
+    }
+
+    public void C4Show()
+    {
+        ShowDialogue(C4);
+    }
+
     public void D6Show()
     {
         ShowDialogue(D6);
