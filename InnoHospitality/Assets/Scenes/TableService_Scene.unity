@@ -1401,6 +1401,7 @@ GameObject:
   - component: {fileID: 81595775}
   - component: {fileID: 81595774}
   - component: {fileID: 81595777}
+  - component: {fileID: 81595778}
   m_Layer: 0
   m_Name: Spoon Snap
   m_TagString: Untagged
@@ -1567,6 +1568,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &81595778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81595770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df397e1dcc6aa44a6d8400402371f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utensil: {fileID: 7122510204038993917}
+  boxTag: Plank
+  count: {fileID: 515048530}
 --- !u!64 &85707176
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10984,6 +11000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 515048529}
+  - component: {fileID: 515048530}
   m_Layer: 0
   m_Name: Utensils
   m_TagString: Untagged
@@ -11014,6 +11031,19 @@ Transform:
   - {fileID: 1620290911}
   m_Father: {fileID: 1597102463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515048530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515048528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa8d9f788e6514478a49ce67249e24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
 --- !u!64 &522831619
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24563,6 +24593,7 @@ GameObject:
   - component: {fileID: 1017381563}
   - component: {fileID: 1017381561}
   - component: {fileID: 1017381565}
+  - component: {fileID: 1017381566}
   m_Layer: 0
   m_Name: Knife Snap
   m_TagString: Untagged
@@ -24729,6 +24760,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &1017381566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017381558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df397e1dcc6aa44a6d8400402371f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utensil: {fileID: 6736943272959342303}
+  boxTag: Plank
+  count: {fileID: 515048530}
 --- !u!1 &1019618860
 GameObject:
   m_ObjectHideFlags: 0
@@ -24922,6 +24968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utensil: {fileID: 455696428021087317}
+  boxTag: Plank
+  count: {fileID: 515048530}
 --- !u!1 &1021536307
 GameObject:
   m_ObjectHideFlags: 0
@@ -39695,9 +39743,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620290905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564e3269f8bfc5748b53f251f2cab8c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 39df397e1dcc6aa44a6d8400402371f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  utensil: {fileID: 4383242943982825428}
+  boxTag: Plank
+  count: {fileID: 515048530}
 --- !u!1 &1623893052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1817217116481809602, guid: 7d0a3a271d4d92a469a6d98a3c7c58a1, type: 3}

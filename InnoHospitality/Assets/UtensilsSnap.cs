@@ -3,13 +3,24 @@ using UnityEngine;
 public class UtensilsSnap : MonoBehaviour
 {
     public GameObject utensil;
+    public string boxTag = "Plank";
+    public UtensilCounter count;
 
     void OnTriggerEnter(Collider other)
     {
         // Check if the collided object is the specified utensil
         if (other.gameObject == utensil)
         {
-            Debug.Log("Utensil collided");
+            count.Increment();
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        // Check if the collided object is the specified utensil
+        if (other.gameObject == utensil)
+        {
+            count.Decrement();
         }
     }
 }
