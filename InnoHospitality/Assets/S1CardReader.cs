@@ -4,6 +4,7 @@ using System.Collections;
 public class S1CardReader : MonoBehaviour
 {
     public MeshRenderer CardReader;
+    public GameObject CardParent; 
     public GameObject Card; // Assign this in the Inspector
     private Color originalColor; // Store the original color
     public S1CanvasManager s1CanvasManager;
@@ -40,6 +41,7 @@ public class S1CardReader : MonoBehaviour
         yield return new WaitForSeconds(3f); // Wait for 3 seconds
         CardReader.material.color = Color.green; // Change to green
         Card.SetActive(false);
+        CardParent.SetActive(false);
             
         // Play the door opening sound if available and not already played
         if (cardReaderSound != null && audioSource != null && !soundPlayed)
