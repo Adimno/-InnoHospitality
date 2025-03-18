@@ -39,6 +39,7 @@ public class S1CardReader : MonoBehaviour
         hasTriggered = true; // Set flag so it doesn't run again
         yield return new WaitForSeconds(3f); // Wait for 3 seconds
         CardReader.material.color = Color.green; // Change to green
+        Card.SetActive(false);
             
         // Play the door opening sound if available and not already played
         if (cardReaderSound != null && audioSource != null && !soundPlayed)
