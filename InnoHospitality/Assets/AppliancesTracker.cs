@@ -11,7 +11,7 @@ public class AppliancesTracker : MonoBehaviour
         if (AreAllAppliancesInactive() && IsSoundInactive()) 
         {
             Debug.Log("All appliances and sound are turned off.");
-            s1CanvasManager.AppliancesLookCanvasLogic();
+            s1CanvasManager.GoBathMarkedAreaCanvasLogic();
         }
     }
 
