@@ -4,6 +4,7 @@ public class UtensilsSnap : MonoBehaviour
 {
     public GameObject utensil;
     public UtensilCounter count;
+    public GameObject utensilNoMesh;
 
 
     void OnTriggerEnter(Collider other)
@@ -12,6 +13,16 @@ public class UtensilsSnap : MonoBehaviour
         if (other.gameObject == utensil)
         {
             count.Increment();
+
+            // Disable the MeshRenderer of utensilNoMesh
+            if (utensilNoMesh != null)
+            {
+                MeshRenderer meshRenderer = utensilNoMesh.GetComponent<MeshRenderer>();
+                if (meshRenderer != null)
+                {
+                    meshRenderer.enabled = false; // Disable the renderer
+                }
+            }
         }
     }
 
@@ -21,6 +32,15 @@ public class UtensilsSnap : MonoBehaviour
         if (other.gameObject == utensil)
         {
             count.Decrement();
+            // Disable the MeshRenderer of utensilNoMesh
+            if (utensilNoMesh != null)
+            {
+                MeshRenderer meshRenderer = utensilNoMesh.GetComponent<MeshRenderer>();
+                if (meshRenderer != null)
+                {
+                    meshRenderer.enabled = true; // Disable the renderer
+                }
+            }
         }
     }
 }

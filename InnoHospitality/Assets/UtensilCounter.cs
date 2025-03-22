@@ -31,11 +31,11 @@ public class UtensilCounter : MonoBehaviour
 
     private void CheckerCount()
     {
-        if (counter < 4)
+        if (counter < 7)
         {
             Debug.Log("INCOMPLETE " + counter);
         }
-        else if (counter == 4)
+        else if (counter == 7)
         {
             Debug.Log("COMPLETE " + counter);
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
