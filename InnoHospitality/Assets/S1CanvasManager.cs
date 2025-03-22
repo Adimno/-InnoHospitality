@@ -42,11 +42,12 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkBedDoorCollider; // Kitchen mark 
     public GameObject MarkBedRoomCollider; // Kitchen mark 
     public GameObject PillowGuide;
-
+     
     public GameObject[] TrashbinChecklist;
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;
 
-
+// door collider bedroom
+    public BoxCollider bedDoor;
     
     
     void Start()
@@ -84,6 +85,9 @@ public class S1CanvasManager : MonoBehaviour
         MarkTrashCollider.SetActive(false);
         MarkBedDoorCollider.SetActive(false);
         MarkBedRoomCollider.SetActive(false);
+
+        // door 
+        bedDoor.enabled = false; 
      
         
         foreach (GameObject trashbin in TrashbinChecklist) 
@@ -473,6 +477,7 @@ public class S1CanvasManager : MonoBehaviour
          CongratsTrashBinCanvas.SetActive(false);
         GoBedAreaCanvas.SetActive(false);
          OpenBedDoorCanvas.SetActive(true);
+          bedDoor.enabled = true; 
 
      
     }
