@@ -7,7 +7,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     public GameObject[] GameObjectFalse; // The next GameObject to activate
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;// Array of XRGrabInteractable objects
          public S1CanvasManager s1CanvasManager;
-
+    private bool hasTriggered = false;
     void Start()
     {
         // Ensure the first XRGrab is enabled, and the rest are disabled
@@ -17,25 +17,27 @@ public class S1MeshRendererBedTracker : MonoBehaviour
         }
     }
 
-    void Update()
+  void Update()
+{
+    for (int i = 0; i < bedMesh.Length; i++)
     {
-        for (int i = 0; i < bedMesh.Length; i++)
+        if (bedMesh[i].enabled && i < XRGrabInteractableGrabs.Length - 1)
         {
-            if (bedMesh[i].enabled && i < XRGrabInteractableGrabs.Length - 1)
-            {
-                XRGrabInteractableGrabs[i + 1].enabled = true; // Enable the next XRGrab when the corresponding bedMesh is enabled
-            }
-        }
-
-        if (AllMeshesEnabled())
-        {
-            s1CanvasManager.AppliancesLookCanvasLogic();
-            foreach (GameObject GameObjectDisabled in GameObjectFalse) 
-            {
-             GameObjectDisabled.SetActive(false);
-             }
+            XRGrabInteractableGrabs[i + 1].enabled = true; 
         }
     }
+
+    if (AllMeshesEnabled() && !hasTriggered) // Prevent multiple calls
+    {
+        hasTriggered = true; // Set flag so it doesn't run again
+        s1CanvasManager.AppliancesLookCanvasLogic(); 
+        foreach (GameObject GameObjectDisabled in GameObjectFalse) 
+        {
+            GameObjectDisabled.SetActive(false);
+        }
+    }
+}
+
 
     bool AllMeshesEnabled()
     {

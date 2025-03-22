@@ -30,7 +30,8 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject StartSetUpBedAreaCanvas;
     public GameObject AppliancesLookCanvas;
     public GameObject GetRemoteControlCanvas;
-  
+    public GameObject GoBathMarkedAreaCanvas;
+    
 
     
  // Assets
@@ -42,6 +43,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkTrashCollider; // Kitchen mark 
     public GameObject MarkBedDoorCollider; // Kitchen mark 
     public GameObject MarkBedRoomCollider; // Kitchen mark 
+    public GameObject MarkBathroomCollider;
     public GameObject PillowGuide;
      
     public GameObject[] TrashbinChecklist;
@@ -77,6 +79,7 @@ public class S1CanvasManager : MonoBehaviour
         StartSetUpBedAreaCanvas.SetActive(false);
         AppliancesLookCanvas.SetActive(false);
          GetRemoteControlCanvas.SetActive(false);
+         GoBathMarkedAreaCanvas.SetActive(false);
         
          
         
@@ -87,6 +90,8 @@ public class S1CanvasManager : MonoBehaviour
         MarkTrashCollider.SetActive(false);
         MarkBedDoorCollider.SetActive(false);
         MarkBedRoomCollider.SetActive(false);
+        MarkBathroomCollider.SetActive(false);
+
 
         // door 
         bedDoor.enabled = false; 
@@ -629,7 +634,7 @@ public class S1CanvasManager : MonoBehaviour
         StartSetUpBedAreaCanvas.SetActive(false);
            PillowGuide.SetActive(false);
            AppliancesLookCanvas.SetActive(true);
-              StartCoroutine(GetRemoteControlGuide(6.5f));
+            StartCoroutine(GetRemoteControlGuide(8f));
         
      
     }
@@ -670,6 +675,47 @@ public class S1CanvasManager : MonoBehaviour
            PillowGuide.SetActive(false);
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(true);
+     
+    }
+
+    public void GoBathMarkedAreaCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+           PillowGuide.SetActive(false);
+           AppliancesLookCanvas.SetActive(false);
+        GetRemoteControlCanvas.SetActive(false);
+          GoBathMarkedAreaCanvas.SetActive(true);
+         MarkBathroomCollider.SetActive(true);
      
     }
 
@@ -751,6 +797,6 @@ public class S1CanvasManager : MonoBehaviour
           private IEnumerator GetRemoteControlGuide(float delay)
     {
         yield return new WaitForSeconds(delay);
-         GetRemoteControlCanvasLogic();
+        GetRemoteControlCanvasLogic();
     }
 }
