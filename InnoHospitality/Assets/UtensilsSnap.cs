@@ -5,6 +5,7 @@ public class UtensilsSnap : MonoBehaviour
     public GameObject utensil;
     public UtensilCounter count;
 
+
     void OnTriggerEnter(Collider other)
     {
         // Check if the collided object is the specified utensil
