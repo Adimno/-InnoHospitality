@@ -11,7 +11,7 @@ public class S2CanvasManager : MonoBehaviour
 
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
-    public GameObject D9, C6, P7, P8, D10;
+    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9;
 
     void Start()
     {
@@ -50,6 +50,13 @@ public class S2CanvasManager : MonoBehaviour
         P7.SetActive(false);
         P8.SetActive(false);
         D10.SetActive(false);
+
+        C7.SetActive(false);
+        P9.SetActive(false);
+        P10.SetActive(false);
+        C8.SetActive(false);
+        P11.SetActive(false);
+        C9.SetActive(false);
     }
 
     public void D1Show()
@@ -199,7 +206,7 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
-    public void D7Close ()
+    public void D7Close()
     {
         D7.SetActive(false);
         Order1.SetActive(true);
@@ -257,6 +264,45 @@ public class S2CanvasManager : MonoBehaviour
     }
 
 
+    public void C7Show()
+    {
+        ShowDialogue(C7);
+        StartCoroutine(ActivateP10WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP10WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P10Show();
+    }
+
+    public void P10Show()
+    {
+        ShowDialogue(P10);
+    }
+
+    public void C8Show()
+    {
+        ShowDialogue(C8);
+        StartCoroutine(ActivateP11WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP11WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P11Show();
+    }
+
+    public void P11Show()
+    {
+        ShowDialogue(P11);
+    }
+
+    public void C9Show()
+    {
+        ShowDialogue(C9);
+        tablet.SetActive(true);
+    }
 
     private void ShowDialogue(GameObject dialogue)
     {
@@ -285,6 +331,12 @@ public class S2CanvasManager : MonoBehaviour
         P7.SetActive(false);
         P8.SetActive(false);
         D10.SetActive(false);
+        C7.SetActive(false);
+        P9.SetActive(false);
+        P10.SetActive(false);
+        C8.SetActive(false);
+        P11.SetActive(false);
+        C9.SetActive(false);
         dialogue.SetActive(true);
     }
 }
