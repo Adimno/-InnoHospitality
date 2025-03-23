@@ -3,12 +3,15 @@ using System.Collections;
 
 public class S2CanvasManager : MonoBehaviour
 {
-    public GameObject D1, D2, D3, D4, P1, D6, D7, D8, D9, D10, D11, D12, D13, C1;
+    public GameObject D1, D2, D3, D4, P1, D6, D7, D8, C1;
     public GameObject P2, P3, P4, P5, P6, C2, C3, C4, C5;
     public ReceptionistAnimation receptionist;
     public GameObject utensils, gosign, customer1Mark, tableMark, tablet;
     public GameObject WrongOrder, AskAgain, Order1;
 
+    // customer2
+    public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
+    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9;
 
     void Start()
     {
@@ -20,11 +23,6 @@ public class S2CanvasManager : MonoBehaviour
         D6.SetActive(false);
         D7.SetActive(false);
         D8.SetActive(false);
-        D9.SetActive(false);
-        D10.SetActive(false);
-        D11.SetActive(false);
-        D12.SetActive(false);
-        D13.SetActive(false);
         utensils.SetActive(false);
         gosign.SetActive(false);
         customer1Mark.SetActive(false);
@@ -42,6 +40,23 @@ public class S2CanvasManager : MonoBehaviour
         WrongOrder.SetActive(false);
         AskAgain.SetActive(false);
         Order1.SetActive(false);
+
+        utensils2.SetActive(false);
+        customer2Mark.SetActive(false);
+        tableMark2.SetActive(false);
+        Order2.SetActive(false);
+        D9.SetActive(false);
+        C6.SetActive(false);
+        P7.SetActive(false);
+        P8.SetActive(false);
+        D10.SetActive(false);
+
+        C7.SetActive(false);
+        P9.SetActive(false);
+        P10.SetActive(false);
+        C8.SetActive(false);
+        P11.SetActive(false);
+        C9.SetActive(false);
     }
 
     public void D1Show()
@@ -191,7 +206,7 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
-    public void D7Close ()
+    public void D7Close()
     {
         D7.SetActive(false);
         Order1.SetActive(true);
@@ -201,7 +216,8 @@ public class S2CanvasManager : MonoBehaviour
     public void D8Close() //lastorder
     {
         D8.SetActive(false);
-
+        utensils2.SetActive(true);
+        gosign2.SetActive(true);
     }
 
     public void AskAgainShow()
@@ -209,7 +225,84 @@ public class S2CanvasManager : MonoBehaviour
         ShowDialogue(AskAgain);
     }
 
+    public void D9Close()
+    {
+        D9.SetActive(false);
+        receptionist.Idle();
+        customer2Mark.SetActive(true);
+    }
 
+    public void C6Show()
+    {
+        ShowDialogue(C6);
+        StartCoroutine(ActivateP8WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP8WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P8Show();
+    }
+
+    public void P8Show()
+    {
+        ShowDialogue(P8);
+    }
+
+    public void D10Show()
+    {
+        ShowDialogue(D10);
+        receptionist.Talk();
+    }
+
+    public void D10Close()
+    {
+        D10.SetActive(false);
+        receptionist.Idle();
+        tableMark2.SetActive(true);
+
+    }
+
+
+    public void C7Show()
+    {
+        ShowDialogue(C7);
+        StartCoroutine(ActivateP10WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP10WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P10Show();
+    }
+
+    public void P10Show()
+    {
+        ShowDialogue(P10);
+    }
+
+    public void C8Show()
+    {
+        ShowDialogue(C8);
+        StartCoroutine(ActivateP11WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP11WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P11Show();
+    }
+
+    public void P11Show()
+    {
+        ShowDialogue(P11);
+    }
+
+    public void C9Show()
+    {
+        ShowDialogue(C9);
+        tablet.SetActive(true);
+    }
 
     private void ShowDialogue(GameObject dialogue)
     {
@@ -221,11 +314,6 @@ public class S2CanvasManager : MonoBehaviour
         D6.SetActive(false);
         D7.SetActive(false);
         D8.SetActive(false);
-        D9.SetActive(false);
-        D10.SetActive(false);
-        D11.SetActive(false);
-        D12.SetActive(false);
-        D13.SetActive(false);
         C1.SetActive(false);
         P2.SetActive(false);
         P3.SetActive(false);
@@ -238,7 +326,17 @@ public class S2CanvasManager : MonoBehaviour
         C5.SetActive(false);
         WrongOrder.SetActive(false);
         AskAgain.SetActive(false);
-
+        D9.SetActive(false);
+        C6.SetActive(false);
+        P7.SetActive(false);
+        P8.SetActive(false);
+        D10.SetActive(false);
+        C7.SetActive(false);
+        P9.SetActive(false);
+        P10.SetActive(false);
+        C8.SetActive(false);
+        P11.SetActive(false);
+        C9.SetActive(false);
         dialogue.SetActive(true);
     }
 }

@@ -8,8 +8,8 @@ public class WaterController : MonoBehaviour
     public AudioSource waterSound;
 
     private InputDevice rightHandDevice;
-    private bool isGripPressed = false;
-    private bool isButtonPressed = false;
+    public bool isGripPressed = false;
+    public bool isButtonPressed = false;
     public static InputFeatureUsage<bool> gripButton = CommonUsages.gripButton;
     public static InputFeatureUsage<bool> triggerButton = CommonUsages.triggerButton;
 
