@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShowDialogue : MonoBehaviour
 {
-    public GameObject Player, D5, CustomerMark;
+    public GameObject Player, CustomerMark;
     public CustomerWalkToTable customer1;
 
     void OnTriggerEnter(Collider other)
@@ -20,7 +20,6 @@ public class ShowDialogue : MonoBehaviour
     private IEnumerator ActivateD5WithDelay()
     {
         yield return new WaitForSeconds(3); // Wait for 2 seconds
-        D5.SetActive(true); // Show dialogue or perform another action
         CustomerMark.SetActive(false);
     }
 }

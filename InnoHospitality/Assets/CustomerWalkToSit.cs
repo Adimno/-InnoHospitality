@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CustomerWalkToSit : MonoBehaviour
 {
-    public GameObject CustomerStandUp, CustomerSit;
+    public GameObject CustomerStandUp, CustomerSit, canvas;
 
     void OnTriggerEnter(Collider other)
     {
@@ -11,6 +11,7 @@ public class CustomerWalkToSit : MonoBehaviour
         {
             CustomerStandUp.SetActive(false);
             CustomerSit.SetActive(true);
+            canvas.SetActive(true);
             Debug.Log("Customer Collided with box");
         }
     }
