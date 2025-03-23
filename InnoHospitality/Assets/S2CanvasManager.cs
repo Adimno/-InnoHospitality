@@ -10,9 +10,8 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject WrongOrder, AskAgain, Order1;
 
     // customer2
-
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
-
+    public GameObject D9, C6, P7, P8, D10;
 
     void Start()
     {
@@ -46,6 +45,11 @@ public class S2CanvasManager : MonoBehaviour
         customer2Mark.SetActive(false);
         tableMark2.SetActive(false);
         Order2.SetActive(false);
+        D9.SetActive(false);
+        C6.SetActive(false);
+        P7.SetActive(false);
+        P8.SetActive(false);
+        D10.SetActive(false);
     }
 
     public void D1Show()
@@ -214,6 +218,44 @@ public class S2CanvasManager : MonoBehaviour
         ShowDialogue(AskAgain);
     }
 
+    public void D9Close()
+    {
+        D9.SetActive(false);
+        receptionist.Idle();
+        customer2Mark.SetActive(true);
+    }
+
+    public void C6Show()
+    {
+        ShowDialogue(C6);
+        StartCoroutine(ActivateP8WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateP8WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        P8Show();
+    }
+
+    public void P8Show()
+    {
+        ShowDialogue(P8);
+    }
+
+    public void D10Show()
+    {
+        ShowDialogue(D10);
+        receptionist.Talk();
+    }
+
+    public void D10Close()
+    {
+        D10.SetActive(false);
+        receptionist.Idle();
+        tableMark2.SetActive(true);
+
+    }
+
 
 
     private void ShowDialogue(GameObject dialogue)
@@ -238,7 +280,11 @@ public class S2CanvasManager : MonoBehaviour
         C5.SetActive(false);
         WrongOrder.SetActive(false);
         AskAgain.SetActive(false);
-
+        D9.SetActive(false);
+        C6.SetActive(false);
+        P7.SetActive(false);
+        P8.SetActive(false);
+        D10.SetActive(false);
         dialogue.SetActive(true);
     }
 }
