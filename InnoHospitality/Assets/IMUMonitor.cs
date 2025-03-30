@@ -7,20 +7,15 @@ public class IMUMonitor : MonoBehaviour
     public GameObject[] objectsToMonitor;  
     public TutorialCanvasManager tutorialCanvasManager;
 
-    public GameObject ProceedGame;
 
     void Update()
     {
         if (AllObjectsAreActive())
         {
-            ProceedGame.SetActive(true);
             tutorialCanvasManager.ProceedCanvasLogic();
             
         }
-        else
-        {
-            ProceedGame.SetActive(false);
-        }
+
     }
 
     bool AllObjectsAreActive()

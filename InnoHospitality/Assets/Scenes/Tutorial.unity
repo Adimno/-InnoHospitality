@@ -19902,6 +19902,7 @@ GameObject:
   - component: {fileID: 1337971412}
   - component: {fileID: 1337971411}
   - component: {fileID: 1337971410}
+  - component: {fileID: 1337971413}
   m_Layer: 0
   m_Name: IMUChecklist
   m_TagString: Untagged
@@ -19989,6 +19990,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1337971413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337971407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe02144fdfd8864a9f248cd1871219d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraHead: {fileID: 1203074027}
+  lookupicon: {fileID: 732268952}
+  lookdownicon: {fileID: 826119587}
+  lookrighticon: {fileID: 2143765504}
+  looklefticon: {fileID: 1956174255}
+  tiltlefticon: {fileID: 734406804}
+  tiltrighticon: {fileID: 1261558317}
 --- !u!1 &1340664047
 GameObject:
   m_ObjectHideFlags: 0
@@ -27205,9 +27225,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 657184242118504722, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1870982580}
-    - targetCorrespondingSourceObject: {fileID: 657184242118504722, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1870982581}
   m_SourcePrefab: {fileID: 100100000, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
 --- !u!4 &1870982564 stripped
@@ -27262,25 +27279,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 657184242118504721, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
   m_PrefabInstance: {fileID: 1870982563}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1870982580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203074027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe02144fdfd8864a9f248cd1871219d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraHead: {fileID: 1203074027}
-  lookupicon: {fileID: 732268952}
-  lookdownicon: {fileID: 826119587}
-  lookrighticon: {fileID: 2143765504}
-  looklefticon: {fileID: 1956174255}
-  tiltlefticon: {fileID: 734406804}
-  tiltrighticon: {fileID: 1261558317}
 --- !u!114 &1870982581
 MonoBehaviour:
   m_ObjectHideFlags: 0
