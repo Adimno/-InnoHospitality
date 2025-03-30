@@ -52,6 +52,7 @@ public class S1CanvasManager : MonoBehaviour
 
 // door collider bedroom
     public BoxCollider bedDoor;
+    public BoxCollider bathDoor;
     
     
     void Start()
@@ -97,6 +98,7 @@ public class S1CanvasManager : MonoBehaviour
 
         // door 
         bedDoor.enabled = false; 
+        bathDoor.enabled = false;
      
         
         foreach (GameObject trashbin in TrashbinChecklist) 
@@ -761,6 +763,7 @@ public class S1CanvasManager : MonoBehaviour
           GoBathMarkedAreaCanvas.SetActive(false);
          MarkBathroomCollider.SetActive(false);
          OpenDoorBathroomCanvas.SetActive(true);
+          bathDoor.enabled = true;
      
     }
 
