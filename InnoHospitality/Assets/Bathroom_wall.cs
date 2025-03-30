@@ -7,6 +7,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
     public Texture2D _dirtMaskBase;
     public Texture2D _brush;
     public Material _material;
+    public GameObject CleaningCanvasDone;
 
     private Texture2D _templateDirtMask;
     private float dirtAmountTotal;
@@ -68,6 +69,11 @@ public class Bathroom_Wall7_Script : MonoBehaviour
 
                     int cleanAmount = CalculateCleanPercentage();
                     Debug.Log("Percentage of Clean Area: " + cleanAmount + "%");
+                    if (cleanAmount > 96)
+                    {
+                        CleaningCanvasDone.SetActive(true);
+                        Debug.Log("Cleaning Done");
+                    }
 
                     MaterialManager.UpdateMaterialValue("Flooring");
                 }
