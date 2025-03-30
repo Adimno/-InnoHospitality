@@ -14,8 +14,8 @@ public class S1GoBathroomGuide : MonoBehaviour
     {
         if (other.gameObject == Player && !hasTriggered) // Ensure it only runs once
         {
-            meshKitchen.enabled = false;
             s1CanvasManager.OpenDoorBathroomCanvasLogic();
+            meshKitchen.enabled = false;
             hasTriggered = true; // Set flag so it doesn't run again
         }
     }

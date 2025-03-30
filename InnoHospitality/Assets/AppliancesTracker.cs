@@ -5,13 +5,15 @@ public class AppliancesTracker : MonoBehaviour
     public GameObject[] appliances; // Array of appliances
     public AudioSource audioSource; // Reference to the AudioSource
     public S1CanvasManager s1CanvasManager; // Reference to Canvas Manager
+    private bool hasTriggered = false; // Flag to track execution
 
     void Update()
     {
-        if (AreAllAppliancesInactive() && IsSoundInactive()) 
+        if (!hasTriggered && AreAllAppliancesInactive() && IsSoundInactive()) 
         {
             Debug.Log("All appliances and sound are turned off.");
             s1CanvasManager.GoBathMarkedAreaCanvasLogic();
+            hasTriggered = true; // Prevent further updates
         }
     }
 
