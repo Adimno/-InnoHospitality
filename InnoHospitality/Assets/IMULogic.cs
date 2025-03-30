@@ -31,7 +31,7 @@ public class IMULogic : MonoBehaviour
         float xRotation = cameraHead.transform.rotation.eulerAngles.x;
         float yRotation = cameraHead.transform.rotation.eulerAngles.y;
         float zRotation = cameraHead.transform.rotation.eulerAngles.z;
-        Debug.Log("x: " + xRotation + " y: " + yRotation + " z: " + zRotation);
+       // Debug.Log("x: " + xRotation + " y: " + yRotation + " z: " + zRotation);
 
         //PITCH
         // LOOK UP
