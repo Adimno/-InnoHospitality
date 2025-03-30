@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class S1GoBathroomGuide : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+   public GameObject Player;
+    public S1CanvasManager s1CanvasManager;
+    public MeshRenderer meshKitchen;
 
-    // Update is called once per frame
-    void Update()
+    private bool hasTriggered = false; // Flag to track if it has already executed
+
+ 
+
+     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject == Player && !hasTriggered) // Ensure it only runs once
+        {
+            meshKitchen.enabled = false;
+            s1CanvasManager.OpenDoorBathroomCanvasLogic();
+            hasTriggered = true; // Set flag so it doesn't run again
+        }
     }
 }

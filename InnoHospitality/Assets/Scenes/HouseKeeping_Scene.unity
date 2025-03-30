@@ -4810,8 +4810,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 14e56f02355ad004eb42afbedfb213c9, type: 3}
-  m_Resource: {fileID: 8300000, guid: 14e56f02355ad004eb42afbedfb213c9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 999c63bdcb51719488e57a1e9648194b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 999c63bdcb51719488e57a1e9648194b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -43813,6 +43813,7 @@ MonoBehaviour:
   AppliancesLookCanvas: {fileID: 716880253}
   GetRemoteControlCanvas: {fileID: 1517641174}
   GoBathMarkedAreaCanvas: {fileID: 1028806988}
+  OpenDoorBathroomCanvas: {fileID: 193440539}
   button: {fileID: 1938659420}
   CardReader: {fileID: 755207520991502575}
   CardReaderParent: {fileID: 4002584091083754316}
@@ -44765,6 +44766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09ce40bc3cc35147bffa7c0025563f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  s1CanvasManager: {fileID: 0}
+  meshKitchen: {fileID: 0}
+  PillowsSheetGuide: {fileID: 0}
 --- !u!1 &1773501303
 GameObject:
   m_ObjectHideFlags: 0

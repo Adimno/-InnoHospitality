@@ -31,6 +31,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject AppliancesLookCanvas;
     public GameObject GetRemoteControlCanvas;
     public GameObject GoBathMarkedAreaCanvas;
+    public GameObject OpenDoorBathroomCanvas;
     
 
     
@@ -80,6 +81,7 @@ public class S1CanvasManager : MonoBehaviour
         AppliancesLookCanvas.SetActive(false);
          GetRemoteControlCanvas.SetActive(false);
          GoBathMarkedAreaCanvas.SetActive(false);
+         OpenDoorBathroomCanvas.SetActive(false);
         
          
         
@@ -716,6 +718,49 @@ public class S1CanvasManager : MonoBehaviour
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(true);
          MarkBathroomCollider.SetActive(true);
+     
+    }
+
+    
+    public void OpenDoorBathroomCanvasLogic()
+    {
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+           PillowGuide.SetActive(false);
+           AppliancesLookCanvas.SetActive(false);
+        GetRemoteControlCanvas.SetActive(false);
+          GoBathMarkedAreaCanvas.SetActive(false);
+         MarkBathroomCollider.SetActive(false);
+         OpenDoorBathroomCanvas.SetActive(true);
      
     }
 
