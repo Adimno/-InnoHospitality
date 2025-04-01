@@ -10,12 +10,15 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     public TotalPoints points;
      public S1IconLogic Icon;
 
+     public TimeLogic time;
+
     void Update()
     {
         if (AllObjectsEnabled() && !hasTriggered) // Check all objects
         {
             hasTriggered = true; // Prevent multiple calls
             s1CanvasManager.GameFinishCanvasLogic(); 
+            time.PauseTimer();
             points.IncrementPoints(20);
                         Icon.BathIconLogic();
 
