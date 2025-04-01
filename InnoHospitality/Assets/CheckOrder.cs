@@ -4,6 +4,7 @@ public class CheckOrder : MonoBehaviour
 {
     public bool[] orders = new bool[11]; // 11 boolean array, all false by default
     public GameObject P6, tablet, wrongOrder;
+    public GameObject P12, wrongOrder2;  
     private int counter = 0;
 
     public void OnTriggerEnter(Collider other)
@@ -76,7 +77,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Pizza");
-            P6.SetActive(true);
+            P12.SetActive(true);
             tablet.SetActive(false);
         }
         else

@@ -31,11 +31,11 @@ public class Order2Counter : MonoBehaviour
 
     private void CheckerCount()
     {
-        if (counter < 4)
+        if (counter < 3)
         {
             Debug.Log("INCOMPLETE " + counter);
         }
-        else if (counter == 4 && !hasActivated) // Ensure it runs only once
+        else if (counter == 3 && !hasActivated) // Ensure it runs only once
         {
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true

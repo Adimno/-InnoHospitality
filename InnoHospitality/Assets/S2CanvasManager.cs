@@ -8,10 +8,11 @@ public class S2CanvasManager : MonoBehaviour
     public ReceptionistAnimation receptionist;
     public GameObject utensils, gosign, customer1Mark, tableMark, tablet;
     public GameObject WrongOrder, AskAgain, Order1;
+    public GameObject WrongOrder2, AskAgain2;
 
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
-    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9;
+    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12;
 
     void Start()
     {
@@ -40,6 +41,9 @@ public class S2CanvasManager : MonoBehaviour
         WrongOrder.SetActive(false);
         AskAgain.SetActive(false);
         Order1.SetActive(false);
+        WrongOrder2.SetActive(false);
+        AskAgain2.SetActive(false);
+        Order2.SetActive(false);
 
         utensils2.SetActive(false);
         customer2Mark.SetActive(false);
@@ -57,6 +61,9 @@ public class S2CanvasManager : MonoBehaviour
         C8.SetActive(false);
         P11.SetActive(false);
         C9.SetActive(false);
+        C10.SetActive(false);
+        D11.SetActive(false);
+        D12.SetActive(false);
     }
 
     public void D1Show()
@@ -304,6 +311,39 @@ public class S2CanvasManager : MonoBehaviour
         tablet.SetActive(true);
     }
 
+    public void AskOrderAgain2Show()
+    {
+        ShowDialogue(AskAgain2);
+    }
+
+    public void C10Show()
+    {
+        ShowDialogue(C10);
+        StartCoroutine(ActivateD11WithDelay()); // Start the coroutine
+    }
+
+    private IEnumerator ActivateD11WithDelay()
+    {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        D11Show();
+    }
+
+    public void D11Show()
+    {
+        ShowDialogue(D11);
+    }
+
+    public void D11Close()
+    {
+        D11.SetActive(false);
+        Order2.SetActive(true);
+    }
+
+    public void D12Close()
+    {
+        D12.SetActive(false);
+    }
+
     private void ShowDialogue(GameObject dialogue)
     {
         D1.SetActive(false);
@@ -337,6 +377,12 @@ public class S2CanvasManager : MonoBehaviour
         C8.SetActive(false);
         P11.SetActive(false);
         C9.SetActive(false);
+        WrongOrder2.SetActive(false);
+        AskAgain2.SetActive(false);
+        Order2.SetActive(false);
+        C10.SetActive(false);
+        D11.SetActive(false);
+        D12.SetActive(false);
         dialogue.SetActive(true);
     }
 }
