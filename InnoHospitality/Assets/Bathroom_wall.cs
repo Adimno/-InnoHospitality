@@ -12,6 +12,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
     public S1IconLogic Icon;
     private Texture2D _templateDirtMask;
     private float dirtAmountTotal;
+    private bool hasCleaned = false; // Track if points were already given
 
     private void Start()
     {
@@ -70,13 +71,14 @@ public class Bathroom_Wall7_Script : MonoBehaviour
 
                     int cleanAmount = CalculateCleanPercentage();
                     Debug.Log("Percentage of Clean Area: " + cleanAmount + "%");
-                    if (cleanAmount > 96)
-                    {
-                                    Icon.CLeanIconLogic();
-                          points.IncrementPoints(20);
-                        s1CanvasManager.CleanedFloorCanvasLogic();
-                        Debug.Log("Cleaning Done");
-                    }
+                     if (cleanAmount > 96 && !hasCleaned) // Check if cleaning is completed only once
+                        {
+                            hasCleaned = true; // Set flag to prevent repeated increments
+                            Icon.CLeanIconLogic();
+                            points.IncrementPoints(20);
+                            s1CanvasManager.CleanedFloorCanvasLogic();
+                            Debug.Log("Cleaning Done");
+                        }
 
                     MaterialManager.UpdateMaterialValue("Flooring");
                 }
