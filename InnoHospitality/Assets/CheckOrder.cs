@@ -16,10 +16,10 @@ public class CheckOrder : MonoBehaviour
             }
             else if (counter == 1)
             {
-                CheckForSteak();
+                CheckForPizza();
             } else if (counter == 2)
             {
-                CheckForPizza();
+                CheckForSalad();
             }
         }
     }
@@ -54,45 +54,17 @@ public class CheckOrder : MonoBehaviour
         }
     }
 
-    public void CheckForSteak()
-    {
-        bool correctIndexes = orders[0] && orders[3] && orders[6] && orders[8];
-        bool otherIndexesFalse = true;
-
-        
-        for (int i = 0; i < orders.Length; i++)
-        {
-            if (i != 0 && i != 3 && i != 6 && i != 8 && orders[i])
-            {
-                otherIndexesFalse = false;
-                break;
-            }
-        }
-
-        if (correctIndexes && otherIndexesFalse)
-        {
-            counter++;
-            Debug.Log("Counter: " + counter);
-            Debug.Log("Steak");
-            P6.SetActive(true);
-            tablet.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Not Steak");
-            wrongOrder.SetActive(true);
-        }
-    }
+    
 
     public void CheckForPizza()
     {
-        bool correctIndexes = orders[1] && orders[4] && orders[8];
+        bool correctIndexes = orders[1] && orders[2] && orders[8];
         bool otherIndexesFalse = true;
 
         
         for (int i = 0; i < orders.Length; i++)
         {
-            if (i != 1 && i != 4 && i != 8 && orders[i])
+            if (i != 1 && i != 2 && i != 8 && orders[i])
             {
                 otherIndexesFalse = false;
                 break;
@@ -110,6 +82,36 @@ public class CheckOrder : MonoBehaviour
         else
         {
             Debug.Log("Not Pizza");
+            wrongOrder.SetActive(true);
+        }
+    }
+
+    public void CheckForSalad()
+    {
+        bool correctIndexes = orders[4] && orders[3] && orders[6];
+        bool otherIndexesFalse = true;
+
+
+        for (int i = 0; i < orders.Length; i++)
+        {
+            if (i != 4 && i != 3 && i != 6 && orders[i])
+            {
+                otherIndexesFalse = false;
+                break;
+            }
+        }
+
+        if (correctIndexes && otherIndexesFalse)
+        {
+            counter++;
+            Debug.Log("Counter: " + counter);
+            Debug.Log("Salad");
+            P6.SetActive(true);
+            tablet.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Not Salad");
             wrongOrder.SetActive(true);
         }
     }
