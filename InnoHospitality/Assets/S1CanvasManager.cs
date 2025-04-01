@@ -49,8 +49,10 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkBedRoomCollider; // Kitchen mark 
     public GameObject MarkBathroomCollider;
     public GameObject PillowGuide;
+    public GameObject WaterSpray;
      
     public GameObject[] TrashbinChecklist;
+    public GameObject[] BathRoomObjects;
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;
 
 // door collider bedroom
@@ -100,6 +102,7 @@ public class S1CanvasManager : MonoBehaviour
         MarkBedDoorCollider.SetActive(false);
         MarkBedRoomCollider.SetActive(false);
         MarkBathroomCollider.SetActive(false);
+        WaterSpray.SetActive(false);
 
 
         // door 
@@ -111,6 +114,12 @@ public class S1CanvasManager : MonoBehaviour
          {
         trashbin.SetActive(false);
          }
+
+         foreach (GameObject bath in BathRoomObjects) 
+         {
+          bath.SetActive(false);
+         }
+         
          
         foreach (UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab in XRGrabInteractableGrabs)
     {
@@ -902,6 +911,13 @@ public class S1CanvasManager : MonoBehaviour
            BathRoomCanvas.SetActive(false);
            CleaningCanvas.SetActive(false);
         CleanedFloorCanvas.SetActive(true);
+            WaterSpray.SetActive(false);
+
+           foreach (GameObject bath in BathRoomObjects) 
+         {
+          bath.SetActive(true);
+         }
+         
      
     }
 
