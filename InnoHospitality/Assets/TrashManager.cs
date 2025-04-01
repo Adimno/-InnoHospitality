@@ -10,6 +10,7 @@ public class TrashManager : MonoBehaviour
     public S1CanvasManager s1CanvasManager; // Message object to show when all trash is collected
     private int totalTrash = 0; // Total trash count
     private int collectedTrash = 0; // Counter for collected trash
+     public TotalPoints points;
 
     void Awake()
     {
@@ -38,6 +39,7 @@ public class TrashManager : MonoBehaviour
 
         if (collectedTrash >= totalTrash) // Check if all trash is collected
         {
+             points.IncrementPoints(20);
               s1CanvasManager.CongratsTrashCanvasLogic(); // Show success message
         }
     }

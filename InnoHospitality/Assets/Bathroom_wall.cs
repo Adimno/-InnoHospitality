@@ -8,6 +8,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
     public Texture2D _brush;
     public Material _material;
     public S1CanvasManager s1CanvasManager;
+    public TotalPoints points;
 
     private Texture2D _templateDirtMask;
     private float dirtAmountTotal;
@@ -71,6 +72,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
                     Debug.Log("Percentage of Clean Area: " + cleanAmount + "%");
                     if (cleanAmount > 96)
                     {
+                          points.IncrementPoints(20);
                         s1CanvasManager.CleanedFloorCanvasLogic();
                         Debug.Log("Cleaning Done");
                     }

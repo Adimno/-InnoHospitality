@@ -6,12 +6,14 @@ public class AppliancesTracker : MonoBehaviour
     public AudioSource audioSource; // Reference to the AudioSource
     public S1CanvasManager s1CanvasManager; // Reference to Canvas Manager
     private bool hasTriggered = false; // Flag to track execution
+    public TotalPoints points;
 
     void Update()
     {
         if (!hasTriggered && AreAllAppliancesInactive() && IsSoundInactive()) 
         {
             Debug.Log("All appliances and sound are turned off.");
+            points.IncrementPoints(20);
             s1CanvasManager.GoBathMarkedAreaCanvasLogic();
             hasTriggered = true; // Prevent further updates
         }

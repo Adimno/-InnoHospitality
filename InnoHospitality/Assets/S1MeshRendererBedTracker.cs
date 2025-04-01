@@ -8,6 +8,8 @@ public class S1MeshRendererBedTracker : MonoBehaviour
      public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;// Array of XRGrabInteractable objects
          public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
+    public TotalPoints points;
+
     void Start()
     {
         // Ensure the first XRGrab is enabled, and the rest are disabled
@@ -30,6 +32,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     if (AllMeshesEnabled() && !hasTriggered) // Prevent multiple calls
     {
         hasTriggered = true; // Set flag so it doesn't run again
+         points.IncrementPoints(20);
         s1CanvasManager.AppliancesLookCanvasLogic(); 
         foreach (GameObject GameObjectDisabled in GameObjectFalse) 
         {

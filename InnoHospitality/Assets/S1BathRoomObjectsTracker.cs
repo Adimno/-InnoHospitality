@@ -7,13 +7,16 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
 
+    public TotalPoints points;
+
     void Update()
     {
         if (AllObjectsEnabled() && !hasTriggered) // Check all objects
         {
             hasTriggered = true; // Prevent multiple calls
-            s1CanvasManager.AppliancesLookCanvasLogic(); 
-            
+            s1CanvasManager.GameFinishCanvasLogic(); 
+            points.IncrementPoints(20);
+
             foreach (GameObject obj in GameObjectFalse) 
             {
                 obj.SetActive(false);
