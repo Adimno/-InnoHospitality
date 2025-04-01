@@ -9,6 +9,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
          public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
     public TotalPoints points;
+         public S1IconLogic Icon;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     {
         hasTriggered = true; // Set flag so it doesn't run again
          points.IncrementPoints(20);
+                     Icon.BedIconLogic();
         s1CanvasManager.AppliancesLookCanvasLogic(); 
         foreach (GameObject GameObjectDisabled in GameObjectFalse) 
         {

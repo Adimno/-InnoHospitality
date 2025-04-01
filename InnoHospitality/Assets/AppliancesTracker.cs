@@ -7,6 +7,7 @@ public class AppliancesTracker : MonoBehaviour
     public S1CanvasManager s1CanvasManager; // Reference to Canvas Manager
     private bool hasTriggered = false; // Flag to track execution
     public TotalPoints points;
+     public S1IconLogic Icon;
 
     void Update()
     {
@@ -14,6 +15,7 @@ public class AppliancesTracker : MonoBehaviour
         {
             Debug.Log("All appliances and sound are turned off.");
             points.IncrementPoints(20);
+            Icon.TurnOffIconLogic();
             s1CanvasManager.GoBathMarkedAreaCanvasLogic();
             hasTriggered = true; // Prevent further updates
         }

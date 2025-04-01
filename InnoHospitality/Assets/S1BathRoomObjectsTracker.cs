@@ -8,6 +8,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     private bool hasTriggered = false;
 
     public TotalPoints points;
+     public S1IconLogic Icon;
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
             hasTriggered = true; // Prevent multiple calls
             s1CanvasManager.GameFinishCanvasLogic(); 
             points.IncrementPoints(20);
+                        Icon.BathIconLogic();
 
             foreach (GameObject obj in GameObjectFalse) 
             {
