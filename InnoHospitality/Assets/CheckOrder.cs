@@ -6,6 +6,7 @@ public class CheckOrder : MonoBehaviour
     public GameObject P6, tablet, wrongOrder;
     public GameObject P12, wrongOrder2;  
     private int counter = 0;
+    public S2IconLogic icon;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -45,6 +46,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Chicken");
+            icon.ShowTake1();
             P6.SetActive(true);
             tablet.SetActive(false);
         }
@@ -77,6 +79,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Pizza");
+            icon.ShowTake2();
             P12.SetActive(true);
             tablet.SetActive(false);
         }

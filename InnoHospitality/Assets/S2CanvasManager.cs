@@ -9,6 +9,7 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject utensils, gosign, customer1Mark, tableMark, tablet;
     public GameObject WrongOrder, AskAgain, Order1;
     public GameObject WrongOrder2, AskAgain2;
+    public S2IconLogic icon;
 
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
@@ -115,6 +116,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C1Show()
     {
         ShowDialogue(C1);
+        icon.ShowGreet1();
         StartCoroutine(ActivateP2WithDelay()); // Start the coroutine
     }
 
@@ -185,6 +187,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C5Show()
     {
+        icon.ShowGreet2();
         ShowDialogue(C5);
         StartCoroutine(ActivateD7WithDelay()); // Start the coroutine
     }

@@ -7,6 +7,7 @@ public class Order1Counter : MonoBehaviour
     public int counter = 0;
     public GameObject D8;
     private bool hasActivated = false; // Flag to ensure activation runs once
+    public S2IconLogic icon;
 
     public void Increment()
     {
@@ -37,6 +38,7 @@ public class Order1Counter : MonoBehaviour
         }
         else if (counter == 4 && !hasActivated) // Ensure it runs only once
         {
+            icon.ShowServe1();
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
