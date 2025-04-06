@@ -13,7 +13,7 @@ public class S2CanvasManager : MonoBehaviour
 
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
-    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12;
+    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12;
 
     void Start()
     {
@@ -65,6 +65,7 @@ public class S2CanvasManager : MonoBehaviour
         C10.SetActive(false);
         D11.SetActive(false);
         D12.SetActive(false);
+        P12.SetActive(false);
     }
 
     public void D1Show()
@@ -310,6 +311,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C9Show()
     {
+        P11.SetActive(false);
         ShowDialogue(C9);
         tablet.SetActive(true);
     }
@@ -321,6 +323,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C10Show()
     {
+        P12.SetActive(false);
         ShowDialogue(C10);
         StartCoroutine(ActivateD11WithDelay()); // Start the coroutine
     }
