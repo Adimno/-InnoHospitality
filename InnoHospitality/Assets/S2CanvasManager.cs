@@ -13,7 +13,7 @@ public class S2CanvasManager : MonoBehaviour
 
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
-    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12;
+    public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12, results, checklist1, checklist2;
 
     void Start()
     {
@@ -66,6 +66,10 @@ public class S2CanvasManager : MonoBehaviour
         D11.SetActive(false);
         D12.SetActive(false);
         P12.SetActive(false);
+
+        results.SetActive(false);
+        checklist1.SetActive(false);
+        checklist2.SetActive(false);
     }
 
     public void D1Show()
@@ -350,6 +354,21 @@ public class S2CanvasManager : MonoBehaviour
         D12.SetActive(false);
     }
 
+    public void ResultsShow()
+    {
+        ShowDialogue(results);
+    }
+
+    public void Checklist1Show()
+    {
+        ShowDialogue(checklist1);
+    }
+
+    public void Checklist2Show()
+    {
+        ShowDialogue(checklist2);
+    }
+
     private void ShowDialogue(GameObject dialogue)
     {
         D1.SetActive(false);
@@ -389,6 +408,9 @@ public class S2CanvasManager : MonoBehaviour
         C10.SetActive(false);
         D11.SetActive(false);
         D12.SetActive(false);
+        results.SetActive(false);
+        checklist1.SetActive(false);
+        checklist2.SetActive(false);
         dialogue.SetActive(true);
     }
 }
