@@ -8,6 +8,7 @@ public class UtensilCounter : MonoBehaviour
     public GameObject D4, arrow;
     private bool hasActivated = false; // Flag to ensure activation runs only once
     public S2IconLogic icon;
+    public TotalPoints points;
 
     public void Increment()
     {
@@ -39,6 +40,7 @@ public class UtensilCounter : MonoBehaviour
         else if (counter == 7 && !hasActivated) // Ensure it runs only once
         {
             icon.ShowArrange1();
+            points.IncrementPoints(10);
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine

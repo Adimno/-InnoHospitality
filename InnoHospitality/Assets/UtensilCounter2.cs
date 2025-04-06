@@ -8,6 +8,7 @@ public class UtensilCounter2 : MonoBehaviour
     public GameObject D4, arrow;
     private bool hasActivated = false; // Flag to ensure activation runs only once
     public S2IconLogic icon;
+    public TotalPoints points;
 
     public void Increment()
     {
@@ -38,6 +39,7 @@ public class UtensilCounter2 : MonoBehaviour
         }
         else if (counter == 7 && !hasActivated) // Ensure it runs only once
         {
+            points.IncrementPoints(10);
             icon.ShowArrange2();
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true
