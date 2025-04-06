@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class S2CanvasManager : MonoBehaviour
 {
@@ -14,6 +15,17 @@ public class S2CanvasManager : MonoBehaviour
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
     public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12, results, checklist1, checklist2;
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu"); 
+    }
+    
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene("TableService_Scene");
+    }
 
     void Start()
     {
