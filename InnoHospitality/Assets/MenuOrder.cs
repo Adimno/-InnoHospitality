@@ -35,4 +35,18 @@ public class MenuOrder : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canClick = true;
     }
+
+    public void ResetVisuals()
+    {
+        isCheckActive = false;
+        check.SetActive(false);
+        wrong.SetActive(true);
+
+        if (order != null && indexValue >= 0 && indexValue < order.orders.Length)
+        {
+            order.orders[indexValue] = false;
+            Debug.Log($"Order {indexValue} reset to false");
+        }
+    }
+
 }

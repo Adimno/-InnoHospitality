@@ -7,6 +7,7 @@ public class CheckOrder : MonoBehaviour
     public GameObject P12, wrongOrder2;  
     private int counter = 0;
     public S2IconLogic icon;
+    public MenuOrder steak, pizza, pancake, salad, pasta, chicken, cake, coffee, coke, water, meal; 
 
     public void OnTriggerEnter(Collider other)
     {
@@ -49,6 +50,19 @@ public class CheckOrder : MonoBehaviour
             icon.ShowTake1();
             P6.SetActive(true);
             tablet.SetActive(false);
+            ResetOrders();
+            steak.ResetVisuals();
+            pizza.ResetVisuals();
+            salad.ResetVisuals();
+            pasta.ResetVisuals();
+            chicken.ResetVisuals();
+            cake.ResetVisuals();
+            coffee.ResetVisuals();
+            coke.ResetVisuals();
+            water.ResetVisuals();
+            meal.ResetVisuals();
+            pancake.ResetVisuals();
+
         }
         else
         {
@@ -119,4 +133,13 @@ public class CheckOrder : MonoBehaviour
             wrongOrder.SetActive(true);
         }
     }
+
+    public void ResetOrders()
+    {
+        for (int i = 0; i < orders.Length; i++)
+        {
+            orders[i] = false;
+        }
+    }
+
 }
