@@ -2,28 +2,41 @@ using UnityEngine;
 
 public class S1AirconTurnOff : MonoBehaviour
 {
-
     public MeshRenderer AirconBox;
-    public AudioSource audioSource; 
-    private Color originalColor; // Store the original color
-     private bool hasTriggered = false; // Flag to track if it has already executed
+    public AudioSource audioSource;
+
+    private Color originalColor;
+    private bool isRed = false;
+
     private void Start()
     {
-        originalColor = AirconBox.material.color; // Save the original color at the start
+        originalColor = AirconBox.material.color;
 
-        // Ensure AudioSource is assigned
-        audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            Debug.LogError("No AudioSource found on " + gameObject.name);
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                Debug.LogError("No AudioSource found on " + gameObject.name);
+            }
         }
     }
 
-    public void ChangeColor(){
-        hasTriggered = true; // Set flag so it doesn't run again
-        audioSource.enabled = false;
-        AirconBox.material.color = Color.red; // Change to red
+    public void ChangeColor()
+    {
+        if (isRed)
+        {
+            // Revert to original color and re-enable audio
+            AirconBox.material.color = originalColor;
+            audioSource.enabled = true;
+            isRed = false;
+        }
+        else
+        {
+            // Change to red and disable audio
+            AirconBox.material.color = Color.red;
+            audioSource.enabled = false;
+            isRed = true;
+        }
     }
 }
-
-
