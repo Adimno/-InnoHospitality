@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class BioColliders : MonoBehaviour
 {
-    public GameObject[] ChecklistTrash; // List of trash objects
+    public GameObject[] ChecklistTrash; // List of correct trash objects
+    public GameObject[] WrongTrash; // List of wrong trash objects
     public GameObject[] CheckIcon; // Corresponding check icons
-    public AudioSource music;
+    public AudioSource music; // Correct sound
+    public AudioSource wrongSound; // Wrong sound
 
     void Start()
     {
@@ -22,18 +24,35 @@ public class BioColliders : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-        {
-    for (int i = 0; i < ChecklistTrash.Length; i++)
     {
-        if (ChecklistTrash[i] != null && other.gameObject == ChecklistTrash[i]) // Ensure valid reference and check match
+        bool isCorrect = false;
+
+        for (int i = 0; i < ChecklistTrash.Length; i++)
         {
-            if (CheckIcon[i] != null && !CheckIcon[i].activeSelf) // Ensure it hasn't been counted yet
+            if (ChecklistTrash[i] != null && other.gameObject == ChecklistTrash[i]) // Ensure valid reference and check match
             {
-                CheckIcon[i].SetActive(true); // Enable check icon
-                TrashManager.instance.CollectTrash(); // Update global count
-                music.Play(); // Play the music
+                if (CheckIcon[i] != null && !CheckIcon[i].activeSelf) // Ensure it hasn't been counted yet
+                {
+                    CheckIcon[i].SetActive(true); // Enable check icon
+                    TrashManager.instance.CollectTrash(); // Update global count
+                    music.Play(); // Play correct sound
+                    isCorrect = true;
+                }
+                break; // Stop checking once matched
+            }
+        }
+
+        // If not correct, check if it's in the wrong trash list
+        if (!isCorrect)
+        {
+            foreach (GameObject wrong in WrongTrash)
+            {
+                if (wrong != null && other.gameObject == wrong)
+                {
+                    wrongSound.Play(); // Play wrong sound
+                    break;
+                }
             }
         }
     }
-        }
 }
