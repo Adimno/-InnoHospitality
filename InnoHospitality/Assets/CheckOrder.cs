@@ -8,7 +8,8 @@ public class CheckOrder : MonoBehaviour
     private int counter = 0;
     public S2IconLogic icon;
     public TotalPoints points;
-    public MenuOrder steak, pizza, pancake, salad, pasta, chicken, cake, coffee, coke, water, meal; 
+    public MenuOrder steak, pizza, pancake, salad, pasta, chicken, cake, coffee, coke, water, meal;
+    public AudioSource correct;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -49,6 +50,7 @@ public class CheckOrder : MonoBehaviour
             Debug.Log("Counter: " + counter);
             Debug.Log("Chicken");
             icon.ShowTake1();
+            correct.Play();
             points.IncrementPoints(10);
             P6.SetActive(true);
             tablet.SetActive(false);
@@ -96,6 +98,7 @@ public class CheckOrder : MonoBehaviour
             Debug.Log("Counter: " + counter);
             Debug.Log("Pizza");
             icon.ShowTake2();
+            correct.Play();
             points.IncrementPoints(10);
             P12.SetActive(true);
             tablet.SetActive(false);
@@ -103,7 +106,7 @@ public class CheckOrder : MonoBehaviour
         else
         {
             Debug.Log("Not Pizza");
-            wrongOrder.SetActive(true);
+            wrongOrder2.SetActive(true);
         }
     }
 
