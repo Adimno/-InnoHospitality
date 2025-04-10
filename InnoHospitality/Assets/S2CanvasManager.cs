@@ -15,6 +15,7 @@ public class S2CanvasManager : MonoBehaviour
     // customer2
     public GameObject utensils2, customer2Mark, tableMark2, Order2, gosign2;
     public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12, results, checklist1, checklist2;
+    public AudioSource correct;
 
     public void MainMenu()
     {
@@ -134,6 +135,7 @@ public class S2CanvasManager : MonoBehaviour
     {
         ShowDialogue(C1);
         icon.ShowGreet1();
+        correct.Play();
         points.IncrementPoints(10);
         StartCoroutine(ActivateP2WithDelay()); // Start the coroutine
     }
@@ -166,6 +168,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C2Show()
     {
         icon.ShowGuide1();
+        correct.Play();
         points.IncrementPoints(10);
         ShowDialogue(C2);
         StartCoroutine(ActivateP4WithDelay()); // Start the coroutine
@@ -208,6 +211,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C5Show()
     {
         icon.ShowGreet2();
+        correct.Play();
         points.IncrementPoints(10);
         ShowDialogue(C5);
         StartCoroutine(ActivateD7WithDelay()); // Start the coroutine
@@ -298,6 +302,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C7Show()
     {
         icon.ShowGuide2();
+        correct.Play();
         points.IncrementPoints(10);
         ShowDialogue(C7);
         StartCoroutine(ActivateP10WithDelay()); // Start the coroutine

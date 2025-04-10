@@ -9,6 +9,7 @@ public class UtensilCounter : MonoBehaviour
     private bool hasActivated = false; // Flag to ensure activation runs only once
     public S2IconLogic icon;
     public TotalPoints points;
+    public AudioSource correct;
 
     public void Increment()
     {
@@ -40,6 +41,7 @@ public class UtensilCounter : MonoBehaviour
         else if (counter == 7 && !hasActivated) // Ensure it runs only once
         {
             icon.ShowArrange1();
+            correct.Play();
             points.IncrementPoints(10);
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true
