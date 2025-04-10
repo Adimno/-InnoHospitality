@@ -11,6 +11,7 @@ public class IMULogic : MonoBehaviour
     public GameObject looklefticon;
     public GameObject tiltlefticon;
     public GameObject tiltrighticon;
+    public AudioSource Music;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class IMULogic : MonoBehaviour
         looklefticon.SetActive(false);
         tiltlefticon.SetActive(false);
         tiltrighticon.SetActive(false);
+
         
     }
 
@@ -41,6 +43,7 @@ public class IMULogic : MonoBehaviour
             {
    
                 lookupicon.SetActive(true);
+                Music.Play();
             }
         }
         //PITCH
@@ -50,6 +53,7 @@ public class IMULogic : MonoBehaviour
             if (lookdownicon != null)
             {
                 lookdownicon.SetActive(true);
+                Music.Play();
             }
         }
 
@@ -60,6 +64,7 @@ public class IMULogic : MonoBehaviour
             if (lookrighticon != null)
             {
                 lookrighticon.SetActive(true);
+                  Music.Play();
             }
         }
         //YAW
@@ -69,6 +74,7 @@ public class IMULogic : MonoBehaviour
             if (looklefticon!= null)
             {
                 looklefticon.SetActive(true);
+                  Music.Play();
             }
         }
 
@@ -79,6 +85,7 @@ public class IMULogic : MonoBehaviour
             if (tiltlefticon != null)
             {
                 tiltlefticon.SetActive(true);
+                  Music.Play();
             }
         }
         //ROLL
@@ -88,6 +95,7 @@ public class IMULogic : MonoBehaviour
             if (tiltrighticon != null)
             {
                 tiltrighticon.SetActive(true);
+                  Music.Play();
             }
     }
     
