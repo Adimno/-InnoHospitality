@@ -5,11 +5,11 @@ public class S1MeshRendererBedTracker : MonoBehaviour
 {
     public MeshRenderer[] bedMesh; // Array of MeshRenderers
     public GameObject[] GameObjectFalse; // The next GameObject to activate
-     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;// Array of XRGrabInteractable objects
-         public S1CanvasManager s1CanvasManager;
+    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable[] XRGrabInteractableGrabs;// Array of XRGrabInteractable objects
+    public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
     public TotalPoints points;
-         public S1IconLogic Icon;
+    public S1IconLogic Icon;
 
     void Start()
     {
@@ -33,8 +33,8 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     if (AllMeshesEnabled() && !hasTriggered) // Prevent multiple calls
     {
         hasTriggered = true; // Set flag so it doesn't run again
-         points.IncrementPoints(20);
-                     Icon.BedIconLogic();
+        points.IncrementPoints(20);
+        Icon.BedIconLogic();
         s1CanvasManager.AppliancesLookCanvasLogic(); 
         foreach (GameObject GameObjectDisabled in GameObjectFalse) 
         {
