@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class BioColliders : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class BioColliders : MonoBehaviour
     public GameObject[] CheckIcon; // Corresponding check icons
     public AudioSource music; // Correct sound
     public AudioSource wrongSound; // Wrong sound
+
+    public TotalPoints totalPoints;
 
     void Start()
     {
@@ -49,6 +52,7 @@ public class BioColliders : MonoBehaviour
             {
                 if (wrong != null && other.gameObject == wrong)
                 {
+                    totalPoints.DecrementPoints(1);
                     wrongSound.Play(); // Play wrong sound
                     break;
                 }

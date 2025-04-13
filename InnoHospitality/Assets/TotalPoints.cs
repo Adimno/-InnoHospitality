@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class TotalPoints : MonoBehaviour
 {
@@ -25,5 +26,10 @@ public class TotalPoints : MonoBehaviour
     {
         points += incrementValue;
     }
+
+        public void DecrementPoints(double decrementValue)
+        {
+            points = Math.Max(0, points - decrementValue);
+        }
 
 }
