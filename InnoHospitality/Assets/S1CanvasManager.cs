@@ -51,6 +51,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkBathroomCollider;
     public GameObject PillowGuide;
     public GameObject WaterSpray;
+    public AudioSource CongratsSound;
      
     public GameObject[] TrashbinChecklist;
     public GameObject[] BathRoomObjects;
@@ -970,7 +971,7 @@ public class S1CanvasManager : MonoBehaviour
             WaterSpray.SetActive(false);
 
          GameFinishCanvas.SetActive(true);
-         
+         CongratsSound.Play();
      
     }
 

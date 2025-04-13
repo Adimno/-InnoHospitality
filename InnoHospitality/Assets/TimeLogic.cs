@@ -5,28 +5,43 @@ using TMPro;
 
 public class TimeLogic : MonoBehaviour
 {
-    public TextMeshProUGUI timerText; // Assign this in the Inspector
-    public bool startTimer = false;  // Set to true to start the timer
-    public bool isPaused = false;    // Set to true to pause the timer
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI statusText1;
+    public TextMeshProUGUI statusText2; 
+
+    public S1CanvasManager s1CanvasManger;
+    public AudioSource GameOverSound;
+      public AudioSource disabledaudio;
+
+    public bool startTimer = false;
+    public bool isPaused = false;
 
     public float elapsedTime = 0f;
-    private float targetTime = 4 * 60 + 45; // Target time in seconds (4 minutes 45 seconds)
+    private float targetTime = 600f; // 10 minutes
+    private bool objectShown = false;
 
     void Start()
     {
-        StartTimer(); // Automatically start the timer
+        StartTimer();
     }
 
     void Update()
     {
-        if (startTimer && !isPaused && elapsedTime < targetTime)
+        if (startTimer && !isPaused)
         {
             elapsedTime += Time.deltaTime;
 
-            if (elapsedTime >= targetTime)
+            if (elapsedTime >= targetTime && !objectShown)
             {
-                elapsedTime = targetTime; // Stop at 4:45
+                objectShown = true;
+                disabledaudio.enabled =false;
+                s1CanvasManger.GameFinishCanvasLogic(); // Show the object
                 startTimer = false;
+                
+                // Update the two text fields
+                GameOverSound.Play();
+                statusText1.text = "Game Over!";
+                statusText2.text = "You have run out of time.";
             }
 
             UpdateTimerDisplay(elapsedTime);
