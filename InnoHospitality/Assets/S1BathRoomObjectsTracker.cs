@@ -8,21 +8,23 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     private bool hasTriggered = false;
 
     public TotalPoints points;
-     public S1IconLogic Icon;
-
-     public TimeLogic time;
+    public S1IconLogic Icon;
+    public TimeLogic time;
 
     void Update()
     {
-        if (AllObjectsEnabled() && !hasTriggered) // Check all objects
+        if (AllObjectsEnabled() && !hasTriggered)
         {
-            hasTriggered = true; // Prevent multiple calls
+            hasTriggered = true;
             s1CanvasManager.GameFinishCanvasLogic(); 
             time.PauseTimer();
-            points.IncrementPoints(20);
-                        Icon.BathIconLogic();
+            Icon.BathIconLogic();
 
-            foreach (GameObject obj in GameObjectFalse) 
+            double basePoints = 20;
+            double bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
+            points.IncrementPoints(basePoints + bonusPoints);
+
+            foreach (GameObject obj in GameObjectFalse)
             {
                 obj.SetActive(false);
             }
@@ -33,11 +35,26 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     {
         foreach (GameObject obj in objectsBath)
         {
-            if (!obj.activeSelf) // If any GameObject is not active, return false
-            {
+            if (!obj.activeSelf)
                 return false;
-            }
         }
-        return true; // If all objects are active, return true
+        return true;
+    }
+
+    double CalculateTimeBonus(float elapsedTime)
+    {
+        if (elapsedTime <= 240f) // ≤ 4 minutes
+        {
+            return 30;
+        }
+        else if (elapsedTime <= 300f) // ≤ 5 minutes
+        {
+            return 20;
+        }
+        else if (elapsedTime <= 360f) // ≤ 6 minutes
+        {
+            return 10;
+        }
+        return 0;
     }
 }
