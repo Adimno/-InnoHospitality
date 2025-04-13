@@ -49,7 +49,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkBedDoorCollider; // Kitchen mark 
     public GameObject MarkBedRoomCollider; // Kitchen mark 
     public GameObject MarkBathroomCollider;
-    public GameObject PillowGuide;
+
     public GameObject WaterSpray;
     public AudioSource CongratsSound;
      
@@ -616,7 +616,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(true);
-           PillowGuide.SetActive(false);
+           
         
      
     }
@@ -654,7 +654,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(true);
             StartCoroutine(GetRemoteControlGuide(8f));
         
@@ -694,7 +694,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(true);
      
@@ -733,7 +733,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(true);
@@ -775,7 +775,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(false);
@@ -818,7 +818,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(false);
@@ -861,7 +861,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(false);
@@ -905,7 +905,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(false);
@@ -959,7 +959,7 @@ public class S1CanvasManager : MonoBehaviour
          BedroomCanvas.SetActive(false);
         GoBedroomMarkedAreaCanvas.SetActive(false);
         StartSetUpBedAreaCanvas.SetActive(false);
-           PillowGuide.SetActive(false);
+           
            AppliancesLookCanvas.SetActive(false);
         GetRemoteControlCanvas.SetActive(false);
           GoBathMarkedAreaCanvas.SetActive(false);

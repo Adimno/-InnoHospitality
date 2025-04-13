@@ -8,6 +8,8 @@ public class S1SheetsCollider : MonoBehaviour
     public GameObject Sheet;
     public  GameObject HideGrabSheet;
 
+    public GameObject HideGuidePopup;
+
     private bool hasTriggered = false; // Flag to track if it has already executed
 
  
@@ -17,6 +19,7 @@ public class S1SheetsCollider : MonoBehaviour
         if (other.gameObject == Sheet && !hasTriggered) // Ensure it only runs once
         {
             HideGrabSheet.SetActive(false);
+            HideGuidePopup.SetActive(false);
             SheetCollider.enabled = true;
             hasTriggered = true; // Set flag so it doesn't run again
         }
