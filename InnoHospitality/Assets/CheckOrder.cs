@@ -71,6 +71,7 @@ public class CheckOrder : MonoBehaviour
         else
         {
             Debug.Log("Not Chicken");
+            points.DecrementPoints(2);
             wrongOrder.SetActive(true);
         }
     }
@@ -106,6 +107,7 @@ public class CheckOrder : MonoBehaviour
         else
         {
             Debug.Log("Not Pizza");
+            points.DecrementPoints(2);
             wrongOrder2.SetActive(true);
         }
     }
