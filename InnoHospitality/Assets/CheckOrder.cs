@@ -51,7 +51,6 @@ public class CheckOrder : MonoBehaviour
             Debug.Log("Chicken");
             icon.ShowTake1();
             correct.Play();
-            points.IncrementPoints(10);
             P6.SetActive(true);
             tablet.SetActive(false);
             ResetOrders();
@@ -66,7 +65,7 @@ public class CheckOrder : MonoBehaviour
             water.ResetVisuals();
             meal.ResetVisuals();
             pancake.ResetVisuals();
-
+            points.IncrementPoints(10);
         }
         else
         {
