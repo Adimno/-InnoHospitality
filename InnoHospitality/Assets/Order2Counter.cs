@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Order2Counter : MonoBehaviour
@@ -9,6 +9,9 @@ public class Order2Counter : MonoBehaviour
     private bool hasActivated = false; // Flag to ensure activation runs once
     public S2IconLogic icon;
     public AudioSource correct;
+    public TimeLogicScene2 time;
+    public TotalPoints points;
+    double bonusPoints = 0;
 
     public void Increment()
     {
@@ -42,6 +45,8 @@ public class Order2Counter : MonoBehaviour
             icon.ShowServe2();
             correct.Play();
             Debug.Log("COMPLETE " + counter);
+            bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
+            points.IncrementPoints(bonusPoints);
             hasActivated = true; // Set flag to true
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
         }
@@ -51,5 +56,22 @@ public class Order2Counter : MonoBehaviour
     {
         yield return new WaitForSeconds(2); // Wait for 2 seconds
         D8.SetActive(true);
+    }
+
+    double CalculateTimeBonus(float elapsedTime)
+    {
+        if (elapsedTime <= 420f) // ≤ 7 minutes
+        {
+            return 30;
+        }
+        else if (elapsedTime <= 480f) // ≤ 8 minutes
+        {
+            return 20;
+        }
+        else if (elapsedTime <= 540f) // ≤ 9 minutes
+        {
+            return 10;
+        }
+        return 0;
     }
 }
