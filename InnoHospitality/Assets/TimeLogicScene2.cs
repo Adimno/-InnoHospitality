@@ -10,7 +10,8 @@ public class TimeLogicScene2 : MonoBehaviour
     public TextMeshProUGUI statusText1;
     public TextMeshProUGUI statusText2;
 
-    public S1CanvasManager s1CanvasManger;
+    public GameObject results;
+
     public AudioSource GameOverSound;
     public AudioSource disabledaudio;
 
@@ -36,9 +37,8 @@ public class TimeLogicScene2 : MonoBehaviour
             {
                 objectShown = true;
                 disabledaudio.enabled = false;
-                s1CanvasManger.GameFinishCanvasLogic(); // Show the object
                 startTimer = false;
-
+                results.SetActive(true);
                 // Update the two text fields
                 GameOverSound.Play();
                 statusText1.text = "Game Over!";
