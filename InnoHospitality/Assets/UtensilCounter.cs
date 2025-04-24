@@ -14,12 +14,14 @@ public class UtensilCounter : MonoBehaviour
     public void Increment()
     {
         counter++;
+        points.IncrementPoints(1);
         Debug.Log("Counter increment: " + counter);
     }
 
     public void Decrement()
     {
         counter--;
+        points.DecrementPoints(1);
         Debug.Log("Counter decrement: " + counter);
     }
 
