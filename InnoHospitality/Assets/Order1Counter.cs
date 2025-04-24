@@ -12,15 +12,18 @@ public class Order1Counter : MonoBehaviour
     public TimeLogicScene2 time;
     public TotalPoints points;
     double bonusPoints = 0;
+
     public void Increment()
     {
         counter++;
+        points.IncrementPoints(1);
         Debug.Log("Counter increment: " + counter);
     }
 
     public void Decrement()
     {
         counter--;
+        points.DecrementPoints(1);
         Debug.Log("Counter decrement: " + counter);
     }
 
