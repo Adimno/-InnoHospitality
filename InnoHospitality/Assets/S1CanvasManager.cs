@@ -21,6 +21,9 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject TrashbinCanvas;
     public GameObject BioMeansCanvas;
     public GameObject EnvironmentCanvas;
+    // added canvas  
+    public GameObject CheckTrashCanvas;
+    // continues
     public GameObject ChecklistTrashBinCanvas;
     public GameObject CongratsTrashBinCanvas;
     public GameObject GoBedAreaCanvas;
@@ -79,6 +82,7 @@ public class S1CanvasManager : MonoBehaviour
         TrashbinCanvas.SetActive(false);
         BioMeansCanvas.SetActive(false);
         EnvironmentCanvas.SetActive(false);
+        CheckTrashCanvas.SetActive(false);
         ChecklistTrashBinCanvas.SetActive(false);
         CongratsTrashBinCanvas.SetActive(false);
          GoBedAreaCanvas.SetActive(false);
@@ -368,8 +372,37 @@ public class S1CanvasManager : MonoBehaviour
      
     }
 
+     
+         public void CheckTrashLogic()
+    {
+          EnvironmentCanvas.SetActive(false);
+        CardReaderParent.SetActive(false);
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        CheckTrashCanvas.SetActive(true);
+     
+    }
+
+
           public void ChecklistTrashBinCanvasLogic()
     {
+         CheckTrashCanvas.SetActive(false);
         CardReaderParent.SetActive(false);
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
@@ -1032,7 +1065,7 @@ public class S1CanvasManager : MonoBehaviour
         private IEnumerator ChecklistTrashbinRoomArea(float delay)
     {
         yield return new WaitForSeconds(delay);
-        ChecklistTrashBinCanvasLogic();
+        CheckTrashLogic();
     }
 
            private IEnumerator GoBedRoomArea(float delay)
