@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class BioColliders : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BioColliders : MonoBehaviour
     public AudioSource wrongSound; // Wrong sound
 
     public TotalPoints totalPoints;
+    public GameObject WrongCanvas;
 
     void Start()
     {
@@ -54,9 +56,17 @@ public class BioColliders : MonoBehaviour
                 {
                     totalPoints.DecrementPoints(1);
                     wrongSound.Play(); // Play wrong sound
+                    StartCoroutine(ShowWrongCanvas());
                     break;
                 }
             }
         }
+    }
+
+       private IEnumerator ShowWrongCanvas()
+    {
+        WrongCanvas.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        WrongCanvas.SetActive(false);
     }
 }
