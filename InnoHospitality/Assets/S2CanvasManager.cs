@@ -17,6 +17,10 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject D9, C6, P7, P8,P9, D10, C7, P10, C8, P11, C9, C10, D11, D12, P12, results, checklist1, checklist2;
     public AudioSource correct;
 
+    //new
+
+    public GameObject DTools, Tools;
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu"); 
@@ -30,6 +34,7 @@ public class S2CanvasManager : MonoBehaviour
 
     void Start()
     {
+        DTools.SetActive(false);    
         D1Show();
         D2.SetActive(false);
         D3.SetActive(false);
@@ -97,6 +102,18 @@ public class S2CanvasManager : MonoBehaviour
         receptionist.Talk();
     }
 
+    public void DToolsShow()
+    {
+        ShowDialogue(DTools);
+        receptionist.Talk();
+    }
+
+    public void DToolsClose()
+    {
+        DTools.SetActive(false);
+        Tools.SetActive(true);
+        receptionist.Idle();
+    }
 
     public void D3Show()
     {

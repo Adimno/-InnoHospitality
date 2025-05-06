@@ -4,7 +4,7 @@ public class Tools : MonoBehaviour
 {
 
     private bool[] itemStatus = new bool[4] { false, false, false, false };
-
+    public S2CanvasManager canvas;
 
 
     public void SetItemPicked(int index)
@@ -18,6 +18,7 @@ public class Tools : MonoBehaviour
             if (AllItemsPicked())
             {
                 Debug.Log("All items picked! You're ready.");
+                canvas.D3Show();
             }
         }
         else
