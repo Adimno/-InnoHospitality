@@ -53,6 +53,7 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject MarkBathroomCollider;
 
     public GameObject WaterSpray;
+    public GameObject Rope;
     public AudioSource CongratsSound;
      
     public GameObject[] TrashbinChecklist;
@@ -946,6 +947,7 @@ public class S1CanvasManager : MonoBehaviour
            CleaningCanvas.SetActive(false);
         CleanedFloorCanvas.SetActive(true);
             WaterSpray.SetActive(false);
+            Rope.SetActive(false);
 
            foreach (GameObject bath in BathRoomObjects) 
          {
