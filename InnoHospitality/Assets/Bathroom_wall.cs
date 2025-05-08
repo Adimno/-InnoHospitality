@@ -76,7 +76,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
                             hasCleaned = true; // Set flag to prevent repeated increments
                             Icon.CLeanIconLogic();
                             points.IncrementPoints(20);
-                            s1CanvasManager.CleanedFloorCanvasLogic();
+                            s1CanvasManager.WaterSprayerCanvasLogic();
                             Debug.Log("Cleaning Done");
                         }
 
