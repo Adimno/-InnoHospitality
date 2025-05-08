@@ -45,7 +45,6 @@ public class S1CanvasManager : MonoBehaviour
  // Assets
     public Button button;
     public GameObject CardReader; // card for reader
-    public GameObject CardReaderParent; // card parent 
     public GameObject MarkKitchenCollider; // Kitchen mark 
     public GameObject MarkLivingRoomCollider; // Kitchen mark 
     public GameObject MarkTrashCollider; // Kitchen mark 
@@ -71,7 +70,7 @@ public class S1CanvasManager : MonoBehaviour
         WelcomeCanvas.SetActive(true);
         CardReader.SetActive(false);
         TakeCardCanvas.SetActive(false);
-        CardReaderParent.SetActive(false);
+ 
         KitchAreaCanvas.SetActive(false);
         GoKitchAreaCanvas.SetActive(false);
         LivingRoomCanvas.SetActive(false);
@@ -157,13 +156,12 @@ public class S1CanvasManager : MonoBehaviour
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(true);
         CardReader.SetActive(true);
-        CardReaderParent.SetActive(true);
         KitchAreaCanvas.SetActive(false);
     }
     
        public void OpenDoorCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -173,7 +171,7 @@ public class S1CanvasManager : MonoBehaviour
 
        public void KitchAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -184,7 +182,7 @@ public class S1CanvasManager : MonoBehaviour
 
        public void GoKitchAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -196,7 +194,7 @@ public class S1CanvasManager : MonoBehaviour
 
     public void KitchenPlayerCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -210,7 +208,7 @@ public class S1CanvasManager : MonoBehaviour
 
         public void LookLivingRoomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -225,7 +223,7 @@ public class S1CanvasManager : MonoBehaviour
 
      public void GoLivingRoomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -242,7 +240,7 @@ public class S1CanvasManager : MonoBehaviour
     
      public void LivingRoomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -260,7 +258,7 @@ public class S1CanvasManager : MonoBehaviour
 
        public void LookLeftLivingRoomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -279,7 +277,7 @@ public class S1CanvasManager : MonoBehaviour
 
          public void GoTrashbinCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -301,7 +299,7 @@ public class S1CanvasManager : MonoBehaviour
     
          public void TrashbinCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -324,7 +322,7 @@ public class S1CanvasManager : MonoBehaviour
 
          public void BioMeansCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -349,7 +347,7 @@ public class S1CanvasManager : MonoBehaviour
     
          public void EnvironmentCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -376,7 +374,7 @@ public class S1CanvasManager : MonoBehaviour
          public void CheckTrashLogic()
     {
           EnvironmentCanvas.SetActive(false);
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -403,7 +401,7 @@ public class S1CanvasManager : MonoBehaviour
           public void ChecklistTrashBinCanvasLogic()
     {
          CheckTrashCanvas.SetActive(false);
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -443,7 +441,7 @@ public class S1CanvasManager : MonoBehaviour
     
      public void CongratsTrashCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -477,7 +475,7 @@ public class S1CanvasManager : MonoBehaviour
     
      public void GoBedAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -511,7 +509,7 @@ public class S1CanvasManager : MonoBehaviour
 
         public void OpenBedDoorCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -547,7 +545,7 @@ public class S1CanvasManager : MonoBehaviour
     
         public void BedroomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -582,7 +580,7 @@ public class S1CanvasManager : MonoBehaviour
 
       public void GoBedroomMarkedAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -618,7 +616,7 @@ public class S1CanvasManager : MonoBehaviour
 
       public void StartSetUpBedAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -656,7 +654,7 @@ public class S1CanvasManager : MonoBehaviour
 
          public void AppliancesLookCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -696,7 +694,7 @@ public class S1CanvasManager : MonoBehaviour
 
              public void GetRemoteControlCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -735,7 +733,7 @@ public class S1CanvasManager : MonoBehaviour
 
     public void GoBathMarkedAreaCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -777,7 +775,7 @@ public class S1CanvasManager : MonoBehaviour
     
     public void OpenDoorBathroomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -820,7 +818,7 @@ public class S1CanvasManager : MonoBehaviour
 
      public void BathRoomCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -863,7 +861,7 @@ public class S1CanvasManager : MonoBehaviour
 
          public void CleaningCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -907,7 +905,7 @@ public class S1CanvasManager : MonoBehaviour
 
           public void CleanedFloorCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -961,7 +959,7 @@ public class S1CanvasManager : MonoBehaviour
 // For game finish canvas
      public void GameFinishCanvasLogic()
     {
-        CardReaderParent.SetActive(false);
+ 
         CardReader.SetActive(false);
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(false);
