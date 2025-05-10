@@ -5,13 +5,13 @@ public class Order1Counter : MonoBehaviour
 {
     private int previousCounter = -1; // Stores the last counter value
     public int counter = 0;
-    public GameObject D8;
     private bool hasActivated = false; // Flag to ensure activation runs once
     public S2IconLogic icon;
     public AudioSource correct;
     public TimeLogicScene2 time;
     public TotalPoints points;
     double bonusPoints = 0;
+    public S2CanvasManager canvas;
 
     public void Increment()
     {
@@ -57,7 +57,7 @@ public class Order1Counter : MonoBehaviour
     private IEnumerator ActivateD4WithDelay()
     {
         yield return new WaitForSeconds(2); // Wait for 2 seconds
-        D8.SetActive(true);
+        canvas.DGetBillShow();
     }
 
     double CalculateTimeBonus(float elapsedTime)

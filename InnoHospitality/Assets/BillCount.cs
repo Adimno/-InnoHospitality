@@ -3,7 +3,7 @@ using UnityEngine;
 public class BillCount : MonoBehaviour
 {
     private bool[] Bills = new bool[1];
-
+    public S2CanvasManager canvas;
 
     // Call this method with the index (0, 1, or 2) to set it to true
     public void SetTowelTrue(int index)
@@ -16,6 +16,7 @@ public class BillCount : MonoBehaviour
             if (AllTrue())
             {
                 Debug.Log("DONE NA PO");
+                canvas.DGetBillMoneyShow();
             }
         }
         else
