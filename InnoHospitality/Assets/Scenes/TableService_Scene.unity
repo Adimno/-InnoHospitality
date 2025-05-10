@@ -1421,7 +1421,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24436485}
-  - component: {fileID: 24436487}
   - component: {fileID: 24436488}
   - component: {fileID: 24436490}
   - component: {fileID: 24436489}
@@ -1429,6 +1428,7 @@ GameObject:
   - component: {fileID: 24436491}
   - component: {fileID: 24436493}
   - component: {fileID: 24436494}
+  - component: {fileID: 24436495}
   m_Layer: 0
   m_Name: Dirty
   m_TagString: Untagged
@@ -1458,22 +1458,6 @@ Transform:
   - {fileID: 390014765}
   m_Father: {fileID: 1636584064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &24436487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24436484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b677b54bb63b9049b4246f4da620ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
-  clean: {fileID: 1636584063}
-  disinfectant: {fileID: 36621106}
-  rag: {fileID: 1197136897}
 --- !u!114 &24436488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1473,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1308559872}
   lotion: {fileID: 758363358}
   DirtyIndex: 0
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,7 +1489,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1383484888}
   lotion: {fileID: 758363358}
   DirtyIndex: 2
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,7 +1505,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1798578910}
   lotion: {fileID: 758363358}
   DirtyIndex: 1
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,7 +1521,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1881852144}
   lotion: {fileID: 758363358}
   DirtyIndex: 4
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,7 +1537,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1008601904}
   lotion: {fileID: 758363358}
   DirtyIndex: 3
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,7 +1553,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1946791510}
   lotion: {fileID: 758363358}
   DirtyIndex: 5
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
 --- !u!114 &24436494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,7 +1569,23 @@ MonoBehaviour:
   dirtyObject: {fileID: 390014764}
   lotion: {fileID: 758363358}
   DirtyIndex: 6
-  checker: {fileID: 24436487}
+  checker: {fileID: 24436495}
+--- !u!114 &24436495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24436484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b677b54bb63b9049b4246f4da620ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 140949657}
+  clean: {fileID: 1636584063}
+  disinfectant: {fileID: 36621106}
+  rag: {fileID: 1197136897}
 --- !u!1 &28539572
 GameObject:
   m_ObjectHideFlags: 0
@@ -22259,7 +22259,7 @@ GameObject:
   - component: {fileID: 390014767}
   - component: {fileID: 390014766}
   m_Layer: 0
-  m_Name: ketchup-removebg-preview (3)
+  m_Name: 7
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41962,6 +41962,13 @@ GameObject:
   - component: {fileID: 758363366}
   - component: {fileID: 758363365}
   - component: {fileID: 758363364}
+  - component: {fileID: 758363376}
+  - component: {fileID: 758363375}
+  - component: {fileID: 758363374}
+  - component: {fileID: 758363373}
+  - component: {fileID: 758363372}
+  - component: {fileID: 758363371}
+  - component: {fileID: 758363370}
   m_Layer: 0
   m_Name: lotion
   m_TagString: Dirty
@@ -42199,6 +42206,118 @@ MonoBehaviour:
   lotion: {fileID: 758363358}
   DirtyIndex: 1
   checker: {fileID: 1728284795}
+--- !u!114 &758363370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 390014764}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 6
+  checker: {fileID: 24436495}
+--- !u!114 &758363371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1946791510}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 5
+  checker: {fileID: 24436495}
+--- !u!114 &758363372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1881852144}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 4
+  checker: {fileID: 24436495}
+--- !u!114 &758363373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1008601904}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 3
+  checker: {fileID: 24436495}
+--- !u!114 &758363374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1383484888}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 2
+  checker: {fileID: 24436495}
+--- !u!114 &758363375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1798578910}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 1
+  checker: {fileID: 24436495}
+--- !u!114 &758363376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758363358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ec347349c5ef84ebd95d83a6949289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 1308559872}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 0
+  checker: {fileID: 24436495}
 --- !u!1 &760040586
 GameObject:
   m_ObjectHideFlags: 0
@@ -59107,7 +59226,7 @@ GameObject:
   - component: {fileID: 1008601907}
   - component: {fileID: 1008601906}
   m_Layer: 0
-  m_Name: ketchup-removebg-preview
+  m_Name: 4
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76937,7 +77056,7 @@ GameObject:
   - component: {fileID: 1308559875}
   - component: {fileID: 1308559874}
   m_Layer: 0
-  m_Name: cofee-removebg-preview
+  m_Name: 1
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81499,7 +81618,7 @@ GameObject:
   - component: {fileID: 1383484891}
   - component: {fileID: 1383484890}
   m_Layer: 0
-  m_Name: cofee-removebg-preview (1)
+  m_Name: 3
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97980,7 +98099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1636584064
 Transform:
   m_ObjectHideFlags: 0
@@ -101718,6 +101837,7 @@ GameObject:
   - component: {fileID: 1728284789}
   - component: {fileID: 1728284788}
   - component: {fileID: 1728284795}
+  - component: {fileID: 1728284796}
   m_Layer: 0
   m_Name: Dirty
   m_TagString: Untagged
@@ -101859,6 +101979,22 @@ MonoBehaviour:
   clean: {fileID: 728016450}
   disinfectant: {fileID: 36621106}
   rag: {fileID: 1197136897}
+--- !u!114 &1728284796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728284786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd29dcd8ecd45c4ebd01ebe54d73614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyObject: {fileID: 616508324}
+  lotion: {fileID: 758363358}
+  DirtyIndex: 0
+  checker: {fileID: 1728284795}
 --- !u!1 &1728787630
 GameObject:
   m_ObjectHideFlags: 0
@@ -105049,7 +105185,7 @@ GameObject:
   - component: {fileID: 1798578913}
   - component: {fileID: 1798578912}
   m_Layer: 0
-  m_Name: cofee-removebg-preview (2)
+  m_Name: 2
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112203,7 +112339,7 @@ GameObject:
   - component: {fileID: 1881852147}
   - component: {fileID: 1881852146}
   m_Layer: 0
-  m_Name: ketchup-removebg-preview (1)
+  m_Name: 5
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115437,7 +115573,7 @@ GameObject:
   - component: {fileID: 1946791513}
   - component: {fileID: 1946791512}
   m_Layer: 0
-  m_Name: ketchup-removebg-preview (2)
+  m_Name: 6
   m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
