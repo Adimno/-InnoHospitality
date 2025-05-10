@@ -16,7 +16,7 @@ public class BillMoneyCount : MonoBehaviour
             if (AllTrue())
             {
                 Debug.Log("DONE NA PO");
-                canvas.DGetBillMoneyShow();
+                canvas.DPostCleanToolsShow();
             }
         }
         else

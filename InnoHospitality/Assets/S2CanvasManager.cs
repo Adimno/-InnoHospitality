@@ -26,6 +26,8 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject DCleanTools, DCleanDirty, PreClean, Disinfectant, Rag;
     public GameObject green1, green2;
     public GameObject DGetBill, DGetBillMoney, Bill, BillMoney;
+    public GameObject DPostCleanTools, DPostCleanDirty, PostClean;
+    public GameObject green3, green4;
 
     public void MainMenu()
     {
@@ -40,6 +42,7 @@ public class S2CanvasManager : MonoBehaviour
 
     void Start()
     {
+        PostClean.SetActive(false);
         BillMoney.SetActive(false);
         Bill.SetActive(false);
         DGetBill.SetActive(false);
@@ -101,6 +104,35 @@ public class S2CanvasManager : MonoBehaviour
         results.SetActive(false);
         checklist1.SetActive(false);
         checklist2.SetActive(false);
+    }
+
+    public void DPostCleanToolsShow()
+    {
+        ShowDialogue(DPostCleanTools);
+        receptionist.Talk();
+    }
+
+    public void DPostCleanToolsClose()
+    {
+        DPostCleanTools.SetActive(false);
+        PostClean.SetActive(true);
+        receptionist.Idle();
+    }
+
+    public void DPostCleanDirtyShow()
+    {
+        ShowDialogue(DPostCleanDirty);
+        green3.SetActive(false);
+        green4.SetActive(false);
+        receptionist.Talk();
+    }
+
+    public void DPostCleanDirtyClose()
+    {
+        DPostCleanDirty.SetActive(false);
+        Disinfectant.SetActive(true);
+        Rag.SetActive(true);
+        receptionist.Idle();
     }
 
     public void DGetBillShow()
