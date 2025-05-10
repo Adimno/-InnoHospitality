@@ -6,10 +6,11 @@ public class DirtyUtensilsAdder : MonoBehaviour
     private HashSet<GameObject> dirtyObjectsInTrigger = new HashSet<GameObject>();
 
     [SerializeField] private GameObject planeObject;
-
+    
     private Renderer planeRenderer;
     private bool doneTriggered = false;
-
+    public S2CanvasManager canvas;
+    
     private void Start()
     {
         if (planeObject != null)
@@ -34,6 +35,8 @@ public class DirtyUtensilsAdder : MonoBehaviour
             if (dirtyObjectsInTrigger.Count == 7 && !doneTriggered)
             {
                 Debug.Log("Done");
+                canvas.DCleanDirtyShow();
+                
                 if (planeRenderer != null)
                 {
                     // Set the color to green with alpha 64 (out of 255)

@@ -3,8 +3,8 @@ using UnityEngine;
 public class DirtyChecker : MonoBehaviour
 {
     private bool[] itemStatus = new bool[7] { false, false, false, false, false, false, false };
-    public S1CanvasManager canvas;
-
+    public S2CanvasManager canvas;
+    public GameObject clean, disinfectant, rag;
 
     public void SetItemPicked(int index)
     {
@@ -17,7 +17,10 @@ public class DirtyChecker : MonoBehaviour
             if (AllItemsPicked())
             {
                 Debug.Log("All items picked! You're ready.");
-                //canvas.D3Show();
+                canvas.D3Show();
+                clean.SetActive(false);
+                rag.SetActive(false);
+                disinfectant.SetActive(false);
             }
         }
         else

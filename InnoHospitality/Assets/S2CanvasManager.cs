@@ -21,6 +21,11 @@ public class S2CanvasManager : MonoBehaviour
 
     public GameObject DTools, Tools;
 
+    // clean
+
+    public GameObject DCleanTools, DCleanDirty, PreClean, Disinfectant, Rag;
+    public GameObject green1, green2;
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu"); 
@@ -34,6 +39,9 @@ public class S2CanvasManager : MonoBehaviour
 
     void Start()
     {
+        PreClean.SetActive(false);
+        DCleanTools.SetActive(false);
+        DCleanDirty.SetActive(false);
         DTools.SetActive(false);    
         D1Show();
         D2.SetActive(false);
@@ -90,6 +98,8 @@ public class S2CanvasManager : MonoBehaviour
         checklist2.SetActive(false);
     }
 
+    
+
     public void D1Show()
     {
         ShowDialogue(D1);
@@ -114,6 +124,36 @@ public class S2CanvasManager : MonoBehaviour
         Tools.SetActive(true);
         receptionist.Idle();
     }
+
+    public void DCleanToolsShow()
+    {
+        ShowDialogue(DCleanTools);
+        receptionist.Talk();
+    }
+
+    public void DCleanToolsClose()
+    {
+        DCleanTools.SetActive(false);
+        PreClean.SetActive(true);
+        receptionist.Idle();
+    }
+
+    public void DCleanDirtyShow()
+    {
+        ShowDialogue(DCleanDirty);
+        green1.SetActive(false);
+        green2.SetActive(false);
+        receptionist.Talk();
+    }
+
+    public void DCleanDirtyClose()
+    {
+        DCleanDirty.SetActive(false);
+        Disinfectant.SetActive(true);
+        Rag.SetActive(true);
+        receptionist.Talk();
+    }
+
 
     public void D3Show()
     {
@@ -411,6 +451,8 @@ public class S2CanvasManager : MonoBehaviour
 
     private void ShowDialogue(GameObject dialogue)
     {
+        DCleanTools.SetActive(false);
+        DCleanDirty.SetActive(false);
         D1.SetActive(false);
         D2.SetActive(false);
         D3.SetActive(false);

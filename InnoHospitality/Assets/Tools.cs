@@ -18,7 +18,7 @@ public class Tools : MonoBehaviour
             if (AllItemsPicked())
             {
                 Debug.Log("All items picked! You're ready.");
-                canvas.D3Show();
+                canvas.DCleanToolsShow();
             }
         }
         else
