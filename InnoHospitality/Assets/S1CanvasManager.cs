@@ -40,6 +40,10 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject WaterSprayerCanvas;
     public GameObject CleanedFloorCanvas;
     public GameObject GameFinishCanvas;
+
+    // added post canvas
+   public GameObject PostCanvas;
+   public GameObject PostColliders;
     
 
     
@@ -112,6 +116,10 @@ public class S1CanvasManager : MonoBehaviour
         MarkBedRoomCollider.SetActive(false);
         MarkBathroomCollider.SetActive(false);
         WaterSpray.SetActive(false);
+
+        // post logic 
+        PostCanvas.SetActive(false);
+        PostColliders.SetActive(false);
 
 
         // door 
@@ -1006,6 +1014,59 @@ public class S1CanvasManager : MonoBehaviour
      
     }
 
+      public void PostCanvasLogic()
+    {
+ 
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+           
+           AppliancesLookCanvas.SetActive(false);
+        GetRemoteControlCanvas.SetActive(false);
+          GoBathMarkedAreaCanvas.SetActive(false);
+         MarkBathroomCollider.SetActive(false);
+         OpenDoorBathroomCanvas.SetActive(false);
+           BathRoomCanvas.SetActive(false);
+           CleaningCanvas.SetActive(false);
+           WaterSprayerCanvas.SetActive(false);
+        CleanedFloorCanvas.SetActive(false);
+            WaterSpray.SetActive(false);
+            Rope.SetActive(false);
+        PostCanvas.SetActive(true);
+        PostColliders.SetActive(true);
+    
+         
+     
+    }
+
+
 
 // For game finish canvas
      public void GameFinishCanvasLogic()
@@ -1051,7 +1112,7 @@ public class S1CanvasManager : MonoBehaviour
            CleaningCanvas.SetActive(false);
         CleanedFloorCanvas.SetActive(false);
             WaterSpray.SetActive(false);
-
+                PostCanvas.SetActive(false);
          GameFinishCanvas.SetActive(true);
          CongratsSound.Play();
      

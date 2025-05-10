@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class S1IconLogic : MonoBehaviour
 {
-    public GameObject TrashIcon, BedIcon, TurnOffIcon, CleanIcon, BathIcon;
+    public GameObject TrashIcon, BedIcon, TurnOffIcon, CleanIcon, BathIcon, PostBedroom, PostTable, PostRoom;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,4 +39,22 @@ public class S1IconLogic : MonoBehaviour
     {
         BathIcon.SetActive(true);
     }
+
+       public void POstBedroomIconLogic()
+    {
+        PostBedroom.SetActive(true);
+    }
+
+      public void PostWindowLogic()
+    {
+        PostTable.SetActive(true);
+    }
+
+        public void PostTableLogic()
+    {
+        PostRoom.SetActive(true);
+    }
+
+
+
 }
