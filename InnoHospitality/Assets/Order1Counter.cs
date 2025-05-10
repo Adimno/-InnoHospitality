@@ -12,6 +12,7 @@ public class Order1Counter : MonoBehaviour
     public TotalPoints points;
     double bonusPoints = 0;
     public S2CanvasManager canvas;
+    
 
     public void Increment()
     {
@@ -58,6 +59,7 @@ public class Order1Counter : MonoBehaviour
     {
         yield return new WaitForSeconds(2); // Wait for 2 seconds
         canvas.DGetBillShow();
+        
     }
 
     double CalculateTimeBonus(float elapsedTime)

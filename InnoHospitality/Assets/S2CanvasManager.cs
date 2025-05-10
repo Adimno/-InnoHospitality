@@ -27,7 +27,10 @@ public class S2CanvasManager : MonoBehaviour
     public GameObject green1, green2;
     public GameObject DGetBill, DGetBillMoney, Bill, BillMoney;
     public GameObject DPostCleanTools, DPostCleanDirty, PostClean;
-    public GameObject green3, green4;
+    public GameObject green3, green4, customer, Pasta, Chicken, Coffee, Plastic;
+    public GameObject glass, fork, knife, spoon, plate, napkin, placemat;
+    public GameObject glassSNAP, forkSNAP, knifeSNAP, spoonSNAP, plateSNAP, napkinSNAP;
+
 
     public void MainMenu()
     {
@@ -116,6 +119,26 @@ public class S2CanvasManager : MonoBehaviour
     {
         DPostCleanTools.SetActive(false);
         PostClean.SetActive(true);
+        Order1.SetActive(false);
+        Pasta.SetActive(false);
+        Chicken.SetActive(false);
+        Coffee.SetActive(false);
+        Plastic.SetActive(false);
+        glass.SetActive(false);
+        fork.SetActive(false);
+        knife.SetActive(false);
+        spoon.SetActive(false);
+        placemat.SetActive(false);
+        plate.SetActive(false);
+        napkin.SetActive(false);
+
+        glassSNAP.SetActive(false);
+        forkSNAP.SetActive(false);
+        knifeSNAP.SetActive(false);
+        spoonSNAP.SetActive(false);
+        plateSNAP.SetActive(false);
+        napkinSNAP.SetActive(false);
+        customer.SetActive(false);
         receptionist.Idle();
     }
 
@@ -138,6 +161,7 @@ public class S2CanvasManager : MonoBehaviour
     public void DGetBillShow()
     {
         ShowDialogue(DGetBill);
+        
         receptionist.Talk();
     }
 
@@ -145,6 +169,7 @@ public class S2CanvasManager : MonoBehaviour
     {
         DGetBill.SetActive(false);
         Bill.SetActive(true);
+        
         receptionist.Idle();
     }
 
