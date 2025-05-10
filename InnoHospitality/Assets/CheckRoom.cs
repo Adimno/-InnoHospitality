@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CheckRoom : MonoBehaviour
 {
-   public GameObject[] objectsToCheck;
+    public GameObject[] objectsToCheck;
     public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
 
@@ -12,12 +12,10 @@ public class CheckRoom : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < objectsToCheck.Length; i++)
+        if (!hasTriggered && AllObjectsDisabled())
         {
-            if (!objectsToCheck[i].activeSelf && !hasTriggered)
-            {
-
             hasTriggered = true;
+
             s1CanvasManager.GameFinishCanvasLogic(); 
             time.PauseTimer();
             Icon.BathIconLogic();
@@ -25,12 +23,22 @@ public class CheckRoom : MonoBehaviour
             double basePoints = 20;
             double bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
             points.IncrementPoints(basePoints + bonusPoints);
-                
-            }
         }
     }
 
-     double CalculateTimeBonus(float elapsedTime)
+    bool AllObjectsDisabled()
+    {
+        foreach (GameObject obj in objectsToCheck)
+        {
+            if (obj.activeSelf)
+            {
+                return false; // One object still active
+            }
+        }
+        return true; // All objects are inactive
+    }
+
+    double CalculateTimeBonus(float elapsedTime)
     {
         if (elapsedTime <= 240f) // ≤ 4 minutes
         {
