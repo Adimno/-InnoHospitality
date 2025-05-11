@@ -9,6 +9,7 @@ public class Bill : MonoBehaviour
     public TotalPoints points;
     public TotalProgress progress;
     public S2IconLogic icon;
+    public AudioSource correct;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +31,7 @@ public class Bill : MonoBehaviour
             BillSnap.GetComponent<Collider>().enabled = true;
             progress.IncrementProgress(8.33f);
             points.IncrementPoints(5);
+            correct.Play();
             icon.ServeBillIcon();
             Debug.Log("done");
         }

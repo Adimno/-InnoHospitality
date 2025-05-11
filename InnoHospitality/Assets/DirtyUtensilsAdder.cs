@@ -13,6 +13,7 @@ public class DirtyUtensilsAdder : MonoBehaviour
     public TotalPoints points;
     public TotalProgress progress;
     public S2IconLogic icon;
+    public AudioSource correct;
 
     private void Start()
     {
@@ -42,6 +43,8 @@ public class DirtyUtensilsAdder : MonoBehaviour
                 progress.IncrementProgress(8.33f);
                 points.IncrementPoints(10);
                 icon.PreClean1Icon();
+                correct.Play();
+
                 if (planeRenderer != null)
                 {
                     // Set the color to green with alpha 64 (out of 255)

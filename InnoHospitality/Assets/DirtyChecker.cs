@@ -8,6 +8,7 @@ public class DirtyChecker : MonoBehaviour
     public TotalPoints points;
     public TotalProgress progress;
     public S2IconLogic icon;
+    public AudioSource correct;
 
     public void SetItemPicked(int index)
     {
@@ -27,7 +28,7 @@ public class DirtyChecker : MonoBehaviour
                 clean.SetActive(false);
                 rag.SetActive(false);
                 disinfectant.SetActive(false);
-
+                correct.Play();
             }
         }
         else

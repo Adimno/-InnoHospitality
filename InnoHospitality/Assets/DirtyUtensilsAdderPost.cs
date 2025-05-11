@@ -13,6 +13,7 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
     public TotalPoints points;
     public TotalProgress progress;
     public S2IconLogic icon;
+    public AudioSource correct;
 
     private void Start()
     {
@@ -42,6 +43,7 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
                 progress.IncrementProgress(8.33f);
                 points.IncrementPoints(10);
                 icon.PostClean1Icon();
+                correct.Play();
 
                 if (planeRenderer != null)
                 {

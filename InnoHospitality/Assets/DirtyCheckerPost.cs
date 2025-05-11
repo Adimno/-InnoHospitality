@@ -10,6 +10,7 @@ public class DirtyCheckerPost : MonoBehaviour
     public TimeLogicScene2 time;
     public TotalProgress progress;
     public S2IconLogic icon;
+    public AudioSource correct;
 
     public void SetItemPicked(int index)
     {
@@ -31,6 +32,7 @@ public class DirtyCheckerPost : MonoBehaviour
                 clean.SetActive(false);
                 rag.SetActive(false);
                 disinfectant.SetActive(false);
+                correct.Play();
             }
         }
         else
