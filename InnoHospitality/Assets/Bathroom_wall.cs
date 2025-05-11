@@ -13,6 +13,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
     private Texture2D _templateDirtMask;
     private float dirtAmountTotal;
     private bool hasCleaned = false; // Track if points were already given
+     public TotalProgress progress;
 
     private void Start()
     {
@@ -75,6 +76,7 @@ public class Bathroom_Wall7_Script : MonoBehaviour
                         {
                             hasCleaned = true; // Set flag to prevent repeated increments
                             Icon.CLeanIconLogic();
+                            progress.IncrementProgress(15);
                             points.IncrementPoints(15);
                             s1CanvasManager.WaterSprayerCanvasLogic();
                             Debug.Log("Cleaning Done");

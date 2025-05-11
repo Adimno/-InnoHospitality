@@ -10,6 +10,8 @@ public class CheckRoom : MonoBehaviour
     public S1IconLogic Icon;
     public TimeLogic time;
 
+     public TotalProgress progress;
+
     void Update()
     {
         if (!hasTriggered && AllObjectsDisabled())
@@ -17,6 +19,7 @@ public class CheckRoom : MonoBehaviour
             hasTriggered = true;
 
             s1CanvasManager.GameFinishCanvasLogic(); 
+            progress.IncrementProgress(10);
             time.PauseTimer();
             Icon.BathIconLogic();
 

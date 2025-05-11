@@ -13,6 +13,8 @@ public class TrashManager : MonoBehaviour
      public TotalPoints points;
      public S1IconLogic Icon;
 
+     public TotalProgress progress;
+
     void Awake()
     {
         if (instance == null)
@@ -41,6 +43,7 @@ public class TrashManager : MonoBehaviour
         if (collectedTrash >= totalTrash) // Check if all trash is collected
         {
             Icon.TrashIconLogic();
+            progress.IncrementProgress(10);
              points.IncrementPoints(10);
               s1CanvasManager.CongratsTrashCanvasLogic(); // Show success message
         }

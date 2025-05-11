@@ -11,6 +11,8 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     public TotalPoints points;
     public S1IconLogic Icon;
 
+     public TotalProgress progress;
+
     void Start()
     {
         // Ensure the first XRGrab is enabled, and the rest are disabled
@@ -34,6 +36,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     {
         hasTriggered = true; // Set flag so it doesn't run again
         points.IncrementPoints(10);
+        progress.IncrementProgress(10);
         Icon.BedIconLogic();
         s1CanvasManager.AppliancesLookCanvasLogic(); 
         foreach (GameObject GameObjectDisabled in GameObjectFalse) 

@@ -5,6 +5,7 @@ public class DirtyCheckerS1 : MonoBehaviour
     private bool[] itemStatus = new bool[3] { false, false, false};
     public S1CanvasManager canvas;
     public TotalPoints points;
+     public TotalProgress progress;
 
 
     public void SetItemPicked(int index)
@@ -19,6 +20,7 @@ public class DirtyCheckerS1 : MonoBehaviour
             {
                 Debug.Log("All items picked! You're ready.");
                 points.IncrementPoints(15);
+                progress.IncrementProgress(15);
                 canvas.CleanedFloorCanvasLogic(); //change this 
             }
         }

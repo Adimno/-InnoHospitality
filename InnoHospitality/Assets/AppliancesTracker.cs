@@ -9,12 +9,15 @@ public class AppliancesTracker : MonoBehaviour
     public TotalPoints points;
      public S1IconLogic Icon;
 
+      public TotalProgress progress;
+
     void Update()
     {
         if (!hasTriggered && AreAllAppliancesInactive() && IsSoundInactive()) 
         {
             Debug.Log("All appliances and sound are turned off.");
             points.IncrementPoints(10);
+            progress.IncrementProgress(10);
             Icon.TurnOffIconLogic();
             s1CanvasManager.GoBathMarkedAreaCanvasLogic();
             hasTriggered = true; // Prevent further updates

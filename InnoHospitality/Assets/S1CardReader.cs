@@ -15,6 +15,7 @@ public class S1CardReader : MonoBehaviour
     public AudioClip cardReaderSound; // Add this variable in the Inspector
 
      public TotalPoints points;
+     public TotalProgress progress;
 
     private void Start()
     {
@@ -55,6 +56,7 @@ public class S1CardReader : MonoBehaviour
         
         yield return new WaitForSeconds(3f); // Wait another 3 seconds
         CardReader.material.color = originalColor; // Revert back to the original color
+        progress.IncrementProgress(15);
         points.IncrementPoints(15);
         s1CanvasManager.OpenDoorCanvasLogic();
         doorKnobEntrance.enabled = true;

@@ -7,6 +7,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
     public TotalPoints points;
+     public TotalProgress progress;
 
     public S1IconLogic Icon;
 
@@ -15,6 +16,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
         if (AllObjectsEnabled() && !hasTriggered)
         {
             hasTriggered = true;
+            progress.IncrementProgress(15);
             points.IncrementPoints(15);
             s1CanvasManager.PostCanvasLogic(); 
             Icon.BathIconLogic();
