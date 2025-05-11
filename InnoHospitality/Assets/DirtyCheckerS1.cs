@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DirtyCheckerS1 : MonoBehaviour
 {
-    private bool[] itemStatus = new bool[7] { false, false, false, false, false, false, false };
+    private bool[] itemStatus = new bool[3] { false, false, false};
     public S1CanvasManager canvas;
 
 
@@ -17,7 +17,7 @@ public class DirtyCheckerS1 : MonoBehaviour
             if (AllItemsPicked())
             {
                 Debug.Log("All items picked! You're ready.");
-                canvas.LivingRoomCanvasLogic(); //change this 
+                canvas.CleanedFloorCanvasLogic(); //change this 
             }
         }
         else

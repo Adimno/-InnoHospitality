@@ -38,6 +38,8 @@ public class S1CanvasManager : MonoBehaviour
     public GameObject BathRoomCanvas;
     public GameObject CleaningCanvas;
     public GameObject WaterSprayerCanvas;
+    // added canvas
+    public GameObject CleanSinkCanvas;
     public GameObject CleanedFloorCanvas;
     public GameObject GameFinishCanvas;
 
@@ -68,11 +70,16 @@ public class S1CanvasManager : MonoBehaviour
 // door collider bedroom
     public BoxCollider bedDoor;
     public BoxCollider bathDoor;
+
+    // added clean sink
+    public GameObject Rag;
+    public GameObject Disinfectant;
     
     
     void Start()
     {
         // Canvas
+        
         WelcomeCanvas.SetActive(true);
         CardReader.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -104,6 +111,7 @@ public class S1CanvasManager : MonoBehaviour
          CleanedFloorCanvas.SetActive(false);
         GameFinishCanvas.SetActive(false);
         WaterSprayerCanvas.SetActive(false);
+        CleanSinkCanvas.SetActive(false);
         
          
         
@@ -116,6 +124,8 @@ public class S1CanvasManager : MonoBehaviour
         MarkBedRoomCollider.SetActive(false);
         MarkBathroomCollider.SetActive(false);
         WaterSpray.SetActive(false);
+         Disinfectant.SetActive(false);
+         Rag.SetActive(false);
 
         // post logic 
         PostCanvas.SetActive(false);
@@ -960,6 +970,55 @@ public class S1CanvasManager : MonoBehaviour
      
     }
 
+       public void CleanSinkCanvasLogic()
+    {
+ 
+        CardReader.SetActive(false);
+        WelcomeCanvas.SetActive(false);
+        TakeCardCanvas.SetActive(false);
+        OpenDoor.SetActive(false);
+        KitchAreaCanvas.SetActive(false);
+        GoKitchAreaCanvas.SetActive(false);
+        MarkKitchenCollider.SetActive(false);
+        KitchenPlayerCollider.SetActive(false); 
+        LookLivingRoom.SetActive(false);
+        GoLivingRoom.SetActive(false);
+        MarkLivingRoomCollider.SetActive(false);
+        LivingRoomCanvas.SetActive(false);
+        LookLeftLivingRoomCanvas.SetActive(false);
+        GoTrashbinCanvas.SetActive(false);
+        MarkTrashCollider.SetActive(false);
+        TrashbinCanvas.SetActive(false);
+        BioMeansCanvas.SetActive(false);
+        EnvironmentCanvas.SetActive(false);
+        ChecklistTrashBinCanvas.SetActive(false);
+        foreach (GameObject trashbin in TrashbinChecklist) 
+         {
+        trashbin.SetActive(false);
+         }
+         
+         CongratsTrashBinCanvas.SetActive(false);
+        GoBedAreaCanvas.SetActive(false);
+         OpenBedDoorCanvas.SetActive(false);
+         BedroomCanvas.SetActive(false);
+        GoBedroomMarkedAreaCanvas.SetActive(false);
+        StartSetUpBedAreaCanvas.SetActive(false);
+           
+           AppliancesLookCanvas.SetActive(false);
+        GetRemoteControlCanvas.SetActive(false);
+          GoBathMarkedAreaCanvas.SetActive(false);
+         MarkBathroomCollider.SetActive(false);
+         OpenDoorBathroomCanvas.SetActive(false);
+           BathRoomCanvas.SetActive(false);
+           CleaningCanvas.SetActive(false);
+            WaterSprayerCanvas.SetActive(false);
+             WaterSpray.SetActive(false);
+         CleanSinkCanvas.SetActive(true);
+         Disinfectant.SetActive(true);
+         Rag.SetActive(true);
+     
+    }
+
           public void CleanedFloorCanvasLogic()
     {
  
@@ -1002,9 +1061,12 @@ public class S1CanvasManager : MonoBehaviour
            BathRoomCanvas.SetActive(false);
            CleaningCanvas.SetActive(false);
            WaterSprayerCanvas.SetActive(false);
+        CleanSinkCanvas.SetActive(false);
         CleanedFloorCanvas.SetActive(true);
             WaterSpray.SetActive(false);
             Rope.SetActive(false);
+              Disinfectant.SetActive(false);
+         Rag.SetActive(false);
 
            foreach (GameObject bath in BathRoomObjects) 
          {
