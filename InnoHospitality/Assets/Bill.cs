@@ -22,17 +22,17 @@ public class Bill : MonoBehaviour
             BillBlue.SetActive(false);
             BillSnap.SetActive(true);
             count.SetTowelTrue(setCount);
-
-            // Instead of deactivating TowelBlue, just hide it visually and disable interaction
-            BillBlue.GetComponent<Renderer>().enabled = false;
-            BillBlue.GetComponent<Collider>().enabled = false;
-
-            BillSnap.GetComponent<Renderer>().enabled = true;
-            BillSnap.GetComponent<Collider>().enabled = true;
             progress.IncrementProgress(8.33f);
             points.IncrementPoints(5);
             correct.Play();
             icon.ServeBillIcon();
+            //// Instead of deactivating TowelBlue, just hide it visually and disable interaction
+            //BillBlue.GetComponent<Renderer>().enabled = false;
+            //BillBlue.GetComponent<Collider>().enabled = false;
+
+            //BillSnap.GetComponent<Renderer>().enabled = true;
+            //BillSnap.GetComponent<Collider>().enabled = true;
+            
             Debug.Log("done");
         }
     }
