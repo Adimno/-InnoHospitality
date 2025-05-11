@@ -27790,6 +27790,7 @@ MonoBehaviour:
   GameObjectFalse:
   - {fileID: 139379120}
   s1CanvasManager: {fileID: 1725942898}
+  points: {fileID: 1859711026}
   Icon: {fileID: 691882420}
 --- !u!1001 &639486834
 PrefabInstance:
@@ -72557,11 +72558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7530871920592647143, guid: 66790430d223a634a9c82886d81c7773, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0804372
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 7530871920592647143, guid: 66790430d223a634a9c82886d81c7773, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.064878
+      value: -11.065
       objectReference: {fileID: 0}
     - target: {fileID: 7530871920592647143, guid: 66790430d223a634a9c82886d81c7773, type: 3}
       propertyPath: m_LocalRotation.w
@@ -72638,6 +72639,7 @@ MonoBehaviour:
   s1CanvasManager: {fileID: 1725942898}
   doorKnobEntrance: {fileID: 8864681342640148558}
   cardReaderSound: {fileID: 8300000, guid: f79eef9e18e121e418478e398b6f0ce7, type: 3}
+  points: {fileID: 1859711026}
 --- !u!65 &1782472933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73714,6 +73716,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1123477069}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4790197965203847057, guid: 18d6c10a69abfe04db6dd4e18e5a23ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865234059}
     - targetCorrespondingSourceObject: {fileID: 8073876825066983709, guid: 18d6c10a69abfe04db6dd4e18e5a23ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 234493566}
@@ -75172,6 +75177,25 @@ Transform:
   - {fileID: 1531221062}
   m_Father: {fileID: 163717981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1865234055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4790197965203847057, guid: 18d6c10a69abfe04db6dd4e18e5a23ce, type: 3}
+  m_PrefabInstance: {fileID: 1818257959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1865234059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865234055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50181f5bdabbeb5458cacf04652a6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1725942898}
+  points: {fileID: 1859711026}
 --- !u!1 &1867208090
 GameObject:
   m_ObjectHideFlags: 0
@@ -82846,7 +82870,6 @@ GameObject:
   - component: {fileID: 2068177507}
   - component: {fileID: 2068177506}
   - component: {fileID: 2068177510}
-  - component: {fileID: 2068177509}
   - component: {fileID: 2068177512}
   - component: {fileID: 2068177511}
   m_Layer: 0
@@ -82974,19 +82997,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2068177509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068177497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50181f5bdabbeb5458cacf04652a6cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1725942898}
 --- !u!114 &2068177510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83002,7 +83012,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 619503960}
   lotion: {fileID: 2068177497}
   DirtyIndex: 0
-  checker: {fileID: 2068177509}
+  checker: {fileID: 0}
 --- !u!114 &2068177511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83018,7 +83028,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1578068991}
   lotion: {fileID: 2068177497}
   DirtyIndex: 2
-  checker: {fileID: 2068177509}
+  checker: {fileID: 0}
 --- !u!114 &2068177512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83034,7 +83044,7 @@ MonoBehaviour:
   dirtyObject: {fileID: 1588748208}
   lotion: {fileID: 2068177497}
   DirtyIndex: 1
-  checker: {fileID: 2068177509}
+  checker: {fileID: 0}
 --- !u!1 &2068428272
 GameObject:
   m_ObjectHideFlags: 0

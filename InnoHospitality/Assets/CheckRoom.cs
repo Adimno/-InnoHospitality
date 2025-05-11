@@ -20,7 +20,7 @@ public class CheckRoom : MonoBehaviour
             time.PauseTimer();
             Icon.BathIconLogic();
 
-            double basePoints = 20;
+            double basePoints = 10;
             double bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
             points.IncrementPoints(basePoints + bonusPoints);
         }

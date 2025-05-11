@@ -33,7 +33,7 @@ public class S1MeshRendererBedTracker : MonoBehaviour
     if (AllMeshesEnabled() && !hasTriggered) // Prevent multiple calls
     {
         hasTriggered = true; // Set flag so it doesn't run again
-        points.IncrementPoints(20);
+        points.IncrementPoints(10);
         Icon.BedIconLogic();
         s1CanvasManager.AppliancesLookCanvasLogic(); 
         foreach (GameObject GameObjectDisabled in GameObjectFalse) 

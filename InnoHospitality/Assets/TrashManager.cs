@@ -41,7 +41,7 @@ public class TrashManager : MonoBehaviour
         if (collectedTrash >= totalTrash) // Check if all trash is collected
         {
             Icon.TrashIconLogic();
-             points.IncrementPoints(20);
+             points.IncrementPoints(10);
               s1CanvasManager.CongratsTrashCanvasLogic(); // Show success message
         }
     }

@@ -14,6 +14,8 @@ public class S1CardReader : MonoBehaviour
     private AudioSource audioSource; 
     public AudioClip cardReaderSound; // Add this variable in the Inspector
 
+     public TotalPoints points;
+
     private void Start()
     {
         originalColor = CardReader.material.color; // Save the original color at the start
@@ -42,6 +44,7 @@ public class S1CardReader : MonoBehaviour
         CardReader.material.color = Color.green; // Change to green
         Card.SetActive(false);
         CardParent.SetActive(false);
+
             
         // Play the door opening sound if available and not already played
         if (cardReaderSound != null && audioSource != null && !soundPlayed)
@@ -52,7 +55,7 @@ public class S1CardReader : MonoBehaviour
         
         yield return new WaitForSeconds(3f); // Wait another 3 seconds
         CardReader.material.color = originalColor; // Revert back to the original color
-    
+        points.IncrementPoints(15);
         s1CanvasManager.OpenDoorCanvasLogic();
         doorKnobEntrance.enabled = true;
     }

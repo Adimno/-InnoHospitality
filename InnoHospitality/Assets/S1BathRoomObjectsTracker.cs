@@ -6,6 +6,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
     public GameObject[] GameObjectFalse; // GameObjects to deactivate
     public S1CanvasManager s1CanvasManager;
     private bool hasTriggered = false;
+    public TotalPoints points;
 
     public S1IconLogic Icon;
 
@@ -14,6 +15,7 @@ public class S1BathRoomObjectsTracker : MonoBehaviour
         if (AllObjectsEnabled() && !hasTriggered)
         {
             hasTriggered = true;
+            points.IncrementPoints(15);
             s1CanvasManager.PostCanvasLogic(); 
             Icon.BathIconLogic();
 
