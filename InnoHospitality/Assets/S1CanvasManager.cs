@@ -1012,7 +1012,8 @@ public class S1CanvasManager : MonoBehaviour
            BathRoomCanvas.SetActive(false);
            CleaningCanvas.SetActive(false);
             WaterSprayerCanvas.SetActive(false);
-             WaterSpray.SetActive(false);
+               WaterSpray.SetActive(false);
+            Rope.SetActive(false);
          CleanSinkCanvas.SetActive(true);
          Disinfectant.SetActive(true);
          Rag.SetActive(true);

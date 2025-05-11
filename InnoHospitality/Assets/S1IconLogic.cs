@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class S1IconLogic : MonoBehaviour
 {
-    public GameObject TrashIcon, BedIcon, TurnOffIcon, CleanIcon, BathIcon;
+    public GameObject TrashIcon, BedIcon, TurnOffIcon, CleanIcon, BathIcon, CheckAllRoom, Tools;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,10 +13,16 @@ public class S1IconLogic : MonoBehaviour
            TurnOffIcon.SetActive(false);
             CleanIcon.SetActive(false);
         BathIcon.SetActive(false);
+        CheckAllRoom.SetActive(false);
    
     }
 
-  
+       public void ToolsIconLogic()
+    {
+        Tools.SetActive(true);
+    }
+        
+
     public void TrashIconLogic()
     {
         TrashIcon.SetActive(true);
@@ -40,6 +46,12 @@ public class S1IconLogic : MonoBehaviour
     {
         BathIcon.SetActive(true);
     }
+
+        public void CheckAllRoomIconLogic()
+    {
+        CheckAllRoom.SetActive(true);
+    }
+
 
 
 

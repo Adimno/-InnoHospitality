@@ -21,7 +21,7 @@ public class CheckRoom : MonoBehaviour
             s1CanvasManager.GameFinishCanvasLogic(); 
             progress.IncrementProgress(10);
             time.PauseTimer();
-            Icon.BathIconLogic();
+            Icon.CheckAllRoomIconLogic();
 
             double basePoints = 10;
             double bonusPoints = CalculateTimeBonus(time.GetElapsedTime());

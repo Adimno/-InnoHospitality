@@ -13,7 +13,7 @@ public class ShowNextCanvas : MonoBehaviour
         if (WaterStaticTrue.activeSelf && !hasTriggered)
         {
       
-            s1CanvasManager.CleanedFloorCanvasLogic();
+            s1CanvasManager.CleanSinkCanvasLogic();
             hasTriggered = true; 
         }
     }
