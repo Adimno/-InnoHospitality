@@ -12,6 +12,7 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
     public S2CanvasManager canvas;
     public TotalPoints points;
     public TotalProgress progress;
+    public S2IconLogic icon;
 
     private void Start()
     {
@@ -40,6 +41,7 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
                 canvas.DPostCleanDirtyShow();
                 progress.IncrementProgress(8.33f);
                 points.IncrementPoints(10);
+                icon.PostClean1Icon();
 
                 if (planeRenderer != null)
                 {

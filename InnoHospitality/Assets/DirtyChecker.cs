@@ -7,6 +7,7 @@ public class DirtyChecker : MonoBehaviour
     public GameObject clean, disinfectant, rag;
     public TotalPoints points;
     public TotalProgress progress;
+    public S2IconLogic icon;
 
     public void SetItemPicked(int index)
     {
@@ -22,6 +23,7 @@ public class DirtyChecker : MonoBehaviour
                 canvas.D3Show();
                 progress.IncrementProgress(8.33f);
                 points.IncrementPoints(10);
+                icon.PreClean2Icon();
                 clean.SetActive(false);
                 rag.SetActive(false);
                 disinfectant.SetActive(false);

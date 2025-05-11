@@ -21,6 +21,7 @@ public class TimeLogicScene2 : MonoBehaviour
     public float elapsedTime = 0f;
     private float targetTime = 600f; // 10 minutes
     private bool objectShown = false;
+    public S2CanvasManager canvas;
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class TimeLogicScene2 : MonoBehaviour
                 objectShown = true;
                 disabledaudio.enabled = false;
                 startTimer = false;
-                results.SetActive(true);
+                canvas.ResultsShow();
                 // Update the two text fields
                 GameOverSound.Play();
                 statusText1.text = "Game Over!";

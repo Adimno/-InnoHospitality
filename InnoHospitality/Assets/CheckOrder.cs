@@ -50,7 +50,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Chicken");
-            //icon.ShowTake1();
+            icon.TakeOrderIcon();
             correct.Play();
             P6.SetActive(true);
             tablet.SetActive(false);

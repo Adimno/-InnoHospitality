@@ -788,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &12713796
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1492,6 +1492,7 @@ MonoBehaviour:
   points: {fileID: 972895683}
   time: {fileID: 2124717741}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!1 &28539572
 GameObject:
   m_ObjectHideFlags: 0
@@ -51108,8 +51109,9 @@ MonoBehaviour:
   BillBlue: {fileID: 863724843}
   count: {fileID: 1597102465}
   setCount: 0
-  points: {fileID: 0}
-  progress: {fileID: 0}
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!64 &869292379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58613,6 +58615,7 @@ MonoBehaviour:
   canvas: {fileID: 140949657}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!64 &980667865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64468,6 +64471,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37321ba45214b8a47b534bd1538c22c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grab: {fileID: 937469797}
+  PreClean1: {fileID: 2120162223}
+  PreClean2: {fileID: 1381181483}
+  Utensils: {fileID: 1269667585}
+  Greet: {fileID: 181958100}
+  Guide: {fileID: 1163846871}
+  TakeOrder: {fileID: 81325908}
+  ServeOrder: {fileID: 848529170}
+  ServeBill: {fileID: 0}
+  GetBill: {fileID: 1488596235}
+  PostClean1: {fileID: 1000450951}
+  PostClean2: {fileID: 1787763413}
 --- !u!64 &1053076474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68459,7 +68474,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116664111}
   m_LocalRotation: {x: -9.604262e-10, y: -0.000000014901158, z: 0.0000000016435702, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0005552044}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.1555904, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68467,7 +68482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.10004, y: 71.14}
+  m_AnchoredPosition: {x: 0.1, y: 43}
   m_SizeDelta: {x: 302, y: 68}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1116664114
@@ -68490,10 +68505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    You have finished all the tasks, and you are now ready to be a Table
-    Server!'
+  m_text: You have finished all the tasks, and you are now ready to be a Table Server!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -84771,6 +84783,7 @@ MonoBehaviour:
   setCount: 0
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!64 &1402592224
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -104045,6 +104058,7 @@ MonoBehaviour:
   rag: {fileID: 1197136897}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!114 &1728284796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112541,6 +112555,7 @@ MonoBehaviour:
   canvas: {fileID: 140949657}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!65 &1862401775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129439,6 +129454,7 @@ MonoBehaviour:
   startTimer: 0
   isPaused: 0
   elapsedTime: 0
+  canvas: {fileID: 140949657}
 --- !u!1 &2124836065
 GameObject:
   m_ObjectHideFlags: 0
@@ -130241,6 +130257,7 @@ MonoBehaviour:
   canvas: {fileID: 140949657}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
+  icon: {fileID: 1052404382}
 --- !u!1001 &2142166940
 PrefabInstance:
   m_ObjectHideFlags: 0

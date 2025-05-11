@@ -8,6 +8,7 @@ public class BillMoney : MonoBehaviour
     private bool hasCounted = false;
     public TotalPoints points;
     public TotalProgress progress;
+    public S2IconLogic icon;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +30,7 @@ public class BillMoney : MonoBehaviour
             BillSnap.GetComponent<Collider>().enabled = true;
             progress.IncrementProgress(8.33f);
             points.IncrementPoints(5);
+            icon.GetBillIcon();
             Debug.Log("done");
         }
     }

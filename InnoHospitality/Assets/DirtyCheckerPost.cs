@@ -9,6 +9,7 @@ public class DirtyCheckerPost : MonoBehaviour
     double bonusPoints = 0;
     public TimeLogicScene2 time;
     public TotalProgress progress;
+    public S2IconLogic icon;
 
     public void SetItemPicked(int index)
     {
@@ -25,6 +26,7 @@ public class DirtyCheckerPost : MonoBehaviour
                 time.PauseTimer();
                 points.IncrementPoints(bonusPoints);
                 progress.IncrementProgress(8.33f);
+                icon.PostClean2Icon();
                 canvas.ResultsShow();
                 clean.SetActive(false);
                 rag.SetActive(false);

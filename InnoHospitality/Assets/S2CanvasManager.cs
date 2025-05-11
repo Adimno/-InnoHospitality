@@ -277,7 +277,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C1Show()
     {
         ShowDialogue(C1);
-        //icon.ShowGreet1();
+        icon.GreetIcon();
         correct.Play();
         points.IncrementPoints(5);
         progress.IncrementProgress(8.33f);
@@ -314,6 +314,7 @@ public class S2CanvasManager : MonoBehaviour
         //icon.ShowGuide1();
         correct.Play();
         points.IncrementPoints(5);
+        icon.GuideIcon();
         progress.IncrementProgress(8.33f);
         ShowDialogue(C2);
         StartCoroutine(ActivateP4WithDelay()); // Start the coroutine
