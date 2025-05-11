@@ -6,6 +6,8 @@ public class BillMoney : MonoBehaviour
     public BillMoneyCount count;
     public int setCount;
     private bool hasCounted = false;
+    public TotalPoints points;
+    public TotalProgress progress;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +27,8 @@ public class BillMoney : MonoBehaviour
 
             BillSnap.GetComponent<Renderer>().enabled = true;
             BillSnap.GetComponent<Collider>().enabled = true;
-
+            progress.IncrementProgress(8.33f);
+            points.IncrementPoints(5);
             Debug.Log("done");
         }
     }

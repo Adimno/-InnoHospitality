@@ -1586,6 +1586,9 @@ MonoBehaviour:
   clean: {fileID: 1636584063}
   disinfectant: {fileID: 36621106}
   rag: {fileID: 1197136897}
+  points: {fileID: 972895683}
+  time: {fileID: 2124717741}
+  progress: {fileID: 437763938}
 --- !u!1 &28539572
 GameObject:
   m_ObjectHideFlags: 0
@@ -7727,6 +7730,7 @@ MonoBehaviour:
   checklist1: {fileID: 1463749935}
   checklist2: {fileID: 12713795}
   correct: {fileID: 1691028574}
+  progress: {fileID: 437763938}
   DTools: {fileID: 446312221}
   Tools: {fileID: 980375349}
   DCleanTools: {fileID: 1407466903}
@@ -8992,6 +8996,7 @@ MonoBehaviour:
   wrongOrder2: {fileID: 112696944}
   icon: {fileID: 1052404382}
   points: {fileID: 972895683}
+  progress: {fileID: 437763938}
   steak: {fileID: 642066157}
   pizza: {fileID: 702368738}
   pancake: {fileID: 1807414247}
@@ -29419,6 +29424,7 @@ MonoBehaviour:
   arrow: {fileID: 673322534}
   icon: {fileID: 1052404382}
   points: {fileID: 972895683}
+  progress: {fileID: 437763938}
   correct: {fileID: 1691028574}
 --- !u!1 &518115982
 GameObject:
@@ -51029,6 +51035,8 @@ MonoBehaviour:
   BillBlue: {fileID: 863724843}
   count: {fileID: 1597102465}
   setCount: 0
+  points: {fileID: 0}
+  progress: {fileID: 0}
 --- !u!64 &869292379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53224,7 +53232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &917019481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55429,6 +55437,7 @@ MonoBehaviour:
   arrow: {fileID: 673322534}
   icon: {fileID: 0}
   points: {fileID: 0}
+  progress: {fileID: 0}
   correct: {fileID: 0}
 --- !u!1 &940092156
 GameObject:
@@ -58604,6 +58613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 140949657}
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
 --- !u!64 &980667865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78522,6 +78533,7 @@ MonoBehaviour:
   time: {fileID: 2124717741}
   points: {fileID: 972895683}
   canvas: {fileID: 140949657}
+  progress: {fileID: 437763938}
 --- !u!4 &1304736394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8269195505564239483, guid: f15c04a41bbffe94db69d959c647fe33, type: 3}
@@ -84619,6 +84631,8 @@ MonoBehaviour:
   BillBlue: {fileID: 1401126084}
   count: {fileID: 1597102464}
   setCount: 0
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
 --- !u!64 &1402592224
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -104085,6 +104099,8 @@ MonoBehaviour:
   clean: {fileID: 728016450}
   disinfectant: {fileID: 36621106}
   rag: {fileID: 1197136897}
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
 --- !u!114 &1728284796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112352,6 +112368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeObject: {fileID: 1862401772}
   canvas: {fileID: 140949657}
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
 --- !u!65 &1862401775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130277,6 +130295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeObject: {fileID: 2142033183}
   canvas: {fileID: 140949657}
+  points: {fileID: 972895683}
+  progress: {fileID: 437763938}
 --- !u!1001 &2142166940
 PrefabInstance:
   m_ObjectHideFlags: 0

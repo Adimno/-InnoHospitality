@@ -10,6 +10,8 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
     private Renderer planeRenderer;
     private bool doneTriggered = false;
     public S2CanvasManager canvas;
+    public TotalPoints points;
+    public TotalProgress progress;
 
     private void Start()
     {
@@ -36,6 +38,8 @@ public class DirtyUtensilsAdderPost : MonoBehaviour
             {
                 Debug.Log("Done");
                 canvas.DPostCleanDirtyShow();
+                progress.IncrementProgress(8.33f);
+                points.IncrementPoints(10);
 
                 if (planeRenderer != null)
                 {

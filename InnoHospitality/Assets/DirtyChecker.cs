@@ -5,6 +5,8 @@ public class DirtyChecker : MonoBehaviour
     private bool[] itemStatus = new bool[7] { false, false, false, false, false, false, false };
     public S2CanvasManager canvas;
     public GameObject clean, disinfectant, rag;
+    public TotalPoints points;
+    public TotalProgress progress;
 
     public void SetItemPicked(int index)
     {
@@ -18,9 +20,12 @@ public class DirtyChecker : MonoBehaviour
             {
                 Debug.Log("All items picked! You're ready.");
                 canvas.D3Show();
+                progress.IncrementProgress(8.33f);
+                points.IncrementPoints(10);
                 clean.SetActive(false);
                 rag.SetActive(false);
                 disinfectant.SetActive(false);
+
             }
         }
         else

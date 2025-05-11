@@ -8,6 +8,7 @@ public class CheckOrder : MonoBehaviour
     private int counter = 0;
     public S2IconLogic icon;
     public TotalPoints points;
+    public TotalProgress progress;
     public MenuOrder steak, pizza, pancake, salad, pasta, chicken, cake, coffee, coke, water, meal;
     public AudioSource correct;
 
@@ -66,6 +67,7 @@ public class CheckOrder : MonoBehaviour
             meal.ResetVisuals();
             pancake.ResetVisuals();
             points.IncrementPoints(10);
+            progress.IncrementProgress(8.33f);
         }
         else
         {

@@ -12,7 +12,7 @@ public class Order1Counter : MonoBehaviour
     public TotalPoints points;
     double bonusPoints = 0;
     public S2CanvasManager canvas;
-    
+    public TotalProgress progress;
 
     public void Increment()
     {
@@ -49,7 +49,8 @@ public class Order1Counter : MonoBehaviour
             correct.Play();
             Debug.Log("COMPLETE " + counter);
             bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
-            points.IncrementPoints(bonusPoints);
+            points.IncrementPoints(10);
+            progress.IncrementProgress(8.33f);
             hasActivated = true; // Set flag to true
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
         }

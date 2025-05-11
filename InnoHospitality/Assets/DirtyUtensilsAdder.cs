@@ -10,7 +10,9 @@ public class DirtyUtensilsAdder : MonoBehaviour
     private Renderer planeRenderer;
     private bool doneTriggered = false;
     public S2CanvasManager canvas;
-    
+    public TotalPoints points;
+    public TotalProgress progress;
+
     private void Start()
     {
         if (planeObject != null)
@@ -36,7 +38,8 @@ public class DirtyUtensilsAdder : MonoBehaviour
             {
                 Debug.Log("Done");
                 canvas.DCleanDirtyShow();
-                
+                progress.IncrementProgress(8.33f);
+                points.IncrementPoints(10);
                 if (planeRenderer != null)
                 {
                     // Set the color to green with alpha 64 (out of 255)

@@ -5,7 +5,8 @@ public class Tools : MonoBehaviour
 
     private bool[] itemStatus = new bool[4] { false, false, false, false };
     public S2CanvasManager canvas;
-
+    public TotalPoints points;
+    public TotalProgress progress;
 
     public void SetItemPicked(int index)
     {
@@ -19,6 +20,9 @@ public class Tools : MonoBehaviour
             {
                 Debug.Log("All items picked! You're ready.");
                 canvas.DCleanToolsShow();
+                progress.IncrementProgress(8.33f);
+                points.IncrementPoints(10);
+
             }
         }
         else
