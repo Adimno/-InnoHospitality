@@ -22,6 +22,7 @@ public class DirtyCheckerPost : MonoBehaviour
             {
                 Debug.Log("All items picked! You're ready.");
                 bonusPoints = CalculateTimeBonus(time.GetElapsedTime());
+                time.PauseTimer();
                 points.IncrementPoints(bonusPoints);
                 progress.IncrementProgress(8.33f);
                 canvas.ResultsShow();

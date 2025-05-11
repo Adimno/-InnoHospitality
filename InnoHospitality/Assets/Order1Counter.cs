@@ -45,7 +45,7 @@ public class Order1Counter : MonoBehaviour
         }
         else if (counter == 4 && !hasActivated) // Ensure it runs only once
         {
-            icon.ShowServe1();
+            //icon.ShowServe1();
             correct.Play();
             Debug.Log("COMPLETE " + counter);
             bonusPoints = CalculateTimeBonus(time.GetElapsedTime());

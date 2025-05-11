@@ -43,7 +43,7 @@ public class UtensilCounter : MonoBehaviour
         }
         else if (counter == 7 && !hasActivated) // Ensure it runs only once
         {
-            icon.ShowArrange1();
+            //icon.ShowArrange1();
             correct.Play();
             progress.IncrementProgress(8.33f);
             points.IncrementPoints(10);

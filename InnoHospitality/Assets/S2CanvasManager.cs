@@ -277,7 +277,7 @@ public class S2CanvasManager : MonoBehaviour
     public void C1Show()
     {
         ShowDialogue(C1);
-        icon.ShowGreet1();
+        //icon.ShowGreet1();
         correct.Play();
         points.IncrementPoints(5);
         progress.IncrementProgress(8.33f);
@@ -311,7 +311,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C2Show()
     {
-        icon.ShowGuide1();
+        //icon.ShowGuide1();
         correct.Play();
         points.IncrementPoints(5);
         progress.IncrementProgress(8.33f);
@@ -355,7 +355,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C5Show()
     {
-        icon.ShowGreet2();
+        //icon.ShowGreet2();
         correct.Play();
         points.IncrementPoints(10);
         ShowDialogue(C5);
@@ -446,7 +446,7 @@ public class S2CanvasManager : MonoBehaviour
 
     public void C7Show()
     {
-        icon.ShowGuide2();
+        //icon.ShowGuide2();
         correct.Play();
         points.IncrementPoints(10);
         ShowDialogue(C7);

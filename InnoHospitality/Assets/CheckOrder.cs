@@ -50,7 +50,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Chicken");
-            icon.ShowTake1();
+            //icon.ShowTake1();
             correct.Play();
             P6.SetActive(true);
             tablet.SetActive(false);
@@ -99,7 +99,7 @@ public class CheckOrder : MonoBehaviour
             counter++;
             Debug.Log("Counter: " + counter);
             Debug.Log("Pizza");
-            icon.ShowTake2();
+            //icon.ShowTake2();
             correct.Play();
             points.IncrementPoints(10);
             P12.SetActive(true);

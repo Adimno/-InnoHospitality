@@ -44,7 +44,7 @@ public class UtensilCounter2 : MonoBehaviour
         {
             correct.Play();
             points.IncrementPoints(10);
-            icon.ShowArrange2();
+            //icon.ShowArrange2();
             Debug.Log("COMPLETE " + counter);
             hasActivated = true; // Set flag to true
             StartCoroutine(ActivateD4WithDelay()); // Start the coroutine
