@@ -12,19 +12,19 @@ public class S1Evaluation : MonoBehaviour
 
         if (score >= 130)
         {
-            evaluationText.text = "Evaluation Result:\nExcellent housekeeping performance. Keep up the outstanding work!";
+            evaluationText.text = "Excellent";
         }
         else if (score >= 100)
         {
-            evaluationText.text = "Evaluation Result:\nGood job! Your housekeeping skills are above average.";
+            evaluationText.text = "Good job";
         }
         else if (score >= 80)
         {
-            evaluationText.text = "Evaluation Result:\nSatisfactory housekeeping. There’s room for improvement.";
+            evaluationText.text = "Satisfactory";
         }
         else
         {
-            evaluationText.text = "Evaluation Result:\nNeeds improvement. Please review housekeeping standards.";
+            evaluationText.text = "Bad";
         }
     }
 }
