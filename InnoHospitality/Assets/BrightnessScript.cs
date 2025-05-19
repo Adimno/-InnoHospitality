@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BrightnessScript : MonoBehaviour
 {
-    public float brightness = 3f; // Default brightness
+    public float brightness = 1f; // Default brightness
     public Light directionalLight;
 
     private float lastBrightness = -1f; // To track changes and avoid unnecessary updates
@@ -13,7 +13,7 @@ public class BrightnessScript : MonoBehaviour
         if (directionalLight == null || directionalLight.type != LightType.Directional)
             Debug.LogWarning("No Directional Light found in the scene.");
 
-        brightness = PlayerPrefs.GetFloat("Brightness", 3f);
+        brightness = PlayerPrefs.GetFloat("Brightness", 1f);
         ApplyBrightness(brightness);
         lastBrightness = brightness;
     }

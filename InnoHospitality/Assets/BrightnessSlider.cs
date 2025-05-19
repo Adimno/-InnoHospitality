@@ -17,7 +17,7 @@ public class BrightnessSlider : MonoBehaviour
         // Set slider range and initial value to match saved brightness
         brightnessSlider.minValue = 0f;
         brightnessSlider.maxValue = 5f;
-        brightnessSlider.value = PlayerPrefs.GetFloat("Brightness", 3f);
+        brightnessSlider.value = PlayerPrefs.GetFloat("Brightness", 1f);
 
         // Whenever slider changes, update brightness in BrightnessScript
         brightnessSlider.onValueChanged.AddListener(OnSliderValueChanged);
