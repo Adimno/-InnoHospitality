@@ -52,6 +52,7 @@ public class S1CanvasManager : MonoBehaviour
  // Assets
     public Button button;
     public GameObject CardReader; // card for reader
+    public GameObject Card1;
     public GameObject MarkKitchenCollider; // Kitchen mark 
     public GameObject MarkLivingRoomCollider; // Kitchen mark 
     public GameObject MarkTrashCollider; // Kitchen mark 
@@ -79,7 +80,7 @@ public class S1CanvasManager : MonoBehaviour
     void Start()
     {
         // Canvas
-        
+        Card1.SetActive(false);
         WelcomeCanvas.SetActive(true);
         CardReader.SetActive(false);
         TakeCardCanvas.SetActive(false);
@@ -177,6 +178,7 @@ public class S1CanvasManager : MonoBehaviour
         WelcomeCanvas.SetActive(false);
         TakeCardCanvas.SetActive(true);
         CardReader.SetActive(true);
+           Card1.SetActive(true);
         KitchAreaCanvas.SetActive(false);
     }
     

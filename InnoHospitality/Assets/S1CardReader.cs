@@ -6,6 +6,7 @@ public class S1CardReader : MonoBehaviour
     public MeshRenderer CardReader;
     public GameObject CardParent; 
     public GameObject Card; // Assign this in the Inspector
+    public BoxCollider PlayerCollider;
     private Color originalColor; // Store the original color
     public S1CanvasManager s1CanvasManager;
     public BoxCollider doorKnobEntrance;
@@ -20,6 +21,8 @@ public class S1CardReader : MonoBehaviour
 
     private void Start()
     {
+            PlayerCollider.enabled = false;
+        
         originalColor = CardReader.material.color; // Save the original color at the start
         doorKnobEntrance.enabled = false;
 
@@ -35,6 +38,7 @@ public class S1CardReader : MonoBehaviour
     {
         if (other.gameObject == Card && !hasTriggered) // Check if the colliding object is the specific GameObject
         {
+            PlayerCollider.enabled = true;
             StartCoroutine(ChangeColorAfterDelay());
         }
     }
@@ -44,7 +48,6 @@ public class S1CardReader : MonoBehaviour
         hasTriggered = true; // Set flag so it doesn't run again
         yield return new WaitForSeconds(3f); // Wait for 3 seconds
         CardReader.material.color = Color.green; // Change to green
-        Card.SetActive(false);
         CardParent.SetActive(false);
 
             
