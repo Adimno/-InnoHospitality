@@ -1010,8 +1010,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dab2c23adc8c3b047af5ea04e4753443, type: 3}
-  m_Resource: {fileID: 8300000, guid: dab2c23adc8c3b047af5ea04e4753443, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 42b84200616548e46ae028791a675805, type: 3}
+  m_Resource: {fileID: 8300000, guid: 42b84200616548e46ae028791a675805, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8339,9 +8339,6 @@ PrefabInstance:
       addedObject: {fileID: 1057659319}
     - targetCorrespondingSourceObject: {fileID: -3783463821402775489, guid: 00c9c177e828a57439e290aef2a23b3f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1025990453}
-    - targetCorrespondingSourceObject: {fileID: -3783463821402775489, guid: 00c9c177e828a57439e290aef2a23b3f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1337971408}
     - targetCorrespondingSourceObject: {fileID: -3783463821402775489, guid: 00c9c177e828a57439e290aef2a23b3f, type: 3}
       insertIndex: -1
@@ -13749,6 +13746,7 @@ MonoBehaviour:
   WelcomeCanvas: {fileID: 1226907930}
   ProceedCanvas: {fileID: 56730650}
   NextRoomCanvas: {fileID: 1747285322}
+  Portal: {fileID: 1057659318}
 --- !u!1 &878230383
 GameObject:
   m_ObjectHideFlags: 0
@@ -15226,7 +15224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1025990453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15234,19 +15232,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025990452}
-  m_LocalRotation: {x: 6.617445e-24, y: -0.9997167, z: -9.926167e-24, w: -0.023804545}
-  m_LocalPosition: {x: 0, y: 0, z: 0.523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0942284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 215267079}
   - {fileID: 109771037}
   - {fileID: 483471366}
-  m_Father: {fileID: 1363444883}
+  m_Father: {fileID: 1057659319}
   m_LocalEulerAnglesHint: {x: 0, y: -182.728, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.304, y: 0.04}
+  m_AnchoredPosition: {x: 1.6203504, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1025990455
@@ -15949,6 +15947,7 @@ RectTransform:
   - {fileID: 18972762}
   - {fileID: 326195314}
   - {fileID: 687914073}
+  - {fileID: 1025990453}
   m_Father: {fileID: 1363444883}
   m_LocalEulerAnglesHint: {x: 0, y: -182.728, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -20897,12 +20896,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    Congratulations! You can now proceed to the main menu
-
-
-'
+  m_text: "\nCongratulations! You may now proceed to the main menu or enter the portal
+    to find out where you\u2019ll be playing.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
