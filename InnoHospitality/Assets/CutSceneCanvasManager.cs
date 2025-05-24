@@ -11,6 +11,9 @@ public class CutSceneCanvasManager : MonoBehaviour
     public GameObject BedroomCanvas;
     public GameObject BathRoomCanvas;
 
+    public GameObject CongratsCanvas;
+
+
     // Assets
     public BoxCollider doorCollider;
 
@@ -23,6 +26,8 @@ public class CutSceneCanvasManager : MonoBehaviour
         KitchAreaCanvas.SetActive(false);
         BedroomCanvas.SetActive(false);
         BathRoomCanvas.SetActive(false);
+        CongratsCanvas.SetActive(false);
+        
     }
 
     public void WelcomeCanvasLogic()
@@ -68,6 +73,12 @@ public class CutSceneCanvasManager : MonoBehaviour
         BathRoomCanvas.SetActive(true);
     }
 
+        public void CongratsCanvasCanvasLogic()
+    {
+        DisableAllCanvases();
+        CongratsCanvas.SetActive(true);
+    }
+
     // Utility function to disable all canvases
     private void DisableAllCanvases()
     {
@@ -78,5 +89,6 @@ public class CutSceneCanvasManager : MonoBehaviour
         KitchAreaCanvas.SetActive(false);
         BedroomCanvas.SetActive(false);
         BathRoomCanvas.SetActive(false);
+        CongratsCanvas.SetActive(false);
     }
 }
