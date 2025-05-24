@@ -37,28 +37,28 @@ public class SceneLoadingScript : MonoBehaviour
         StartCoroutine(LoadScene("TableService_Scene"));
     }
 
+      public void MoveToCutSceneS1()
+    {
+        StartCoroutine(LoadScene("CutSceneS1"));
+    }
+
 
     public void ExitGame()
     {
         Application.Quit();
     }
 
-  IEnumerator LoadScene(string sceneName)
+    public IEnumerator LoadScene(string sceneName)
     {
-
-
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        asyncLoad.allowSceneActivation = false;
 
-        asyncLoad.allowSceneActivation = false; //scene will not load while this value is false
-
-        // Allow the scene to be activated
         asyncLoad.allowSceneActivation = true;
 
-        // Wait for the scene to finish loading
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
-
     }
+
 }
