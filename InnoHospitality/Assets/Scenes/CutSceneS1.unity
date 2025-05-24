@@ -91454,6 +91454,7 @@ GameObject:
   - component: {fileID: 1819446927}
   - component: {fileID: 1819446933}
   - component: {fileID: 1819446926}
+  - component: {fileID: 1819446934}
   m_Layer: 5
   m_Name: CoachingCardRoot
   m_TagString: Untagged
@@ -91671,6 +91672,25 @@ MonoBehaviour:
   BathRoomCanvas: {fileID: 941360193}
   CongratsCanvas: {fileID: 1112018554}
   doorCollider: {fileID: 1194497155}
+--- !u!114 &1819446934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819446921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca785bec0df83c74e90ab8a0dd4f63a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToCheck:
+  - {fileID: 1098248207}
+  - {fileID: 1350163727}
+  - {fileID: 514991186}
+  - {fileID: 1359483573}
+  - {fileID: 410705908}
+  CutSceneS1: {fileID: 1819446933}
 --- !u!1 &1821122828
 GameObject:
   m_ObjectHideFlags: 0
