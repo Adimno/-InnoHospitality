@@ -12,7 +12,6 @@ public class Cutscene2Manager : MonoBehaviour
     void Start()
     {
         WelcomeShow();
-        Welcome.SetActive(false);
         Instructions.SetActive(false);
         Tools.SetActive(false);
         Utensils.SetActive(false);
@@ -150,6 +149,8 @@ public class Cutscene2Manager : MonoBehaviour
         Dirty.SetActive(false);
         Customer.SetActive(false);
         Done.SetActive(false);
+
+        dialogue.SetActive(true);
     }
 
 }
