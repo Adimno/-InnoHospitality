@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b677b54bb63b9049b4246f4da620ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   clean: {fileID: 1636584063}
   disinfectant: {fileID: 1844234564}
   rag: {fileID: 503795354}
@@ -3965,8 +3965,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140949656}
-  - component: {fileID: 140949657}
   - component: {fileID: 140949658}
+  - component: {fileID: 140949660}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3994,110 +3994,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.719995, y: 2.5500798}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &140949657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140949655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3cc35deed647ca46acb07b2cf1f1f10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  D1: {fileID: 288853484}
-  D2: {fileID: 0}
-  D3: {fileID: 0}
-  D4: {fileID: 0}
-  P1: {fileID: 0}
-  D6: {fileID: 0}
-  D7: {fileID: 0}
-  D8: {fileID: 0}
-  C1: {fileID: 0}
-  P2: {fileID: 0}
-  P3: {fileID: 0}
-  P4: {fileID: 0}
-  P5: {fileID: 0}
-  P6: {fileID: 0}
-  C2: {fileID: 0}
-  C3: {fileID: 0}
-  C4: {fileID: 0}
-  C5: {fileID: 0}
-  receptionist: {fileID: 1891503807}
-  utensils: {fileID: 515048528}
-  gosign: {fileID: 673322534}
-  customer1Mark: {fileID: 0}
-  tableMark: {fileID: 1583564387}
-  tablet: {fileID: 749488799}
-  WrongOrder: {fileID: 0}
-  AskAgain: {fileID: 0}
-  Order1: {fileID: 1299243849}
-  WrongOrder2: {fileID: 0}
-  AskAgain2: {fileID: 0}
-  icon: {fileID: 1052404382}
-  points: {fileID: 972895683}
-  utensils2: {fileID: 827477318}
-  customer2Mark: {fileID: 2020784409}
-  tableMark2: {fileID: 1567383356}
-  Order2: {fileID: 214447346}
-  gosign2: {fileID: 1417927214}
-  D9: {fileID: 0}
-  C6: {fileID: 0}
-  P7: {fileID: 0}
-  P8: {fileID: 0}
-  P9: {fileID: 0}
-  D10: {fileID: 0}
-  C7: {fileID: 0}
-  P10: {fileID: 0}
-  C8: {fileID: 0}
-  P11: {fileID: 0}
-  C9: {fileID: 0}
-  C10: {fileID: 0}
-  D11: {fileID: 0}
-  D12: {fileID: 0}
-  P12: {fileID: 0}
-  results: {fileID: 0}
-  checklist1: {fileID: 0}
-  checklist2: {fileID: 0}
-  correct: {fileID: 1691028574}
-  progress: {fileID: 437763938}
-  DTools: {fileID: 0}
-  Tools: {fileID: 980375349}
-  DCleanTools: {fileID: 0}
-  DCleanDirty: {fileID: 0}
-  PreClean: {fileID: 728016450}
-  Disinfectant: {fileID: 1844234564}
-  Rag: {fileID: 503795354}
-  green1: {fileID: 169539846}
-  green2: {fileID: 1862401772}
-  DGetBill: {fileID: 0}
-  DGetBillMoney: {fileID: 0}
-  Bill: {fileID: 232188212}
-  BillMoney: {fileID: 863724843}
-  DPostCleanTools: {fileID: 0}
-  DPostCleanDirty: {fileID: 0}
-  PostClean: {fileID: 1636584063}
-  green3: {fileID: 943500569}
-  green4: {fileID: 2142033183}
-  customer: {fileID: 919132148308604233}
-  Pasta: {fileID: 52276264}
-  Chicken: {fileID: 1544902601}
-  Coffee: {fileID: 7416626742249921774}
-  Plastic: {fileID: 646915720}
-  glass: {fileID: 2126698145901770330}
-  fork: {fileID: 455696428021087317}
-  knife: {fileID: 6736943272959342303}
-  spoon: {fileID: 7122510204038993917}
-  plate: {fileID: 4383242943982825428}
-  napkin: {fileID: 1125660886}
-  placemat: {fileID: 6336895966998995869}
-  glassSNAP: {fileID: 671670151}
-  forkSNAP: {fileID: 1019618860}
-  knifeSNAP: {fileID: 1017381558}
-  spoonSNAP: {fileID: 81595770}
-  plateSNAP: {fileID: 1620290905}
-  napkinSNAP: {fileID: 2135929711}
 --- !u!223 &140949658
 Canvas:
   m_ObjectHideFlags: 0
@@ -4121,6 +4017,33 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &140949660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140949655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2708e12cba252da4eab7cd1a4d4b88b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Welcome: {fileID: 0}
+  Tools: {fileID: 0}
+  Utensils: {fileID: 0}
+  Chair: {fileID: 0}
+  Order: {fileID: 0}
+  Dirty: {fileID: 0}
+  Customer: {fileID: 0}
+  Done: {fileID: 0}
+  ToolsCircle: {fileID: 1630012070}
+  UtensilsCircle: {fileID: 1242810054}
+  ChairCircle: {fileID: 1940376896}
+  OrderCircle: {fileID: 1544928232}
+  DirtyCircle: {fileID: 1697231557}
+  CustomerCircle: {fileID: 326284678}
+  receptionist: {fileID: 1891503807}
 --- !u!64 &142830146
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8148,7 +8071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &288853485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9970,7 +9893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 326284678}
   onPlayerEnter:
     m_PersistentCalls:
@@ -10074,7 +9997,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.42, y: 0.4433, z: 27.38}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27159,43 +27082,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.595457
+      value: 9.144
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27458024
+      value: 0.34800005
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.477911
+      value: 22.557
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9994989
+      value: -0.71930146
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.003989569
+      value: -0.004747916
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03129047
+      value: 0.69468147
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.002668579
+      value: 0.0007037557
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.467
+      value: 0.335
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 356.415
+      value: 271.99402
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.291
+      value: -0.436
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559054, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_Name
@@ -36190,7 +36113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff40c78a8572d943836b77460a39796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
   icon: {fileID: 1052404382}
@@ -43722,7 +43645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 1242810054}
   onPlayerEnter:
     m_PersistentCalls:
@@ -43826,7 +43749,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.93, y: 0.4433, z: 22.04}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45907,7 +45830,7 @@ MonoBehaviour:
   correct: {fileID: 1691028574}
   time: {fileID: 2124717741}
   points: {fileID: 972895683}
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   progress: {fileID: 437763938}
 --- !u!4 &1304736394 stripped
 Transform:
@@ -53999,7 +53922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 140949657}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: S2CanvasManager, Assembly-CSharp
         m_MethodName: D2Show
         m_Mode: 1
@@ -54559,7 +54482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 1544928232}
   onPlayerEnter:
     m_PersistentCalls:
@@ -54663,7 +54586,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.01, y: 0.4433, z: 23.51}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -56742,7 +56665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18885e3a6d836a40ac6c2d9d273100a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
 --- !u!114 &1597102465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56755,7 +56678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50982c0d5ca9ad04c9d927fccbcc07b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
 --- !u!4 &1600912037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aef78b57021aff34ca51d31214eae860, type: 3}
@@ -57700,7 +57623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 1630012070}
   onPlayerEnter:
     m_PersistentCalls:
@@ -57804,7 +57727,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.04, y: 0.4433, z: 18.6}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60046,7 +59969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 1697231557}
   onPlayerEnter:
     m_PersistentCalls:
@@ -60150,7 +60073,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.478, y: 0.4433, z: 25.662}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61000,7 +60923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532e6c57a068d8f40a884fa05684a67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   clean: {fileID: 728016450}
   disinfectant: {fileID: 1844234564}
   rag: {fileID: 503795354}
@@ -64356,7 +64279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1844234565
 Transform:
   m_ObjectHideFlags: 0
@@ -67102,7 +67025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeObject: {fileID: 1862401772}
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
   icon: {fileID: 1052404382}
@@ -69925,7 +69848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0603ae2f300b4ba34944052faafef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 264369621}
   ColliderToDisable: {fileID: 1940376896}
   onPlayerEnter:
     m_PersistentCalls:
@@ -70029,7 +69952,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.09, y: 0.4433, z: 24.172}
   m_LocalScale: {x: 1, y: 0.32328627, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76100,7 +76023,7 @@ MonoBehaviour:
   startTimer: 0
   isPaused: 0
   elapsedTime: 0
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
 --- !u!1 &2125640940
 GameObject:
   m_ObjectHideFlags: 0
@@ -76759,7 +76682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeObject: {fileID: 2142033183}
-  canvas: {fileID: 140949657}
+  canvas: {fileID: 0}
   points: {fileID: 972895683}
   progress: {fileID: 437763938}
   icon: {fileID: 1052404382}
