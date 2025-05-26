@@ -4,14 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class Cutscene2Manager : MonoBehaviour
 {
-    public GameObject Welcome, Tools, Utensils, Chair, Order, Dirty, Customer, Done;
+    public GameObject Welcome, Instructions, Tools, Utensils, Chair, Order, Dirty, Customer, Done;
     public GameObject ToolsCircle, UtensilsCircle, ChairCircle, OrderCircle, DirtyCircle, CustomerCircle;
 
     public ReceptionistAnimation receptionist;
 
     void Start()
     {
+        WelcomeShow();
         Welcome.SetActive(false);
+        Instructions.SetActive(false);
         Tools.SetActive(false);
         Utensils.SetActive(false);
         Chair.SetActive(false);
@@ -34,10 +36,31 @@ public class Cutscene2Manager : MonoBehaviour
         receptionist.Talk();
     }
 
+
+    public void InstructionsShow()
+    {
+        ShowDialogue(Instructions);
+        receptionist.Talk();
+    }
+
+    public void InstructionsClose()
+    {
+        Instructions.SetActive(false);
+        ToolsCircle.SetActive(true);
+        receptionist.Idle();
+    }
+
     public void ToolsShow()
     {
         ShowDialogue(Tools);
         receptionist.Talk();
+    }
+
+    public void ToolsClose()
+    {
+        Tools.SetActive(false);
+        UtensilsCircle.SetActive(true);
+        receptionist.Idle();
     }
 
     public void UtensilsShow()
@@ -46,10 +69,24 @@ public class Cutscene2Manager : MonoBehaviour
         receptionist.Talk();
     }
 
+    public void UtensilsClose()
+    {
+        Utensils.SetActive(false);
+        ChairCircle.SetActive(true);
+        receptionist.Idle();
+    }
+
     public void ChairShow()
     {
         ShowDialogue(Chair);
         receptionist.Talk();
+    }
+
+    public void ChairClose()
+    {
+        Chair.SetActive(false);
+        CustomerCircle.SetActive(true);
+        receptionist.Idle();
     }
 
     public void CustomerShow()
@@ -58,10 +95,24 @@ public class Cutscene2Manager : MonoBehaviour
         receptionist.Talk();
     }
 
+    public void CustomerClose()
+    {
+        Customer.SetActive(false);
+        OrderCircle.SetActive(true);
+        receptionist.Idle();
+    }
+
     public void OrderShow()
     {
         ShowDialogue(Order);
         receptionist.Talk();
+    }
+
+    public void OrderClose()
+    {
+        Order.SetActive(false);
+        DirtyCircle.SetActive(true);
+        receptionist.Idle();
     }
 
     public void DirtyShow()
@@ -75,6 +126,7 @@ public class Cutscene2Manager : MonoBehaviour
         ShowDialogue(Done);
         receptionist.Talk();
     }
+
 
     public void MainMenu()
     {
@@ -90,6 +142,7 @@ public class Cutscene2Manager : MonoBehaviour
     private void ShowDialogue(GameObject dialogue)
     {
         Welcome.SetActive(false);
+        Instructions.SetActive(false);
         Tools.SetActive(false);
         Utensils.SetActive(false);
         Chair.SetActive(false);
