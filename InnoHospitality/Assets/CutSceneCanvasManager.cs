@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class CutSceneCanvasManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class CutSceneCanvasManager : MonoBehaviour
 
     // Assets
     public BoxCollider doorCollider;
+
+        public BoxCollider bathCollider;
 
     void Start()
     {
@@ -63,6 +66,7 @@ public class CutSceneCanvasManager : MonoBehaviour
 
     public void BedroomCanvasLogic()
     {
+        bathCollider.enabled = false;
         DisableAllCanvases();
         BedroomCanvas.SetActive(true);
     }
@@ -71,6 +75,7 @@ public class CutSceneCanvasManager : MonoBehaviour
     {
         DisableAllCanvases();
         BathRoomCanvas.SetActive(true);
+         StartCoroutine(ShowCongratsAfterDelay());
     }
 
         public void CongratsCanvasCanvasLogic()
@@ -78,6 +83,14 @@ public class CutSceneCanvasManager : MonoBehaviour
         DisableAllCanvases();
         CongratsCanvas.SetActive(true);
     }
+
+   private IEnumerator ShowCongratsAfterDelay()
+    {
+        yield return new WaitForSeconds(3f);
+        CongratsCanvasCanvasLogic();
+    }
+
+    
 
     // Utility function to disable all canvases
     private void DisableAllCanvases()

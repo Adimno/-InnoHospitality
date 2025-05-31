@@ -24134,7 +24134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 482658217}
   - component: {fileID: 482658219}
-  - component: {fileID: 482658218}
   m_Layer: 0
   m_Name: ColliderPlayerBedroom
   m_TagString: Untagged
@@ -24151,26 +24150,12 @@ Transform:
   m_GameObject: {fileID: 482658216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9999719, z: -0, w: -0.007494838}
-  m_LocalPosition: {x: -0.083, y: 0.63700056, z: 0.681}
+  m_LocalPosition: {x: -0.078, y: 0.63700056, z: 0.342}
   m_LocalScale: {x: 5.193318, y: 3.0903988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070553021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &482658218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482658216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617651f63cfe44a41a4e08e8cb61a695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1661636243}
-  s1CanvasManager: {fileID: 0}
 --- !u!65 &482658219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24186,7 +24171,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -91534,7 +91519,6 @@ GameObject:
   - component: {fileID: 1819446927}
   - component: {fileID: 1819446933}
   - component: {fileID: 1819446926}
-  - component: {fileID: 1819446934}
   m_Layer: 5
   m_Name: CoachingCardRoot
   m_TagString: Untagged
@@ -91752,25 +91736,7 @@ MonoBehaviour:
   BathRoomCanvas: {fileID: 941360193}
   CongratsCanvas: {fileID: 1112018554}
   doorCollider: {fileID: 1194497155}
---- !u!114 &1819446934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819446921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca785bec0df83c74e90ab8a0dd4f63a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToCheck:
-  - {fileID: 1098248207}
-  - {fileID: 1350163727}
-  - {fileID: 514991186}
-  - {fileID: 1359483573}
-  - {fileID: 410705908}
-  CutSceneS1: {fileID: 1819446933}
+  bathCollider: {fileID: 482658219}
 --- !u!1 &1821122828
 GameObject:
   m_ObjectHideFlags: 0
