@@ -42,6 +42,11 @@ public class SceneLoadingScript : MonoBehaviour
         StartCoroutine(LoadScene("CutSceneS1"));
     }
 
+       public void MoveToCutSceneS2()
+    {
+        StartCoroutine(LoadScene("CutSceneS2"));
+    }
+
 
     public void ExitGame()
     {
